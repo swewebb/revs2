@@ -12,7 +12,7 @@ Cascading Style Sheet
 
 Formatmallar
 
-Används för att skapa presentation av innehåll, t.ex färger, typsnitt och layout$
+Används för att skapa presentation av innehåll, t.ex färger, typsnitt och layout
 
 ---
 
@@ -34,7 +34,7 @@ p {
 
 --
 
-![Bild](./images/css-01-01.PNG)
+![Bild](images/css-01-01.PNG)
 
 ---
 
@@ -149,7 +149,7 @@ p {
 </style>
 ```
 
-Den här tekniken kan användas för enskilda dokument. Ni ska inte använda tekniken!
+Den här tekniken kan användas för enskilda dokument. **Ni ska inte använda tekniken!**
 
 --
 
@@ -159,7 +159,7 @@ Den här tekniken kan användas för enskilda dokument. Ni ska inte använda tek
 
 # Länkade
 
-Separat fil som länkas in mellan &lt;head&gt;&lt;/head&gt;
+Separat fil som länkas in mellan **&lt;head&gt;&lt;/head&gt;**
 
 
 ```html
@@ -404,3 +404,7 @@ Får enbart kallas på en gång per html-dokument. Om inget annat sägs använde
 --
 
 ![Bild](images/css-01-10.PNG)
+
+---
+
+# Slut!
