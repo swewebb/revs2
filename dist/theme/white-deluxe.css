@@ -408,11 +408,11 @@ th {
   color: #fff;
 }
 
-tr:nth-child(odd) {
+section > table > tr:nth-child(odd) {
   background-color: #fff;
 }
 
-tr:nth-child(even) {
+section > table > tr:nth-child(even) {
   background-color: #f1f2f6;
 }
 
