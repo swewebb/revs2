@@ -10,6 +10,7 @@ Utskrift görs med `print(…) `
 
 ```python
 print('Hello World')
+
 Hello World
 ```
 
@@ -246,7 +247,7 @@ print(a)
 
 --
 
-En variabels värde kan ändras genom tilldelning eller olika operationer, ofta med förkortat skrivsätt **+=**, **-=**, ****=**, ...
+En variabels värde kan ändras genom tilldelning eller olika operationer, ofta med förkortat skrivsätt **+=**, **-=**, **\**=**, ...
 
 ```python
 x = 5
@@ -293,6 +294,7 @@ Med trippla citationstecken kan man ha texter som spänner över flera rader i k
 print("""en lång sträng som går
 ... över flera
 ... rader så att säga""")
+
 en lång sträng som går
 över flera
 rader så att säga
@@ -304,6 +306,7 @@ Vill man räkna med teckensträngar som innehåller siffror måste dessa konvert
 
 ```python
 print('123' + 123)
+
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: can only concatenate str (not "int") to str
@@ -314,6 +317,7 @@ TypeError: can only concatenate str (not "int") to str
 
 ```python
 print(int('123') + 123)
+
 246
 ```
 
@@ -321,6 +325,7 @@ print(int('123') + 123)
 
 ```python
 print(int('123kaka') + 123)
+
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: invalid literal for int() with base 10: '123kaka'
@@ -332,9 +337,11 @@ Strängar kan konkateneras med '+' och förmeras med '*'
 
 ```python
 print('Hej' + 'san')
+
 Hejsan
 
 print(5 * 'Hej')
+
 HejHejHejHejHej
 ```
 
@@ -344,8 +351,11 @@ Heltal och flyttal omvandlas till strängar med funktionen `str()`
 
 ```python
 print(a, b)
+
 5 bananer
+
 print(str(a) + b)
+
 5bananer
 ```
 
@@ -360,7 +370,9 @@ print(str(a) + b)
 ```python
 a = 'gula'
 b = 'bananer'
+
 print(a, b)
+
 gula bananer
 ```
 
@@ -371,7 +383,9 @@ gula bananer
 ```python
 a = 'gula'
 b = 'bananer'
+
 print(a + b)
+
 gulabananer
 ```
 
@@ -381,10 +395,13 @@ gulabananer
 
 ```python
 r = 4
+
 print('Cirkeln har arean ', '3.14 * r ** 2', 'kvm')
+
 Cirkeln har arean  3.14 * r ** 2 kvm
 
 print('Cirkeln har arean ', eval('3.14 * r ** 2'), 'kvm')
+
 Cirkeln har arean  50.24 kvm
 ```
 
@@ -416,7 +433,9 @@ Många språk, inkl Python, används backslash, **\** plus ett annat tecken för
 
 ```python
 txt = "Bosse \"Bildoktorn\" Andersson"
+
 print(txt)
+
 Bosse "Bildoktorn" Andersson.
 ```
 
@@ -432,6 +451,7 @@ Detta kan ändras genom att lägga till ett par parametrar som anger separations
 
 ```python
 print('Kurt', 'Bengt', 'Eva-Britt', sep=' och ', end = '.\n')
+
 Kurt och Bengt och Eva-Britt.
 ```
 
@@ -451,6 +471,7 @@ I Python används "måsvingar" för att markera plats för infogningen, och efte
 
 ```python
 print('{} och {} satsar {} kr var på tipset'.format('Kal', 'Ada', 50))
+
 Kal och Ada satsar 50 kr var på tipset
 ```
 
@@ -460,6 +481,7 @@ I formatmetoden kan man ange ordning för infogningen med siffror, annars sker d
 
 ```python
 print('{1} och {0} satsar {2} kr var på tipset'.format('Kal', 'Ada', 50))
+
 Ada och Kal satsar 50 kr var på tipset
 ```
 
@@ -471,6 +493,7 @@ Inom måsvingen kan man också ange antal tecken för infogningen samt dess form
 
 ```python
 print('{1} och {0} satsar {2:4.2f} kr var på tipset'.format('Kal', 'Ada', 50))
+
 Ada och Kal satsar 50.00 kr var på tipset
 ```
 
@@ -480,6 +503,7 @@ Flyttal med minst fyra tecken, flyttal med två decimaler.
 
 ```python
 print('{1} och {0} satsar {2:08.2f} kr var på tipset'.format('Kal', 'Ada', 50))
+
 Ada och Kal satsar 00050.00 kr var på tipset
 ```
 
@@ -489,6 +513,7 @@ Flyttal med minst åtta tecken, flyttal med två decimaler samt visa "leading ze
 
 ```python
 print('{:02X} {:02X} {:02X}'.format(255,128,5))
+
 FF 80 05
 ```
 
@@ -515,16 +540,21 @@ Höger-, vänsterjustering och centrering anges med >, <, ^
 
 ```python
 num = 9
+
 print('Talet {0:<4d} skrivs binärt som {0:^8b} så det så'.format(num))
+
 Talet 9    skrivs binärt som   1001   så det så
 
 print('Talet {0:>4d} skrivs binärt som {0:^8b} så det så'.format(num))
+
 Talet    9 skrivs binärt som   1001   så det så
 ```
 
 ```python
 num = 9
+
 print('Talet {0:<04d} skrivs binärt som {0:0^8b} så det så'.format(num))
+
 Talet 9000 skrivs binärt som 00100100 så det så
 ```
 
@@ -544,9 +574,11 @@ För att kunna räkna med inmatad data eller göra formaterade utskrifter kan ma
 
 ```python
 pris = input('Ange pris per kilo: ')
+
 Ange pris per kilo: 55
 
 print('Kilopris = {0:4.2f} kr per kilo'.format(float(pris)))
+
 Kilopris = 55.00 kr per kilo
 ```
 
