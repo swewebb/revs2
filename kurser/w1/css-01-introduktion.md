@@ -34,7 +34,7 @@ p {
 
 --
 
-![Bild](images/css-01-01.PNG)
+![Bild](./images/css-01-01.PNG)
 
 ---
 
