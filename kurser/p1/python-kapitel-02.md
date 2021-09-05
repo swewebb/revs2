@@ -8,7 +8,7 @@
 
 Utskrift görs med `print(…) `
 
-```python
+```python [ ]
 print('Hello World')
 
 Hello World
@@ -40,7 +40,7 @@ Variablerna deklareras i och med att vi börjar använda dem
 
 --
 
-```python
+```python [ ]
 a = 17
 b = 3
 print(a + b)
@@ -49,7 +49,7 @@ print(a + b)
 
 --
 
-```python
+```python [ ]
 a = 17
 b = 3
 b = 10
@@ -59,7 +59,7 @@ print(a + b)
 
 --
 
-```python
+```python [ ]
 a = 17
 b = 3
 c = a + b
@@ -89,7 +89,7 @@ Prioritetsregler: (), **, *, /, %, + -
 
 --
 
-```python
+```python [ ]
 print(3+5)
 8
 print(3 + 2 * 2)
@@ -106,7 +106,7 @@ print(3 + 2 * 2)
 
 Modulo-operatorn, ger resten vid division: %
 
-```python
+```python [ ]
 print(15 % 4)
 3
 print(12 % 4)
@@ -121,7 +121,7 @@ Heltalsdivision, ger "hela" antalet ggr som nämnaren ryms i täljaren: //
 
 **Observera:** //-operatorn avrundas nedåt, ger lite olika effekt för positiva och negativa tal
 
-```python
+```python [ ]
 print(21 // 8)
 2
 
@@ -135,12 +135,12 @@ print(21 // -8)
 
 Exponentierings-operatorn, ger vanliga "upphöjt i": **
 
-```python
+```python [ ]
 print(10**3)
 1000
 ```
 
-```python
+```python [ ]
 print(2**3)
 8
 ```
@@ -159,7 +159,7 @@ Python tar dock mer minne om det behövs (gränsen sätts vid internminnets stor
 
 --
 
-```python
+```python [ ]
 print(2 ** 64 - 1)
 18446744073709551615
 
@@ -185,7 +185,7 @@ Aritmetiska operationer kan blanda flyttal och heltal, men svaret blir då ett f
 
 --
 
-```python
+```python [ ]
 print(1.283456789E12)
 1283456789000.0
 
@@ -208,7 +208,7 @@ Emellanåt vill man omvandla heltal till flyttal och tvärtom. Då finns inbyggd
 
 **`float(x)`** omvandlar heltalet **x** till ett flyttal
 
-```python
+```python [ ]
 float(4)
 4.0
 
@@ -229,7 +229,7 @@ print(a)
 
 **`int(x)`** omvandlar flyttalet **x** till ett heltal via trunkering (decimalerna skärs bort, helt enkelt – trunkering används också vid heltalsdivision)
 
-```python
+```python [ ]
 a = 6.2
 print(a)
 6.2
@@ -249,7 +249,7 @@ print(a)
 
 En variabels värde kan ändras genom tilldelning eller olika operationer, ofta med förkortat skrivsätt **+=**, **-=**, **\**=**, ...
 
-```python
+```python [ ]
 x = 5
 x += 2
 print(x)
@@ -277,7 +277,7 @@ Det är okej med enkla eller dubbla citationstecken
 
 --
 
-```python
+```python [ ]
 print("Kalle Kanin")
 Kalle Kanin
 
@@ -289,7 +289,7 @@ Kalle Kanin
 
 Med trippla citationstecken kan man ha texter som spänner över flera rader i källkoden
 
-```python
+```python [ ]
 
 print("""en lång sträng som går
 ... över flera
@@ -304,7 +304,7 @@ rader så att säga
 
 Vill man räkna med teckensträngar som innehåller siffror måste dessa konverteras först (heltal och flyttal kan blandas utan konvertering, men siffror och teckensträngar är olika typer)
 
-```python
+```python [ ]
 print('123' + 123)
 
 Traceback (most recent call last):
@@ -315,7 +315,7 @@ TypeError: can only concatenate str (not "int") to str
 --
 
 
-```python
+```python [ ]
 print(int('123') + 123)
 
 246
@@ -323,7 +323,7 @@ print(int('123') + 123)
 
 --
 
-```python
+```python [ ]
 print(int('123kaka') + 123)
 
 Traceback (most recent call last):
@@ -335,7 +335,7 @@ ValueError: invalid literal for int() with base 10: '123kaka'
 
 Strängar kan konkateneras med '+' och förmeras med '*'
 
-```python
+```python [ ]
 print('Hej' + 'san')
 
 Hejsan
@@ -349,7 +349,7 @@ HejHejHejHejHej
 
 Heltal och flyttal omvandlas till strängar med funktionen `str()`
 
-```python
+```python [ ]
 print(a, b)
 
 5 bananer
@@ -367,7 +367,7 @@ print(str(a) + b)
 
 `print` kan användas för att skriva ut flera saker samtidigt genom att man anger dem med kommatecken mellan.
 
-```python
+```python [ ]
 a = 'gula'
 b = 'bananer'
 
@@ -380,7 +380,7 @@ gula bananer
 
 `print` sätter in ett separationstecken (vanligen mellanslag) mellan varje sak (vill man undvika det får man konkatenera strängarna istället och lägga in mellanslag själv).
 
-```python
+```python [ ]
 a = 'gula'
 b = 'bananer'
 
@@ -393,7 +393,7 @@ gulabananer
 
 `print` kan innehålla saker som måste räknas ut eller matas in innan det kan skrivas ut.
 
-```python
+```python [ ]
 r = 4
 
 print('Cirkeln har arean ', '3.14 * r ** 2', 'kvm')
@@ -431,7 +431,7 @@ Många språk, inkl Python, används backslash, **\** plus ett annat tecken för
 
 --
 
-```python
+```python [ ]
 txt = "Bosse \"Bildoktorn\" Andersson"
 
 print(txt)
@@ -449,7 +449,7 @@ Bosse "Bildoktorn" Andersson.
 
 Detta kan ändras genom att lägga till ett par parametrar som anger separationstecken och avslutningstecken.
 
-```python
+```python [ ]
 print('Kurt', 'Bengt', 'Eva-Britt', sep=' och ', end = '.\n')
 
 Kurt och Bengt och Eva-Britt.
@@ -469,7 +469,7 @@ Till exempel om vill man infoga vissa strängar på vissa platser i en utskrift.
 
 I Python används "måsvingar" för att markera plats för infogningen, och efter strängen skriver man en formatmetod.
 
-```python
+```python [ ]
 print('{} och {} satsar {} kr var på tipset'.format('Kal', 'Ada', 50))
 
 Kal och Ada satsar 50 kr var på tipset
@@ -479,7 +479,7 @@ Kal och Ada satsar 50 kr var på tipset
 
 I formatmetoden kan man ange ordning för infogningen med siffror, annars sker den i tur och ordning.
 
-```python
+```python [ ]
 print('{1} och {0} satsar {2} kr var på tipset'.format('Kal', 'Ada', 50))
 
 Ada och Kal satsar 50 kr var på tipset
@@ -491,7 +491,7 @@ Inom måsvingen kan man också ange antal tecken för infogningen samt dess form
 
 --
 
-```python
+```python [ ]
 print('{1} och {0} satsar {2:4.2f} kr var på tipset'.format('Kal', 'Ada', 50))
 
 Ada och Kal satsar 50.00 kr var på tipset
@@ -501,7 +501,7 @@ Flyttal med minst fyra tecken, flyttal med två decimaler.
 
 --
 
-```python
+```python [ ]
 print('{1} och {0} satsar {2:08.2f} kr var på tipset'.format('Kal', 'Ada', 50))
 
 Ada och Kal satsar 00050.00 kr var på tipset
@@ -511,7 +511,7 @@ Flyttal med minst åtta tecken, flyttal med två decimaler samt visa "leading ze
 
 --
 
-```python
+```python [ ]
 print('{:02X} {:02X} {:02X}'.format(255,128,5))
 
 FF 80 05
@@ -538,7 +538,7 @@ En komplett tabell är som följer:
 Höger-, vänsterjustering och centrering anges med >, <, ^
 
 
-```python
+```python [ ]
 num = 9
 
 print('Talet {0:<4d} skrivs binärt som {0:^8b} så det så'.format(num))
@@ -550,7 +550,7 @@ print('Talet {0:>4d} skrivs binärt som {0:^8b} så det så'.format(num))
 Talet    9 skrivs binärt som   1001   så det så
 ```
 
-```python
+```python [ ]
 num = 9
 
 print('Talet {0:<04d} skrivs binärt som {0:0^8b} så det så'.format(num))
@@ -572,7 +572,7 @@ För att kunna räkna med inmatad data eller göra formaterade utskrifter kan ma
 
 --
 
-```python
+```python [ ]
 pris = input('Ange pris per kilo: ')
 
 Ange pris per kilo: 55
