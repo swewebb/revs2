@@ -1,76 +1,91 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="sv">
 
-		<title>css-01-introduktion</title>
+<head>
+	<meta charset="utf-8">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+	<title>css-01-introduktion</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css">
-    
-    <!-- Local Theme -->
-		<link rel="stylesheet" href="theme.css">
-		
-		<!-- Chalkboard CSS-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../dist/reveal.css">
+	<link rel="stylesheet" href="../../dist/theme/white.css" id="theme">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-          <section data-markdown="css-01-introduktion.md"
-          data-separator="^\n---\n"
-          data-separator-vertical="^\n--\n"
-          data-separator-notes="^Note:"
-          data-charset="UTF8">
-          <!--
-              Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
-              For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
-          -->
-      </section>
-			</div>
+	<link rel="stylesheet" href="../../plugin/highlight/styles/github-dark.min.css">
+
+	<link rel="stylesheet" href="../../plugin/verticator/verticator.css">
+	<link rel="stylesheet" href="../../plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			<section
+				data-markdown="css-01-introduktion.md"
+				data-separator="^\n---\n"
+				data-separator-vertical="^\n--\n"
+				data-charset="UTF8"
+			>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="../../dist/reveal.js"></script>
+	<script src="../../plugin/markdown/markdown.js"></script>
+	<script src="../../plugin/highlight/highlight.js"></script>
+	<script src="../../plugin/notes/notes.js"></script>
+	<script src="../../plugin/verticator/verticator.js"></script>
+	<script src="../../plugin/chalkboard/plugin.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				chalkboard: { 
-					// optionally load pre-recorded chalkboard drawing from file
-					//src: "chalkboard.json",
-					theme: "whiteboard"
-				},
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true },
-					{ src: 'plugin/chalkboard/chalkboard.js' }
+	<script>
+
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			chalkboard: {
+				boardmarkerWidth: 3,
+				chalkWidth: 7,
+				chalkEffect: 1.0,
+				storage: null,
+				src: null,
+				readOnly: undefined,
+				toggleChalkboardButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
+				toggleNotesButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
+				transition: 800,
+				theme: "chalkboard",
+				background: ['rgba(127,127,127,.1)', path + 'img/blackboard.png'],
+				grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2 },
+				eraser: { src: path + 'img/sponge.png', radius: 20 },
+				boardmarkers: [
+					{ color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto' },
+					{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto' },
+					{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto' },
+					{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto' },
+					{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto' },
+					{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto' },
+					{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto' }
 				],
-				keyboard: {
-						67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-						66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-						46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-						8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-						68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
-				}
-			});
-		</script>
-	</body>
+				chalks: [
+					{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto' },
+					{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto' },
+					{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto' },
+					{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto' },
+					{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto' },
+					{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto' },
+					{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto' }
+				]
+			},
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, Verticator, RevealChalkboard]
+		});
+
+	</script>
+
+</body>
+
 </html>
