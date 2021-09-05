@@ -396,12 +396,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 td, th, table {
-  border: 1px solid #000;
+  border: 1px solid #011627;
   text-align: left !important;
 }
 
 th {
-  background: #636e72;
+  background: #011627;
   color: #fff;
 }
 
