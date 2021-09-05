@@ -14,7 +14,7 @@
 
 --
 
-```python
+```python [ ]
 # Mitt första program
 
 # Fråga efter namnet och skriv ut hälsning
@@ -26,7 +26,7 @@ print("Hej,", namn ,", trevligt att råkas!")
 
 --
 
-```python
+```python [ ]
 # Mitt första program
 
 # Fråga efter namnet och skriv ut hälsning
@@ -38,7 +38,7 @@ print("Hej, " + namn + ", trevligt att råkas!")
 
 --
 
-```python
+```python [ ]
 # Mitt första program
 
 # Fråga efter namnet och skriv ut hälsning
@@ -54,7 +54,7 @@ print("Hej, ", input("Vad heter du?\n"), ", trevligt att råkas!")
 
 --
 
-```python
+```python [ ]
 # Mitt andra program
 
 # Fråga efter två tal och beräkna dess produkt
@@ -73,7 +73,7 @@ input("\nTryck Enter för att avsluta!")
 
 --
 
-```python
+```python [ ]
 # Mitt andra program
 
 # Fråga efter två tal och beräkna dess produkt
@@ -96,7 +96,7 @@ input("\nTryck Enter för att avsluta!")
 
 --
 
-```python
+```python [ ]
 # Mitt andra program, version 2
 
 # Fråga efter två tal och beräkna dess produkt
@@ -133,7 +133,7 @@ En gammal regel säger att rader bör brytas innan 80:e tecknet.
 
 --
 
-```python
+```python [ ]
 txt="Här kommer det en lång rad med text... \
 Här kommer det en lång rad med text... \
 Här kommer det en lång rad med text..."
@@ -174,7 +174,7 @@ Bra val på variabelnamn kompletterar kommentarerna.
 
 --
 
-```python
+```python [ ]
 # Dålig kommentar och namn:
 
 # Öka x med 1
@@ -183,7 +183,7 @@ x += 1
 
 --
 
-```python
+```python [ ]
 # Bra kommentar och namn:
 
 # Gå till nästa iteration
@@ -208,7 +208,7 @@ Går vi tillbaka till källkoden står ofta markören i närheten av den rad dä
 
 --
 
-```python
+```python [ ]
 >>> print('123' + 123)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -219,14 +219,14 @@ TypeError: can only concatenate str (not "int") to str
 --
 
 
-```python
+```python [ ]
 >>> print(int('123') + 123)
 246
 ```
 
 --
 
-```python
+```python [ ]
 print("Talens produkt är " +
       str((int(inpu("Ange första talet: "))) * \
           (int(input("Ange andra talet: "))) ))
