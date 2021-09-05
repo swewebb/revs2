@@ -373,5 +373,5 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   background-color: #011627 !important;
   color: #fff !important;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 4px;
 }
