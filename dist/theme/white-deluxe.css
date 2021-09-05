@@ -386,3 +386,44 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .redtext {
   color: #eb4d4b;
 }
+
+.bluetext {
+  color: #3498db;
+}
+
+.purpletext {
+  color: #8e44ad;
+}
+
+td, th, table {
+  border: 1px solid #000;
+  text-align: left !important;
+}
+
+th {
+  background: #636e72;
+  color: #fff;
+}
+
+.terminal {
+  background: #011627;
+  color: #FFF;
+  text-align: left;
+  font-family: "fira code", monospace;
+  white-space: pre-wrap;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.terminal__prompt {
+  font-style: italic;
+  color: rgb(127,219,202);
+}
+
+.terminal__command {
+  color: rgb(173,219,103);
+}
+
+.terminal__file{
+  color: rgb(236,196,141);
+}
