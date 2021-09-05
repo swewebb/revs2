@@ -408,6 +408,14 @@ th {
   color: #fff;
 }
 
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: orange;
+}
+
 .terminal {
   background: #011627;
   color: #FFF;
