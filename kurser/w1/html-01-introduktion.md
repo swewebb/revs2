@@ -5,7 +5,7 @@
 
 # HTML
 
-<span class="purpletext">H</span>yper<span class="purpletext">T</span>ext <span class="purpletext">M</span>arkup <span class="purpletext">L</span>anguage
+**H**yper**T**ext **M**arkup **L**anguage
 
 Språket som vi kodar webbsidor i.
 
@@ -30,13 +30,13 @@ Tolkas av webbläsaren.
 
 # Taggar
 
-Taggar/märken börjar med **<span class="purpletext">&lt;</span>** och slutar med **<span class="purpletext">&gt;</span>**.
+Taggar/märken börjar med **&lt;** och slutar med **&gt;**.
 
-Mellan **<span class="purpletext">&lt; &gt;</span>** finns ett nyckelord som berättar vilken typ av tagg det är.
+Mellan **&lt; &gt;** finns ett nyckelord som berättar vilken typ av tagg det är.
 
 I HTML kan man använde både stora (versaler) och små (gemener) bokstäver för att skriva taggarna.
 
-<span class="purpletext">Men enligt god programmeringspraxis kodar man med små bokstäver.</span>
+**Men enligt god programmeringspraxis kodar man med små bokstäver.**
 
 --
 
