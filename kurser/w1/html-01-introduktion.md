@@ -236,6 +236,8 @@ Via **Visa källa/Inspektera element** kommer du åt att se HTML-koden, här syn
 
 Kommentera upp koden vad den gör.
 
+Observera det är två bindestreck i vardera ände.
+
 --
 
 ```html
