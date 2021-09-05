@@ -294,7 +294,7 @@ selektorA > selektorB {
 }
 ```
 
-Påverkar alla selektorB som är barn till selektorA.
+Påverkar alla **selektorB** som är barn till **selektorA**.
 
 ```css
 div > ol {
