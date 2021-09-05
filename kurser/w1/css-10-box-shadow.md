@@ -150,6 +150,51 @@ div {
 
 ---
 
+## Ex 9
+
+```css [ ]
+.ex {
+  box-shadow:
+    rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+```
+
+![bild](images/shadow-1.png)
+
+---
+
+## Ex 10
+
+```css [ ]
+.ex {
+  box-shadow:
+    rgb(232, 204, 204) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+```
+
+![bild](images/shadow-1.png)
+
+---
+
+## Ex 11
+
+```css [ ]
+.ex {
+  box-shadow:
+    rgba(40, 146, 70, 0.4) 5px 5px,
+    rgba(40, 146, 70, 0.3) 10px 10px,
+    rgba(40, 146, 70, 0.2) 15px 15px,
+    rgba(40, 146, 70, 0.1) 20px 20px,
+    rgba(40, 146, 70, 0.05) 25px 25px;
+}
+```
+
+![bild](images/shadow-3.png)
+
+---
+
 # Bra källor
 
 * [https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
