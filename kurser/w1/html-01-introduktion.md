@@ -40,7 +40,7 @@ I HTML kan man använde både stora (versaler) och små (gemener) bokstäver fö
 
 --
 
-```html
+```html [ ]
 <title>Datorteknik</title>
 ```
 
@@ -61,7 +61,7 @@ Tomma taggar är taggar som inte har en sluttagg.
 <br /> (XHTML)
 ```
 
-För manuell radbrytning använder vi br-taggen. 
+För manuell radbrytning använder vi br-taggen.
 
 I den äldre xhtml-standarden måste även tomma taggar avslutas.
 
@@ -69,7 +69,7 @@ I den äldre xhtml-standarden måste även tomma taggar avslutas.
 
 # En enkel webbsida
 
-```html
+```html [ ]
 <!DOCTYPE html>
 <html lang="sv">
   <head>
@@ -90,7 +90,7 @@ I den äldre xhtml-standarden måste även tomma taggar avslutas.
 
 # Dokumenttyp
 
-```html
+```html [ ]
 <!DOCTYPE html>
 ```
 Anger typ av dokument och hur det ska tolkas.
@@ -103,14 +103,14 @@ Anges inte dokumenttyp används **Quirk mode**, dvs det är upp till webbläsare
 
 ## Exempel på äldre versioner
 
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+```html [ ]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
 "http://www.w3.org/TR/html4/frameset.dtd">
 ```
 
@@ -118,7 +118,7 @@ Anges inte dokumenttyp används **Quirk mode**, dvs det är upp till webbläsare
 
 # HTML-taggen
 
-```html
+```html [ ]
 <html>…</html>
 ```
 
@@ -129,7 +129,7 @@ Det är mellan dessa två allt ska finnas (utom DOCTYPE).
 
 --
 
-```html
+```html [ ]
 <html lang="sv"> Svenska
 <html lang="en-US"> Amerikansk engelska
 <html lang="en"> Engelska
@@ -144,11 +144,11 @@ Med attributet **dir** kan man ange textorientering.
 
 # Head-taggen
 
-```html
+```html [ ]
 <head>
-  <title>Teknikprogrammet</title>  
+  <title>Teknikprogrammet</title>
 </head>
-``` 
+```
 
 Innehåller beskrivande taggar om själva dokumentet, till exempel teckentabell, titel m.m (metadata).
 
@@ -158,15 +158,15 @@ När det gäller innehållet i **title** så ska vi följa riktlinjen [Skriv bes
 
 ### Metadata
 
-```html
+```html [ ]
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Spikarnas paradis">
   <meta name="keywords" content="Spik, Skruv">
   <meta name="author" content="Bo Spik">
-  <title>Teknikprogrammet</title>  
+  <title>Teknikprogrammet</title>
 </head>
-``` 
+```
 
 Metadata är data (information) om data
 
@@ -174,13 +174,13 @@ Metadata är data (information) om data
 
 # Body-taggen
 
-```html
+```html [ ]
 <body> … </body>
 ```
 
 Det här vi kodar och skriver allt innehåll som ska synas på webbplatsen.
 
-```html
+```html [ ]
 <body>
   <h1>En rubrik</h1>
 </body>
@@ -190,7 +190,7 @@ Det här vi kodar och skriver allt innehåll som ska synas på webbplatsen.
 
 # Filnamn
 
-Det är viktigt att döpa filerna på ett korrekt sätt. 
+Det är viktigt att döpa filerna på ett korrekt sätt.
 
 Här ska vi följa riktlinjen [Ge dokument filnamn som beskriver innehållet](https://webbriktlinjer.se/riktlinjer/9-ge-dokument-tydliga-filnamn/)
 
@@ -214,7 +214,7 @@ Se [Charref](https://dev.w3.org/html5/html-author/charref)
 
 --
 
-```html
+```html [ ]
 <p>A $lt; B</p>
 ```
 
@@ -230,7 +230,7 @@ Via **Visa källa/Inspektera element** kommer du åt att se HTML-koden, här syn
 
 --
 
-```html
+```html [ ]
 <!-- Text in här -->
 ```
 
@@ -240,7 +240,7 @@ Observera det är två bindestreck i vardera ände.
 
 --
 
-```html
+```html [ ]
 <!-- <p>Ett stycke text</p> -->
 ```
 

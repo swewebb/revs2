@@ -21,7 +21,7 @@
 <p>Lorem...</p>
 ```
 
-```css
+```css [ ]
 p {
   border: 1px solid #000;
   width: 500px;
@@ -34,7 +34,7 @@ p {
 
 --
 
-```css
+```css [ ]
 img {
   float: left;
   clear: both;

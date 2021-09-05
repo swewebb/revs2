@@ -6,7 +6,7 @@
 
 # Tabeller
 
-```css
+```css [ ]
 table {
   border-collapse: collapse;
 }
@@ -61,7 +61,7 @@ Man kan även, som i det här fallet, formatera med `list-style-type` på `<li>`
 
 --
 
-För en 1-2-3-lista använder vi vanligen ett av ovanstående värden. 
+För en 1-2-3-lista använder vi vanligen ett av ovanstående värden.
 
 Det finns en hel del till olika värden, se [https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type) samt [https://caniuse.com/#search=list-style-type](https://caniuse.com/#search=list-style-type)
 
@@ -74,7 +74,7 @@ Det finns en hel del till olika värden, se [https://developer.mozilla.org/en-US
 ## Bild som listpunkt
 
 
-```css
+```css [ ]
 .ex1 {
   list-style-image: url("bullet-red.png");
 }
@@ -92,7 +92,7 @@ Det finns andra sätt att sätta en bild som listenhet.
 
 --
 
-```css
+```css [ ]
 .ex2 {
   list-style-type: none;
   margin: 0;
@@ -115,7 +115,7 @@ Det finns andra sätt att sätta en bild som listenhet.
 
 Den här egenskapen använder vi för att placera själva listpunkten/listenheten.
 
-```css
+```css [ ]
 ol {
   border: 1px solid #000;
 }

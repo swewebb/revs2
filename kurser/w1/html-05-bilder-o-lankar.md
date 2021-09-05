@@ -7,7 +7,7 @@
 
 Länkar internt inom samma webbplats.
 
-```html
+```html [ ]
 <a href="index.html">Hem</a>
 ```
 
@@ -17,7 +17,7 @@ Den här metoden är det vanligaste.
 
 --
 
-```html
+```html [ ]
 <a href="https://www.abc.se/index.html">Hem</a>
 ```
 
@@ -29,7 +29,7 @@ Den här metoden är det vanligaste.
 
 Länkar till andra webbplatser
 
-```html
+```html [ ]
 <a href="https://www.abc.se">ABC-klubben</a>
 ```
 
@@ -43,7 +43,7 @@ Rekommenderad metod.
 
 --
 
-```html
+```html [ ]
 <a href="https://www.abc.se/index.html">ABC-klubben</a>
 ```
 
@@ -62,7 +62,7 @@ Fungerar endast så länge inte den andra webbplatsen ändrar namn på filen, t.
 
 # Bilder
 
-```html
+```html [ ]
 <img src="logga.jpg" alt="Startsidan" width="800" height="100">
 ```
 
@@ -76,7 +76,7 @@ Attributen **width** och **height** är valbara, men bör finnas med. Anges i pi
 
 # Klickbar bild med länk
 
-```html
+```html [ ]
 <a href="index.html">
 <img src="logga.jpg" alt="Startsidan" width="800" height="100">
 </a>
@@ -88,7 +88,7 @@ Klickbar bild som länkar till något...
 
 # Picture-taggen
 
-```html
+```html [ ]
 <picture>...</picture>
 ```
 
@@ -98,11 +98,11 @@ Klientens webbläsare kommer att gå igenom de source-taggar som finns för att 
 
 --
 
-```html
+```html [ ]
 <picture>
-  <source srcset="half.jpg" 
+  <source srcset="half.jpg"
           media="(min-width: 800px)">
-  <source srcset="full.jpg" 
+  <source srcset="full.jpg"
           media="(min-width: 1500px)">
   <img src="face.jpg" alt="">
 </picture>
@@ -114,7 +114,7 @@ I det här fallet kommer klientens webbläsare att välja en av de tre bilderna 
 
 # Figure-taggen
 
-```html
+```html [ ]
 <figure>...</figure>
 ```
 
@@ -124,7 +124,7 @@ Oftast tillsammans med taggen **figcaption** som används för att ange figurbes
 
 --
 
-```html
+```html [ ]
 <figure>
   <img src="http://placekitten.com/g/130/130">
   <figcaption>En mästerkatt utan stövlar.</figcaption>
@@ -135,7 +135,7 @@ Oftast tillsammans med taggen **figcaption** som används för att ange figurbes
 
 --
 
-```html
+```html [ ]
 <figure>
   <img src="http://placekitten.com/g/80/80" alt="">
   <img src="http://www.placecage.com/80/80" alt="">

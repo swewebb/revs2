@@ -8,7 +8,7 @@
 
 Med egenskapen `background-color` kan man ange bakgrundsfärgen i en selektor (CSS-regel).
 
-```css
+```css [ ]
 body {
   background-color: #222f3e;
 }
@@ -34,7 +34,7 @@ h1 {
 
 För att använda en bild som bakgrund använder man egenskapen `background-image`.
 
-```css
+```css [ ]
 body {
   background-image: url('bild.jpg');
 }
@@ -60,9 +60,9 @@ Vi har följande värden att använda oss av:
 
 --
 
-```css
+```css [ ]
 body {
-  background-image: url('bild.jpg'); 
+  background-image: url('bild.jpg');
   background-repeat: no-repeat;
 }
 ```
@@ -71,9 +71,9 @@ body {
 
 --
 
-```css
+```css [ ]
 body {
-  background-image: url('bild.jpg'); 
+  background-image: url('bild.jpg');
   background-repeat: repeat-x;
 }
 ```
@@ -82,9 +82,9 @@ body {
 
 --
 
-```css
+```css [ ]
 body {
-  background-image: url('bild.jpg'); 
+  background-image: url('bild.jpg');
   background-repeat: repeat-y;
 }
 ```
@@ -99,7 +99,7 @@ Värdet *round* innebär att bilderna i "kedjan" kommer att sträckas ut för at
 
 --
 
-```css
+```css [ ]
 .space {
   background-image: url('donut.png');
   background-repeat: round;
@@ -145,7 +145,7 @@ Vi har följande värden att använda oss av:
 
 --
 
-```css
+```css [ ]
 body {
   background-image: url('bild.jpg');
   background-attachment: scroll; /* Standardvärdet */
@@ -162,7 +162,7 @@ Den här deklarationen behövs ej då *scroll* är standardvärdet om inget anna
 
 --
 
-```css
+```css [ ]
 body {
   background-image: url('bild.jpg');
   background-attachment: fixed;
@@ -175,7 +175,7 @@ body {
 
 --
 
-```css
+```css [ ]
 .box {
   background-image: url('bild.jpg');
 
@@ -205,7 +205,7 @@ Som du ser så kommer bakgrunden att vara fixerad som standard.
 
 --
 
-```css
+```css [ ]
 .box {
   background-image: url('bild.jpg');
   background-attachment: local;
@@ -231,7 +231,7 @@ Anger vi nu att `background-attachment` ska ha värdet *local* så kommer bakgru
 
 Med egenskapen `background-position` kan vi ange hur vi vill att bakgrunden ska placeras.
 
-```css
+```css [ ]
 div {
   border: 1px solid #000;
   height: 100px;
@@ -261,7 +261,7 @@ Här har vi anget hur vi vill att alla div:ar ska se ut.
 
 --
 
-```css
+```css [ ]
 .topleft {
   background-image: url('donut.png');
   background-position: top left;
@@ -285,7 +285,7 @@ Här har vi anget hur vi vill att alla div:ar ska se ut.
 
 --
 
-```css
+```css [ ]
 .centerleft {
   background-image: url('donut.png');
   background-position: center left;
@@ -309,7 +309,7 @@ Här har vi anget hur vi vill att alla div:ar ska se ut.
 
 --
 
-```css
+```css [ ]
 .bottomleft {
   background-image: url('donut.png');
   background-position: bottom left;
@@ -339,7 +339,7 @@ Här har vi anget hur vi vill att alla div:ar ska se ut.
 <div class="blandad"></div>
 ```
 
-```css
+```css [ ]
 .relativ {
   background-image: url('donut.png');
   background-position: 15% 70%;
@@ -363,7 +363,7 @@ Här har vi anget hur vi vill att alla div:ar ska se ut.
 
 --
 
-```css
+```css [ ]
 body {
   background-color: #ff9ff3;
   background-image: url('donut.png');
@@ -393,7 +393,7 @@ Med egenskapen `background` kan vi ange följande:
 
 De egenskaper som man inte anger kommer att få sina standardvärden. Läs mer på [https://developer.mozilla.org/en-US/docs/Web/CSS/background](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
 
-```css
+```css [ ]
 p {
   background: red url('bg.png');
 }

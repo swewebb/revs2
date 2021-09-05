@@ -100,7 +100,7 @@ Tänk på att teckensnitten måste vara installerade på klienten (finns lösnin
 ## Exempel
 
 
-```css
+```css [ ]
 .ex1 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -135,7 +135,7 @@ Se [mdn-font-size för mer om tillåtna enheter](https://developer.mozilla.org/e
 
 --
 
-```css
+```css [ ]
 p {
   font-size: 40px;
 }
@@ -157,7 +157,7 @@ Som standard i webbläsarna har vi en textstorlek på 16px.
 
 --
 
-```css
+```css [ ]
 h1 {
   font-size: 2em; /*16px * 2 = 32px*/
 }
@@ -165,7 +165,7 @@ h1 {
 
 --
 
-```css
+```css [ ]
 html {
   font-size: 20px;
 }
@@ -180,7 +180,7 @@ h1 {
 ### "Problem" med em
 
 
-```css
+```css [ ]
 html {font-size: 20px;}
 
 i {font-size: 1.5em;}
@@ -205,7 +205,7 @@ Här blir i:et **20\*1,5= 30px** och b:et blir **30px\*1,5=45px**
 **Rem** är en relativ storlek som baseras på html-taggens text-storlek.
 
 
-```css
+```css [ ]
 html {font-size: 20px;}
 
 i {font-size: 1.5rem;}
@@ -241,7 +241,7 @@ Se även [mdn-color-value för mer om färger](https://developer.mozilla.org/en-
 
 --
 
-```css
+```css [ ]
 p {
   color: red;
 }
@@ -261,7 +261,7 @@ Se [mdn-font-weight för mer om tillåtna enheter](https://developer.mozilla.org
 
 --
 
-```css
+```css [ ]
 .ex1 {
   font-weight: bold;
 }
@@ -286,7 +286,7 @@ Se [mdn-text-transform för mer om tillåtna enheter](https://developer.mozilla.
 
 --
 
-```css
+```css [ ]
 .ex1 {
   text-transform: uppercase;
 }
@@ -311,7 +311,7 @@ Vanliga enheter är *normal*, *small-caps*.
 
 Se [mdn-font-variant för mer om tillåtna enheter](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
 
-```css
+```css [ ]
 h1 {
   font-variant: small-caps;
 }
@@ -335,7 +335,7 @@ Se [mdn-letter-spacing för mer om tillåtna enheter](https://developer.mozilla.
 
 --
 
-```css
+```css [ ]
 .ex1 {
   letter-spacing: 0.1em;
 }
@@ -367,7 +367,7 @@ Se [mdn-word-spacing för mer om tillåtna enheter](https://developer.mozilla.or
 
 --
 
-```css
+```css [ ]
 .ex1 {
   word-spacing: 0.1em;
 }
@@ -399,7 +399,7 @@ Se [mdn-line-height för mer om tillåtna enheter](https://developer.mozilla.org
 
 --
 
-```css
+```css [ ]
 .lineheight {
   line-height: 150%;
 }
@@ -424,7 +424,7 @@ Se [mdn-text-align för mer om tillåtna enheter](https://developer.mozilla.org/
 
 --
 
-```css
+```css [ ]
 .ex1 {
   text-align: center;
 }
@@ -454,7 +454,7 @@ Se [mdn-text-decoration för mer om tillåtna enheter](https://developer.mozilla
 
 --
 
-```css
+```css [ ]
 p {
   text-decoration: line-through;
 }
@@ -478,7 +478,7 @@ Se [mdn-text-indent för mer om tillåtna enheter](https://developer.mozilla.org
 
 --
 
-```css
+```css [ ]
 p {
   text-indent: 2em;
   margin: 0;
@@ -500,7 +500,7 @@ p {
 
 --
 
-```css
+```css [ ]
 selektor {
   font: font-style font-variant font-weight font-size/line-height font-family;
 }
@@ -526,7 +526,7 @@ Observera ordningen!
 
 ## Utan shorthand
 
-```css
+```css [ ]
 h1 {
   font-style: italic;
   font-variant: small-caps;
@@ -543,7 +543,7 @@ h1 {
 
 ## Med shorthand
 
-```css
+```css [ ]
 h1 {
     font: italic small-caps bold 1.5em/1.5em arial, helvetica, sans-serif;
 }

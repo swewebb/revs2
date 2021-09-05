@@ -14,7 +14,7 @@ Se [https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes](https://dev
 
 --
 
-```css
+```css [ ]
 selektor:pseudoklass {
     egenskap: värde;
 }
@@ -27,7 +27,7 @@ Anges **alltid** med ett : följt av klassnamnet.
 
 Matchar ett specifikt element som är det första barnet till sin förälder.
 
-```css
+```css [ ]
 li {
     color: red;
 }
@@ -69,7 +69,7 @@ li:first-child {
 
 --
 
-```css
+```css [ ]
 ol:first-child {
   color: cornflowerblue;
   font-weight: bold;
@@ -124,7 +124,7 @@ Vi utgår från samma html-kod som tidigare
 
 --
 
-```css
+```css [ ]
 ol:first-of-type {
   color: cornflowerblue;
   font-weight: bold;
@@ -141,7 +141,7 @@ Den här regeln kommer att påverka den första ordnade listan.
 
 # :nth-child
 
-```css
+```css [ ]
 tr:nth-child(odd) {
   background-color: #55efc4;
 }
@@ -176,7 +176,7 @@ Här kan vi använda oss av:
 
 --
 
-```css
+```css [ ]
 a:link {
     color: blue;
 }
@@ -212,7 +212,7 @@ Se [https://developer.mozilla.org/en-US/docs/Web/CSS/pseudo-elements](https://de
 
 --
 
-```css
+```css [ ]
 selektor::pseudoelement {
     egenskap: värde;
 }
@@ -228,7 +228,7 @@ Anges **alltid** med :: följt av elementnamnet.
 
 Precis som det låter så gäller selektorn enbart för den första bokstaven.
 
-```css
+```css [ ]
 p::first-letter {
   background-color: cornflowerblue;
   font-weight: bold;
@@ -259,7 +259,7 @@ p::first-letter {
 </ol>
 ```
 
-```css
+```css [ ]
 ol:first-of-type li::first-letter {
   background-color: cornflowerblue;
   font-weight: bold;
@@ -276,7 +276,7 @@ ol:first-of-type li::first-letter {
 
 Precis som det låter så gäller selektorn enbart för den första raden.
 
-```css
+```css [ ]
 p::first-line {
   font-variant: small-caps;
   font-size: 1.2em;
@@ -293,7 +293,7 @@ p::first-line {
 
 Det här pseudoelementet kan vi använda för att ange hur det ska se ut när vi markerar en text.
 
-```css
+```css [ ]
 p::selection {
   background-color: pink;
 }
@@ -312,7 +312,7 @@ p::selection {
 
 ## Vad händer här?
 
-```css
+```css [ ]
 *::selection {
   background-color: pink;
 }
@@ -332,7 +332,7 @@ Används för att lägga till något till ett element med hjälp av egenskapen *
 
 --
 
-```css
+```css [ ]
 .celsius {
   color: red;
 }

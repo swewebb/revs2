@@ -5,27 +5,27 @@
 
 # Grundläggande tabelltaggar
 
-```html
-<table>…</table> 
+```html [ ]
+<table>…</table>
 ```
 
 Skapar tabellen
 
-```html
-<tr>…</tr> 
+```html [ ]
+<tr>…</tr>
 ```
 
 Skapar en rad (table row)
 
-```html
-<td>…</td> 
+```html [ ]
+<td>…</td>
 ```
 
 Skapar en cell (table data)
 
 --
 
-```html
+```html [ ]
 <table>
   <tr>
     <td>R1K1</td>
@@ -41,7 +41,7 @@ Minsta möjliga tabell har 1 rad och 1 cell!
 
 --
 
-```html
+```html [ ]
   <title>Grundläggande HTML</title>
 
   <style>
@@ -78,7 +78,7 @@ Använder du **codepen** så kopierar du in följande i rutan CSS.
 
 # En större tabell
 
-```html
+```html [ ]
 <table>
   <tr>
     <td>R1K1</td>
@@ -103,7 +103,7 @@ Två rader med tre celler i varje.
 
 # Rubrikceller
 
-```html
+```html [ ]
 <table>
   <tr>
     <th>R1K1</th>
@@ -126,7 +126,7 @@ Två rader med tre celler i varje.
 
 # Tabellrubrik
 
-```html
+```html [ ]
 <table>
   <caption>Tabellrubrik</caption>
   <tr>
@@ -152,7 +152,7 @@ Två rader med tre celler i varje.
 
 --
 
-```html
+```html [ ]
 <table>
   <tr>
     <td>Cell 1</td>
@@ -173,7 +173,7 @@ Första tabellen innan sammanslagning.
 
 --
 
-```html
+```html [ ]
 <table>
   <tr>
     <td colspan="2">Cell 1</td>
@@ -197,7 +197,7 @@ Med attributet **colspan** kan vi slå samman flera celler till en och det kolum
 
 --
 
-```html
+```html [ ]
 <table>
   <tr>
     <td>Cell 1</td>
@@ -218,7 +218,7 @@ Första tabellen innan sammanslagning.
 
 --
 
-```html
+```html [ ]
 <table>
   <tr>
     <td rowspan="2">Cell 1</td>

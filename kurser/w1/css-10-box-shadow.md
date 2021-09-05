@@ -9,7 +9,7 @@
 Med egenskapen `box-shadow` kan vi lägga till skuggor.
 
 
-```css
+```css [ ]
 .selektor {
   box-shadow: inset offset-x offset-y blur-radius spread-radius color
 }
@@ -21,7 +21,7 @@ Med egenskapen `box-shadow` kan vi lägga till skuggor.
 <div class="ex"></div>
 ```
 
-```css
+```css [ ]
 div {
   background-color: powderblue;
   height: 100px;
@@ -33,7 +33,7 @@ div {
 
 ## Ex 1
 
-```css
+```css [ ]
 .ex {
   /* offset-x offset-y color */
   box-shadow: 20px 40px black;
@@ -48,7 +48,7 @@ div {
 
 ## Ex 2
 
-```css
+```css [ ]
 .ex {
   /* offset-x offset-y color */
   box-shadow: 20px -40px black;
@@ -63,7 +63,7 @@ div {
 
 ## Ex 3
 
-```css
+```css [ ]
 .ex {
   /* offset-x offset-y blur-radius color */
   box-shadow: 20px 40px 20px black;
@@ -78,7 +78,7 @@ div {
 
 ## Ex 4
 
-```css
+```css [ ]
 .ex {
   /* offset-x offset-y blur-radius spread-radius color */
   box-shadow: 20px 40px 20px 20px black;
@@ -93,7 +93,7 @@ div {
 
 ## Ex 5
 
-```css
+```css [ ]
 .ex {
   /* offset-x offset-y blur-radius spread-radius color */
   box-shadow: 20px 40px 20px -20px black;
@@ -108,7 +108,7 @@ div {
 
 ## Ex 6
 
-```css
+```css [ ]
 .ex {
   /* inset offset-x offset-y color */
   box-shadow: inset 10px 10px black;
@@ -123,7 +123,7 @@ div {
 
 ## Ex 7
 
-```css
+```css [ ]
 .ex {
   /* offset-x offset-y blur-radius color */
   box-shadow: 0 12px 12px -12px black;
@@ -138,9 +138,9 @@ div {
 
 ## Ex 8
 
-```css
+```css [ ]
 .ex {
-  box-shadow: 
+  box-shadow:
     0 16px 12px -12px black,
     16px 0 12px -12px red;
 }

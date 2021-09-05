@@ -17,7 +17,7 @@ Det finns ett flertal olika sätt att ange en färg. Vi kommer att titta på fö
 
 Här anger namnet på den färg man vill använda sig av.
 
-```css
+```css [ ]
 .ex1 {
   background: blue;
 }
@@ -80,7 +80,7 @@ Om vi har en hexfärg med sex siffror där vardera del består av likadant värd
 
 ## Exempel
 
-```css
+```css [ ]
 body {
   background-color: #bc7;
 }
@@ -104,7 +104,7 @@ p {
 
 Anges med ett värde mellan 0-255 för vardera R, G, B, t.ex *rgb(25, 168, 240)*
 
-```css
+```css [ ]
 body {
   background-color: rgb(188, 194, 198);
 }
@@ -120,7 +120,7 @@ p {
 
 Anges med ett procentvärde mellan 0-100% för vardera R, G, B, t.ex *rgb(55%, 16%, 24%)*
 
-```css
+```css [ ]
 body {
   background-color: rgb(74%, 75%, 77%)
 }
@@ -136,7 +136,7 @@ p {
 
 Med hjälp av alpha-kanalen kan vi skapa transparanta färger. Vi använder oss då av **rgba** istället för **rgb**.
 
-```css
+```css [ ]
 body {
   background-image:url(bg.jpg);
 }

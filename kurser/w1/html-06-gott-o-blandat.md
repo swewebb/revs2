@@ -7,7 +7,7 @@
 
 --
 
-```html
+```html [ ]
 <cite>...</cite>
 ```
 
@@ -22,7 +22,7 @@ Används för att ange en titel på ett verk, t ex:
 
 --
 
-```html
+```html [ ]
 <p>En av mina favoritfilmer är 
 <cite><a href="http://www.imdb.com/title/tt0089907/">Return of the livning dead</a></cite></p>
 ```
@@ -35,14 +35,14 @@ Används för att ange en titel på ett verk, t ex:
 
 --
 
-```html
+```html [ ]
 <mark>...</mark>
 ```
 Används för att markera något i en text i referenssyfte, på grund av dess betydelse i ett annat sammanhang.
 
 --
 
-```html
+```html [ ]
 <blockquote lang="en-GB">
   <p>Look around and you will find, no-one's really 
   <mark>colour</mark> blind.</p>
@@ -59,11 +59,11 @@ Används för att markera något i en text i referenssyfte, på grund av dess be
 
 --
 
-```html
+```html [ ]
 <time>...</time>
 ```
 
-```html
+```html [ ]
 <p>Idag är det <time datetime="2017-09-10">måndag</time></p>
 <p>Under <time>2012</time> var patentstriderna inom...</p>
 ```
@@ -76,11 +76,11 @@ Används för att markera något i en text i referenssyfte, på grund av dess be
 
 --
 
-```html
+```html [ ]
 <small>...</small>
 ```
 
-```html
+```html [ ]
 <p><small lang="en">&copy; copyright 2010 Example Corp.</small></p>
 
 <p><small><strong>För köp av ABC:S produkter...</strong></small></p>
@@ -94,7 +94,7 @@ Används för att markera något i en text i referenssyfte, på grund av dess be
 
 --
 
-```html
+```html [ ]
 <hr>
 ```
 
@@ -104,7 +104,7 @@ Inte speciellt vanlig idag.
 
 --
 
-```html
+```html [ ]
 <p>lorem...</p>
 <hr>
 <p>lorem...</p>
@@ -118,7 +118,7 @@ Inte speciellt vanlig idag.
 
 --
 
-```html
+```html [ ]
 <pre>…</pre>
 ```
 
@@ -128,7 +128,7 @@ Visas vanligen som Courier eller annat monospacetypsnitt (alla tecken tar lika m
 
 --
 
-```html
+```html [ ]
 <pre>
 <code>
 &lt;?php
@@ -153,7 +153,7 @@ print $summa;
 
 --
 
-```html
+```html [ ]
 <details>
   <summary>Details</summary>
   Det vi vill <i>toggla</i>

@@ -20,13 +20,13 @@ Används för att skapa presentation av innehåll, t.ex färger, typsnitt och la
 
 --
 
-```css
+```css  [ ]
 selektor {
   egenskap: värde;
 }
 ```
 
-```css
+```css  [ ]
 p {
   color: blue;
 }
@@ -57,7 +57,7 @@ Tre huvudgrupper av värden:
 ## Flera deklarationer  i samma regel
 
 
-```css
+```css  [ ]
 p {
   color: red;
   font-size: 20px;
@@ -73,7 +73,7 @@ p {
 ## Flera selektorer kan grupperas
 
 
-```css
+```css  [ ]
 h1, h2, h3 {
   color: red;
 }
@@ -88,7 +88,7 @@ h1, h2, h3 {
 ## Flera regler kan appliceras på samma selektor
 
 
-```css
+```css  [ ]
 h1, h2, h3 {
   color: red;
 }
@@ -166,7 +166,7 @@ Separat fil som länkas in mellan **&lt;head&gt;&lt;/head&gt;**
 <link rel="stylesheet" href="format.css">
 ```
 
-```css
+```css  [ ]
 body {
   background-color: #FFFF64;
 }
@@ -207,7 +207,7 @@ Desto högre nummer desto senare läses de in och vinner över lägre nummer.
 ## Universiell
 
 
-```css
+```css  [ ]
 * {
     egenskap: värde;
 }
@@ -216,7 +216,7 @@ Desto högre nummer desto senare läses de in och vinner över lägre nummer.
 Påverkar alla selektorer!
 
 
-```css
+```css  [ ]
 * {
   margin: 0;
   padding: 0;
@@ -227,7 +227,7 @@ Påverkar alla selektorer!
 
 ## Element
 
-```css
+```css  [ ]
 selektor {
   egenskap: värde;
 }
@@ -235,7 +235,7 @@ selektor {
 
 Påverkar alla taggar/element av angiven typ.
 
-```css
+```css  [ ]
 p {
   color: red;
 }
@@ -249,7 +249,7 @@ p {
 
 ## Ättlingar (descendant)
 
-```css
+```css [ ]
 selektorA selektorB {
   egenskap: värde;
 }
@@ -257,7 +257,7 @@ selektorA selektorB {
 
 Påverkar alla **selektorB** släktningar till **selektorA**.
 
-```css
+```css [ ]
 div ol {
   border: 1px solid black;
 }
@@ -288,7 +288,7 @@ Påverkar alla ordnade listor som är släktningar till div-taggen.
 
 ## Barn (child)
 
-```css
+```css [ ]
 selektorA > selektorB {
   egenskap: värde;
 }
@@ -296,7 +296,7 @@ selektorA > selektorB {
 
 Påverkar alla **selektorB** som är barn till **selektorA**.
 
-```css
+```css [ ]
 div > ol {
   border: 1px solid black;
 }
@@ -327,7 +327,7 @@ Påverkar alla ordnade listor som är barn till div-taggen.
 
 ## Intilliggande (adjacent)
 
-```css
+```css [ ]
 selektor + selektor {
   egenskap: värde;
 }
@@ -335,7 +335,7 @@ selektor + selektor {
 
 Påverkar vald selektor som ligger direkt efter.
 
-```css
+```css [ ]
 h1 + p {
   background-color: powderblue;
 }
@@ -355,7 +355,7 @@ h1 + p {
 
 ## Klasser (class)
 
-```css
+```css [ ]
 .klassnamn {
   egenskap: värde;
 }
@@ -363,7 +363,7 @@ h1 + p {
 
 En klass kan användas på noll eller flera ställen per html-dokument.
 
-```css
+```css [ ]
 .test {
   background-color: powderblue;
 }
@@ -382,7 +382,7 @@ En klass kan användas på noll eller flera ställen per html-dokument.
 
 # Id
 
-```css
+```css [ ]
 #idnamn {
   egenskap: värde;
 }
@@ -390,7 +390,7 @@ En klass kan användas på noll eller flera ställen per html-dokument.
 
 Får enbart kallas på en gång per html-dokument. Om inget annat sägs använder vi inte id:n!
 
-```css
+```css [ ]
 #test {
   background-color: powderblue;
 }

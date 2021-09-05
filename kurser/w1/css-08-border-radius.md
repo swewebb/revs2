@@ -16,7 +16,7 @@ Vi behöver *inte* ha en kantlinje för att kunna använda oss av `border-radius
 
 # Alla hörn
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 20px;
@@ -29,9 +29,9 @@ div {
 
 ---
 
-# Top-left och bottom-right | top-right och bottom-left 
+# Top-left och bottom-right | top-right och bottom-left
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 20px 40px;
@@ -46,7 +46,7 @@ div {
 
 # Top-left | top-right | bottom-right | bottom-left
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 20px 40px 70px 100px;
@@ -61,7 +61,7 @@ div {
 
 # Procent
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 50%;
@@ -74,7 +74,7 @@ div {
 
 --
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 50%;
@@ -87,7 +87,7 @@ div {
 
 --
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 50% 0;
@@ -103,7 +103,7 @@ div {
 # x- och y-värde
 
 
-```css
+```css [ ]
 div {
   background-color: #d63031;
   border-radius: 20px/40px;

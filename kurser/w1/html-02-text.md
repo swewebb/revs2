@@ -5,7 +5,7 @@
 
 # Rubriker
 
-```html
+```html [ ]
 <h1>...</h1>
 <h2>...</h2>
 <h3>...</h3>
@@ -20,7 +20,7 @@
 
 --
 
-```html
+```html [ ]
 <body>
   <h1>En rubrik</h1>
   <p>Massa text</p>
@@ -52,7 +52,7 @@ Man hoppar ***aldrig*** över en nivå!
 
 # Stycken
 
-```html
+```html [ ]
 <p>...</p>
 ```
 
@@ -64,13 +64,13 @@ Obs! Radbrytningar (**&lt;br&gt;**) ska **inte** användas för styckesindelning
 
 --
 
-```html
+```html [ ]
 <p>...</p>
 ```
 
 &nbsp;
 
-```html
+```html [ ]
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolor dolorem obcaecati autem omnis ab velit dolores ducimus nostrum debitis magni sint optio aliquam soluta, sit aut necessitatibus dolore fuga.</p>
 <p>Ea a porro maiores sequi saepe sit veniam expedita nostrum reiciendis. Reprehenderit autem ut id sunt voluptatum debitis impedit deserunt voluptates consectetur sed! Illum quia veritatis quod. Reprehenderit, minima! Rem.</p>
 ```
@@ -83,11 +83,11 @@ Obs! Radbrytningar (**&lt;br&gt;**) ska **inte** användas för styckesindelning
 
 # Kursiv text
 
-```html
+```html [ ]
 <i>...</i>
 ```
 
-```html
+```html [ ]
 <h1><i>Rubriken</i></h1>
 <p>Vi <i>testar</i></p>
 ```
@@ -100,11 +100,11 @@ Obs! Radbrytningar (**&lt;br&gt;**) ska **inte** användas för styckesindelning
 
 # Fet text
 
-```html
+```html [ ]
 <b>...</b>
 ```
 
-```html
+```html [ ]
 <h1><b>Rubriken</b></h1>
 <p>Vi <b>testar</b></p>
 ```
@@ -119,7 +119,7 @@ Obs! Radbrytningar (**&lt;br&gt;**) ska **inte** användas för styckesindelning
 
 # Betoningar
 
-```html
+```html [ ]
 <em>...</em>
 ```
 
@@ -129,7 +129,7 @@ Visas vanligen som kursiv text.
 
 --
 
-```html
+```html [ ]
 <p>Vi <em>testar</em></p>
 ```
 
@@ -137,7 +137,7 @@ Visas vanligen som kursiv text.
 
 --
 
-```html
+```html [ ]
 <strong>...</strong>
 ```
 
@@ -147,7 +147,7 @@ Visas vanligen som fet text.
 
 --
 
-```html
+```html [ ]
 <p>Vi <strong>testar</strong></p>
 ```
 
@@ -157,11 +157,11 @@ Visas vanligen som fet text.
 
 # Upphöjd text
 
-```html
+```html [ ]
 <sup>...</sup>
 ```
 
-```html
+```html [ ]
 <p>Vi <sup>testar</sup></p>
 ```
 
@@ -173,11 +173,11 @@ Visas vanligen som fet text.
 
 # Nedsänkt text
 
-```html
+```html [ ]
 <sub>...</sub>
 ```
 
-```html
+```html [ ]
 <p>Vi <sub>testar</sub></p>
 ```
 
@@ -189,11 +189,11 @@ Visas vanligen som fet text.
 
 # Inaktuell text
 
-```html
+```html [ ]
 <del>...</del>
 ```
 
-```html
+```html [ ]
 <p>Vi <del>testar</del></p>
 ```
 
@@ -205,11 +205,11 @@ Visas vanligen som fet text.
 
 # Ny text
 
-```html
+```html [ ]
 <ins>...</ins>
 ```
 
-```html
+```html [ ]
 <p>Vi <ins>testar</ins></p>
 ```
 
@@ -231,13 +231,13 @@ Här kan du läsa mer om riktlinjen [Stryk aldrig under text som inte är länka
 
 # Förkortningar
 
-```html
+```html [ ]
 <abbr>...</abbr>
 ```
 
 &nbsp;
 
-```html
+```html [ ]
 <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
 ```
 
@@ -251,11 +251,11 @@ Här använder vi även det valbara attributet **title**.
 
 # Definition
 
-```html
+```html [ ]
 <dfn>...</dfn>
 ```
 
-```html
+```html [ ]
 <p>Genom att använda oss av <dfn title="U=I*R">Ohms lag</dfn> kunde vi lösa problemet.</p>
 ```
 
@@ -269,11 +269,11 @@ Här använder vi även det valbara attributet **title**.
 
 # Korta citat
 
-```html
+```html [ ]
 <q>...</q>
 ```
 
-```html
+```html [ ]
 <p>Did you know <q>The quick brown fox jumps over the lazy dog</q> contains every letter of the alphabet?</p>
 ```
 
@@ -287,11 +287,11 @@ Som du ser på bilden läggs citattecknen dit automatiskt.
 
 # Långa citat
 
-```html
+```html [ ]
 <blockquote>...</blockquote>
 ```
 
-```html
+```html [ ]
 <p>Lite text</p>
 <blockquote>
   <p>Vi testar citat</p>
@@ -305,7 +305,7 @@ Som du ser på bilden läggs citattecknen dit automatiskt.
 
 --
 
-```html
+```html [ ]
 <blockquote cite="http://www.george-orwell.org/1984/0.html">
   <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
   <footer>
@@ -324,29 +324,29 @@ Ett mer komplett exempel med attributet **cite** och taggen **cite**. Vi har äv
 
 # Nästling av taggar
 
-```html
+```html [ ]
 <p><i>Rätt</i></p>
 ```
 
-```html
+```html [ ]
 <i><p>Fel</p></i>
 ```
 
-```html
+```html [ ]
 <p><i>Fel</p></i>
 ```
 
 --
 
-```html
+```html [ ]
 <p><i><b>Rätt</b></i></p>
 ```
 
-```html
+```html [ ]
 <i><p><b>Fel</b></p></i>
 ```
 
-```html
+```html [ ]
 <p><i><b>Fel</p></i></b>
 ```
 

@@ -5,13 +5,13 @@
 
 # Ordnade listor
 
-```html
+```html [ ]
 <ol>
   <li>...</li>
 </ol>
 ```
 
-```html
+```html [ ]
 <ol>
   <li>Listenhet #1</li>
   <li>Listenhet #2</li>
@@ -27,13 +27,13 @@
 
 # Oordnade listor
 
-```html
+```html [ ]
 <ul>
   <li>...</li>
 </ul>
 ```
 
-```html
+```html [ ]
 <ul>
   <li>Listenhet #1</li>
   <li>Listenhet #2</li>
@@ -57,7 +57,7 @@ Hur ska vi koda för att få följande lista?
 
 ## Alternativ 1 - Felaktig!
 
-```html
+```html [ ]
 <ul>
   <li>Orange Goblin</li>
   <li>Ramones</li>
@@ -73,7 +73,7 @@ Hur ska vi koda för att få följande lista?
 
 ## Alternativ 2 - Korrekt!
 
-```html
+```html [ ]
 <ul>
   <li>Orange Goblin</li>
   <li>Ramones
@@ -92,19 +92,19 @@ Underlistan **måste** återfinnas inuti en listpunkt.
 
 # Beskrivningslistor
 
-```html
+```html [ ]
 <dl>...</dl>
 ```
 
 Skapar en beskrivningslista.
 
-```html
+```html [ ]
 <dt>...</dt>
 ```
 
 Används för att ange den term man vill beskriva.
 
-```html
+```html [ ]
 <dd>...</dd>
 ```
 
@@ -112,11 +112,11 @@ Används för själva beskrivningen.
 
 --
 
-```html
+```html [ ]
 <dl>
   <dt>Hamburgare</dt>
   <dd>Bröd-Kött-Bröd</dd>
-  
+
   <dt>Halv special</dt>
   <dd>Bröd-Korv-Mos</dd>
 </dl>
@@ -130,11 +130,11 @@ Används för själva beskrivningen.
 
 --
 
-```html
+```html [ ]
 <dl>
   <dt><dfn>RSS</dfn></dt>
   <dd>An XML format …</dd>
-  
+
   <dt><dfn>Weblog</dfn></dt>
   <dd>Contraction of …</dd>
 </dl>
@@ -144,7 +144,7 @@ Används för själva beskrivningen.
 
 --
 
-```html
+```html [ ]
 <dl>
   <dt lang="en-GB">
     <dfn>colour</dfn>
@@ -160,7 +160,7 @@ Används för själva beskrivningen.
 
 --
 
-```html
+```html [ ]
 <dl>
   <dt>Term</dt>
   <dd>Beskrivning 1</dd>

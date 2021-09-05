@@ -14,7 +14,7 @@
 
 --
 
-```css
+```css [ ]
 div {
   background-color: powderblue;
   height: 100px;
@@ -39,7 +39,7 @@ Man kan använda `min-width`, `max-width`, `min-height` och `max-height `för at
 --
 
 
-```css
+```css [ ]
 div {
   background-color: powderblue;
   height: 100px;
@@ -70,7 +70,7 @@ Med egenskapen `border-width` anger vi bredden på kantlinjen.
 
 --
 
-```css
+```css [ ]
 p {
   border-width: thin medium thick 10px;
 }
@@ -83,7 +83,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-width: thin medium thick;
 }
@@ -95,7 +95,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-width: thin medium;
 }
@@ -106,7 +106,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-width: thin;
 }
@@ -137,7 +137,7 @@ Med egenskapen `border-style` styr vi utseendet på kantlinjen. Här följer ett
 
 --
 
-```css
+```css [ ]
 p {
   border-style: dotted solid double dashed;
 }
@@ -150,7 +150,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-style:  dotted solid double;
 }
@@ -161,7 +161,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-style: dotted solid;
 }
@@ -172,7 +172,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-style: dotted;
 }
@@ -197,7 +197,7 @@ Med egenskapen `border-color` anger vi färgen på kantlinjen.
 
 --
 
-```css
+```css [ ]
 p {
   border-color: red green blue  yellow;
 }
@@ -209,7 +209,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-color:  red green blue;
 }
@@ -221,7 +221,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-color: red green;
 }
@@ -233,7 +233,7 @@ p {
 
 --
 
-```css
+```css [ ]
 p {
   border-color: red;
 }
@@ -260,9 +260,9 @@ Ange alltid `border-style` innan `border-color` då det måste finnas en border 
 
 Istället för att ange en egenskap i taget så kan vi använda oss egenskapen `border` och man skriver då värdena i ordningen *border-width border-style border-color*.
 
-```css
+```css [ ]
 p {
-  /*border: tjocklek utseende färg*/ 
+  /*border: tjocklek utseende färg*/
   border: 1px solid #000;
 }
 ```
@@ -283,7 +283,7 @@ Som vanligt kan vi styra alla sidor individuellt antingen via `margin` eller mha
 
 --
 
-```css
+```css [ ]
 div {
   background-color: powderblue;
   height: 100px;
@@ -317,7 +317,7 @@ div {
 
 ### Ett till exempel
 
-```css
+```css [ ]
 div {
   background-color: powderblue;
   height: 50px;
@@ -355,7 +355,7 @@ Som vanligt kan vi styra alla sidor individuellt antingen via `padding` eller mh
 
 --
 
-```css
+```css [ ]
 div {
   background-color: powderblue;
   margin: 5px;
