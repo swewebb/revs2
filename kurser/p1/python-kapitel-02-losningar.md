@@ -18,7 +18,7 @@ print('Hello world')
 
 ## Lösning 2
 
-```python
+```python [ ]
 txt='Hello world'
 
 print(txt)
@@ -32,7 +32,7 @@ print(txt)
 
 ## Lösning 1
 
-```python
+```python [ ]
 print("Lisa \"Superkodaren\" Hammare")
 ```
 
@@ -40,7 +40,7 @@ print("Lisa \"Superkodaren\" Hammare")
 
 ## Lösning 2
 
-```python
+```python [ ]
 print('Lisa "Superkodaren" Hammare')
 ```
 
@@ -48,7 +48,7 @@ print('Lisa "Superkodaren" Hammare')
 
 ## Lösning 3
 
-```python
+```python [ ]
 txt="Lisa \"Superkodaren\" Hammare"
 print(txt)
 ```
@@ -57,7 +57,7 @@ print(txt)
 
 ## Lösning 4
 
-```python
+```python [ ]
 txt='Lisa "Superkodaren" Hammare'
 print(txt)
 ```
@@ -70,7 +70,7 @@ print(txt)
 
 ## Lösning 1
 
-```python
+```python [ ]
 a = 50
 b = 960
 c = a + b
@@ -82,7 +82,7 @@ print(a, '+', b ,'=', c)
 
 ## Lösning 2
 
-```python
+```python [ ]
 a = 50
 b = 960
 c = a + b
@@ -94,7 +94,7 @@ print('{} + {} = {}'.format(a, b, c))
 
 ## Lösning 3
 
-```python
+```python [ ]
 a = 50
 b = 960
 c = a + b
@@ -106,7 +106,7 @@ print(f'{a} + {b} = {c}')
 
 ## Lösning 4
 
-```python
+```python [ ]
 a = 50
 b = 960
 c = a + b
@@ -122,7 +122,7 @@ print(str(a) + ' + ' + str(b) + ' = ' + str(c))
 
 ## Lösning 1
 
-```python
+```python [ ]
 a = 25
 b = 7
 c = a % b
@@ -134,7 +134,7 @@ print(a, '%', b ,'=', c)
 
 ## Lösning 2
 
-```python
+```python [ ]
 a = 25
 b = 7
 c = a % b
@@ -146,7 +146,7 @@ print('{} % {} = {}'.format(a, b, c))
 
 ## Lösning 3
 
-```python
+```python [ ]
 a = 25
 b = 7
 c = a % b
@@ -158,7 +158,7 @@ print(f'{a} % {b} = {c}')
 
 ## Lösning 4
 
-```python
+```python [ ]
 a = 50
 b = 960
 c = a % b
@@ -174,7 +174,7 @@ print(str(a) + ' % ' + str(b) + ' = ' + str(c))
 
 ## Lösning 1
 
-```python
+```python [ ]
 a = 25
 b = 7
 c = a // b
@@ -186,7 +186,7 @@ print(a, '//', b ,'=', c)
 
 ## Lösning 2
 
-```python
+```python [ ]
 a = 25
 b = 7
 c = a // b
@@ -198,7 +198,7 @@ print('{} // {} = {}'.format(a, b, c))
 
 ## Lösning 3
 
-```python
+```python [ ]
 a = 25
 b = 7
 c = a // b
@@ -210,7 +210,7 @@ print(f'{a} // {b} = {c}')
 
 ## Lösning 4
 
-```python
+```python [ ]
 a = 50
 b = 960
 c = a // b
@@ -226,7 +226,7 @@ print(str(a) + ' // ' + str(b) + ' = ' + str(c))
 
 ## Lösning 1
 
-```python
+```python [ ]
 a = 10
 b = 20
 c = a + b
@@ -238,7 +238,7 @@ print('Summan av {:.2f} och {:.2f} är {:.2f}'.format(a, b, c))
 
 ## Lösning 2
 
-```python
+```python [ ]
 a = 10
 b = 20
 c = a + b
@@ -254,7 +254,7 @@ print(f'Summan av {a:.2f} och {b:.2f} är {c:.2f}')
 
 ## Lösning 1
 
-```python
+```python [ ]
 dec = 24
 
 print('Dec: {} är Bin: {:08b}'.format(dec, dec))
@@ -264,7 +264,7 @@ print('Dec: {} är Bin: {:08b}'.format(dec, dec))
 
 ## Lösning 2
 
-```python
+```python [ ]
 dec = 24
 
 print('Dec: {0} är Bin: {0:08b}'.format(dec))
@@ -274,7 +274,7 @@ print('Dec: {0} är Bin: {0:08b}'.format(dec))
 
 ## Lösning 3
 
-```python
+```python [ ]
 dec = 24
 
 print(f'Dec: {dec} är Bin: {dec:08b}')
@@ -288,7 +288,7 @@ print(f'Dec: {dec} är Bin: {dec:08b}')
 
 ## Lösning 1
 
-```python
+```python [ ]
 txt = input("Ange ett heltal:")
 dec = int(txt)
 
@@ -299,7 +299,7 @@ print('Dec: {} är Bin: {:08b}'.format(txt, dec))
 
 ## Lösning 2
 
-```python
+```python [ ]
 dec = int(input("Ange ett heltal:"))
 
 print('Dec: {0} är Bin: {0:08b}'.format(dec))
@@ -309,7 +309,7 @@ print('Dec: {0} är Bin: {0:08b}'.format(dec))
 
 ## Lösning 3
 
-```python
+```python [ ]
 print('Dec: {0} är Bin: {0:08b}'.format(int(input("Ange ett heltal:"))))
 ```
 
@@ -317,7 +317,7 @@ print('Dec: {0} är Bin: {0:08b}'.format(int(input("Ange ett heltal:"))))
 
 ## Lösning 4
 
-```python
+```python [ ]
 dec = int(input("Ange ett heltal:"))
 
 print(f'Dec: {dec} är Bin: {dec:08b}')
