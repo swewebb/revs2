@@ -6,10 +6,6 @@
 
 --
 
-Vi har hittils arbetat med att skriva och köra kod i tolkläge.
-
-Idag kommer vi att introducera användandet av en IDE istället.
-
 **Kom ihåg!** Filändelsen är `.py`
 
 ---
