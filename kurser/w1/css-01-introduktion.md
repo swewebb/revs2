@@ -255,7 +255,7 @@ selektorA selektorB {
 }
 ```
 
-Påverkar alla selektorB släktningar till selektorA.
+Påverkar alla **selektorB** släktningar till **selektorA**.
 
 ```css
 div ol {
