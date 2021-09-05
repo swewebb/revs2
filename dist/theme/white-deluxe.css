@@ -302,6 +302,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   /* margin: var(--r-block-margin) 0; */
   margin: var(--r-block-margin) auto;
   display: inherit;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 /*********************************************
