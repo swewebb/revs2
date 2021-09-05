@@ -86,7 +86,6 @@ Obs! Radbrytningar (**&lt;br&gt;**) ska **inte** användas för styckesindelning
 ```html
 <i>...</i>
 ```
-&nbsp;
 
 ```html
 <h1><i>Rubriken</i></h1>
@@ -104,7 +103,6 @@ Obs! Radbrytningar (**&lt;br&gt;**) ska **inte** användas för styckesindelning
 ```html
 <b>...</b>
 ```
-&nbsp;
 
 ```html
 <h1><b>Rubriken</b></h1>
@@ -162,7 +160,6 @@ Visas vanligen som fet text.
 ```html
 <sup>...</sup>
 ```
-&nbsp;
 
 ```html
 <p>Vi <sup>testar</sup></p>
@@ -179,7 +176,6 @@ Visas vanligen som fet text.
 ```html
 <sub>...</sub>
 ```
-&nbsp;
 
 ```html
 <p>Vi <sub>testar</sub></p>
@@ -196,7 +192,6 @@ Visas vanligen som fet text.
 ```html
 <del>...</del>
 ```
-&nbsp;
 
 ```html
 <p>Vi <del>testar</del></p>
@@ -213,7 +208,6 @@ Visas vanligen som fet text.
 ```html
 <ins>...</ins>
 ```
-&nbsp;
 
 ```html
 <p>Vi <ins>testar</ins></p>
@@ -261,8 +255,6 @@ Här använder vi även det valbara attributet **title**.
 <dfn>...</dfn>
 ```
 
-&nbsp;
-
 ```html
 <p>Genom att använda oss av <dfn title="U=I*R">Ohms lag</dfn> kunde vi lösa problemet.</p>
 ```
@@ -281,8 +273,6 @@ Här använder vi även det valbara attributet **title**.
 <q>...</q>
 ```
 
-&nbsp;
-
 ```html
 <p>Did you know <q>The quick brown fox jumps over the lazy dog</q> contains every letter of the alphabet?</p>
 ```
@@ -300,8 +290,6 @@ Som du ser på bilden läggs citattecknen dit automatiskt.
 ```html
 <blockquote>...</blockquote>
 ```
-
-&nbsp;
 
 ```html
 <p>Lite text</p>
@@ -340,13 +328,9 @@ Ett mer komplett exempel med attributet **cite** och taggen **cite**. Vi har äv
 <p><i>Rätt</i></p>
 ```
 
-&nbsp;
-
 ```html
 <i><p>Fel</p></i>
 ```
-
-&nbsp;
 
 ```html
 <p><i>Fel</p></i>
@@ -358,14 +342,14 @@ Ett mer komplett exempel med attributet **cite** och taggen **cite**. Vi har äv
 <p><i><b>Rätt</b></i></p>
 ```
 
-&nbsp;
-
 ```html
 <i><p><b>Fel</b></p></i>
 ```
 
-&nbsp;
-
 ```html
 <p><i><b>Fel</p></i></b>
 ```
+
+---
+
+# Slut!

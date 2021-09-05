@@ -5,6 +5,8 @@
 
 # Namn på verk
 
+--
+
 ```html
 <cite>...</cite>
 ```
@@ -31,6 +33,8 @@ Används för att ange en titel på ett verk, t ex:
 
 # Överstykningspenna
 
+--
+
 ```html
 <mark>...</mark>
 ```
@@ -53,11 +57,11 @@ Används för att markera något i en text i referenssyfte, på grund av dess be
 
 # Tidsangivelse
 
+--
+
 ```html
 <time>...</time>
 ```
-
-&nbsp;
 
 ```html
 <p>Idag är det <time datetime="2017-09-10">måndag</time></p>
@@ -70,10 +74,11 @@ Används för att markera något i en text i referenssyfte, på grund av dess be
 
 # Finstilt text
 
+--
+
 ```html
 <small>...</small>
 ```
-&nbsp;
 
 ```html
 <p><small lang="en">&copy; copyright 2010 Example Corp.</small></p>
@@ -86,6 +91,8 @@ Används för att markera något i en text i referenssyfte, på grund av dess be
 ---
 
 # Tematisk brytning
+
+--
 
 ```html
 <hr>
@@ -108,6 +115,8 @@ Inte speciellt vanlig idag.
 ---
 
 # Förformaterad text
+
+--
 
 ```html
 <pre>…</pre>
@@ -142,6 +151,7 @@ print $summa;
 
 # Detaljer
 
+--
 
 ```html
 <details>
@@ -157,3 +167,7 @@ print $summa;
 ![det-off](images/details-off.PNG)
 
 ![det-off](images/details-on.PNG)
+
+---
+
+# Slut!

@@ -86,29 +86,6 @@ Klickbar bild som länkar till något...
 
 ---
 
-# scrset i img
-
-```html
-<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" alt="yah">
-```
-
-I det här [exemplet](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) använder vi attribute **srcset** .
-
-**srcset** används för att ange vilka versioner av bilden som webbläsaren har att välja mellan.
-
-Är uppbyggt enligt följande: **filnamn** *mellanslag* **bredden på bilden** (px) men angivit med enheten w.
-
-[DEMO!](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html)
-
---
-
-För mer information:
-
-* [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)
-* [Responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-
----
-
 # Picture-taggen
 
 ```html
@@ -170,3 +147,7 @@ Oftast tillsammans med taggen **figcaption** som används för att ange figurbes
 ```
 
 ![figure2](images/figure2.png)
+
+---
+
+# Slut!

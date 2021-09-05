@@ -204,11 +204,11 @@ Här ska vi följa riktlinjen [Ge dokument filnamn som beskriver innehållet](ht
 
 Används för att koda ett unikt tecken.
 
-Fast mellanslag = &ampnbsp;
+Fast mellanslag fås via &ampnbsp;
 
-&amplt; = <
+&amplt; ger <
 
-&ampgt; = >
+&ampgt; ger >
 
 Se [Charref](https://dev.w3.org/html5/html-author/charref)
 
@@ -288,3 +288,6 @@ Här behöver du inte skapa mallen.
 
 Det du skriver i rutan HTML är det som placeras i bodyn.
 
+---
+
+# Slut!

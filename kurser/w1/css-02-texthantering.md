@@ -147,6 +147,8 @@ p {
 
 ## Em vs. Rem
 
+--
+
 ### Em
 
 **Em** är en relativ storlek som baseras på förälderns storlek.
@@ -528,7 +530,7 @@ Observera ordningen!
 h1 {
   font-style: italic;
   font-variant: small-caps;
-  fot-weight: normal;
+  font-weight: normal;
   font-size: 1.5em;
   line-height: 1.5em;
   font-family: arial, helvetica, sans-serif;

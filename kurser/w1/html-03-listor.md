@@ -176,3 +176,7 @@ Används för själva beskrivningen.
 # Riktlinjer
 
 * [Använd rätt html-element när ni gör listor](https://webbriktlinjer.se/riktlinjer/104-gor-listor-med-de-html-element-som-ar-till-for-att-skapa-listor/)
+
+---
+
+# Slut!

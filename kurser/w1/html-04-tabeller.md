@@ -235,3 +235,7 @@ Första tabellen innan sammanslagning.
 ```
 
 Med attributet **rowspan** kan vi slå samman flera celler till en och det radvis.
+
+---
+
+# Slut!

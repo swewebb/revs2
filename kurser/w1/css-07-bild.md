@@ -55,3 +55,7 @@ För egenskapen `clear` har vi värdena *left*, *right*, *both* och *none*.
 Saxat från MDN (https://developer.mozilla.org/en-US/docs/Web/CSS/clear) om `clear`
 
 ![bild](images/css-bild-3.PNG)
+
+---
+
+# Slut!

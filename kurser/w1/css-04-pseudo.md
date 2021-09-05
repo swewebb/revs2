@@ -356,3 +356,7 @@ Används för att lägga till något till ett element med hjälp av egenskapen *
 --
 
 Här finner du en bra lista över specialtecken som kan användas i *content*: [https://www.webdesignerexpress.com/blog/css-glyphs-and-html-special-characters.html](https://www.webdesignerexpress.com/blog/css-glyphs-and-html-special-characters.html)
+
+---
+
+# Slut!
