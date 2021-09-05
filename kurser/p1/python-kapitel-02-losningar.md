@@ -10,7 +10,7 @@
 
 ## Lösning 1
 
-```python [1]
+```python [ ]
 print('Hello world')
 ```
 
