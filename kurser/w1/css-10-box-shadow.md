@@ -146,6 +146,8 @@ div {
 }
 ```
 
+--
+
 ![bild](images/css-10-08.PNG)
 
 ---
@@ -159,6 +161,8 @@ div {
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 ```
+
+--
 
 ![bild](images/shadow-1.png)
 
@@ -174,7 +178,9 @@ div {
 }
 ```
 
-![bild](images/shadow-1.png)
+--
+
+![bild](images/shadow-2.png)
 
 ---
 
@@ -190,6 +196,8 @@ div {
     rgba(40, 146, 70, 0.05) 25px 25px;
 }
 ```
+
+--
 
 ![bild](images/shadow-3.png)
 
