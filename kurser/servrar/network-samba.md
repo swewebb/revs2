@@ -10,7 +10,7 @@ Samba är fri programvara för Linux/Unix-system som använder SMB/CIFS-protokol
 
 ---
 
-# Installation
+# Installationen
 
 --
 
