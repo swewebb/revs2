@@ -87,7 +87,7 @@ Hmmm... Vår CSS-regel fungerar inte!
 --
 
 ```html
-<!--<h1>:first-child</h1>-->
+<!-- <h1>:first-child</h1> -->
 <ol>
     <li>Test</li>
 </ol>
