@@ -537,7 +537,6 @@ En komplett tabell är som följer:
 
 Höger-, vänsterjustering och centrering anges med >, <, ^
 
-
 ```python [ ]
 num = 9
 
@@ -549,6 +548,9 @@ print('Talet {0:>4d} skrivs binärt som {0:^8b} så det så'.format(num))
 
 Talet    9 skrivs binärt som   1001   så det så
 ```
+
+--
+
 
 ```python [ ]
 num = 9
