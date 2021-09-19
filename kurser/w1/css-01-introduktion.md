@@ -316,9 +316,9 @@ Påverkar alla i-taggar som är barn till p-taggen.
 
 --
 
-![Bild](images/css-01-07.png)
+![Bild](images/css-01-07-fixed.png)
 
-Här ser vi att enbart i-taggen som är direkt barn till p-taggen påverkas av vår regel.
+Här ser vi att enbart i-taggen som är direkt barn till p-taggen påverkas av vår regel
 
 --
 
