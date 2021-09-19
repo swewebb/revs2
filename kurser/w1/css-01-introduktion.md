@@ -285,7 +285,7 @@ Här ser vi hur släktskapet är för taggarna. Som du ser så är den första i
 
 --
 
-![Bild](images/css-01-06.png)
+![Bild](images/css-01-06.PNG)
 
 --
 
@@ -316,7 +316,7 @@ Påverkar alla i-taggar som är barn till p-taggen.
 
 --
 
-![Bild](images/css-01-07-fixed.png)
+![Bild](images/css-01-07-fixed.PNG)
 
 Här ser vi att enbart i-taggen som är direkt barn till p-taggen påverkas av vår regel
 
