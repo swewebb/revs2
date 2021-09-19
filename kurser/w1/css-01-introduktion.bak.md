@@ -258,34 +258,31 @@ selektorA selektorB {
 Påverkar alla **selektorB** släktningar till **selektorA**.
 
 ```css [ ]
-p i {
-  background-color: deepskyblue;
+div ol {
+  border: 1px solid black;
 }
 ```
 
-Påverkar alla i-taggar som är släktningar till p-taggen.
+Påverkar alla ordnade listor som är släktningar till div-taggen.
 
 --
 
 ```html
-<h1>Rubrik med <i>kursiv text</i></h1>
-
-<p>Här kommer det lite <i>kursiv</i> text samt lite <b><i>fet och kursiv text</i></b>.</p>
+<div>
+  <ol>
+    <li>Test</li>
+    <li>Mer test
+      <ol>
+        <li>Underlista</li>
+      </ol>
+    </li>
+  </ol>
+</div>
 ```
 
-Här ser vi att vi har en i-tagg inuti vår h1:a och den kommer inte att påverkas av vår regel.
-
-Dock kommer alla i-taggar inuti vår p-tagg att göra det, oavsett släktskap till p-taggen.
-
 --
 
-![Bild](images/css-01-06b.png)
-
-Här ser vi hur släktskapet är för taggarna. Som du ser så är den första i-taggen inuti p-taggen barn till denna. Den andra i-taggen är barnbarn till p-taggen då den återfinns inut b-taggen.
-
---
-
-![Bild](images/css-01-06.png)
+![Bild](images/css-01-06.PNG)
 
 --
 
@@ -300,25 +297,31 @@ selektorA > selektorB {
 Påverkar alla **selektorB** som är barn till **selektorA**.
 
 ```css [ ]
-p > i {
-  background-color: deepskyblue;
+div > ol {
+  border: 1px solid black;
 }
 ```
 
-Påverkar alla i-taggar som är barn till p-taggen.
+Påverkar alla ordnade listor som är barn till div-taggen.
 
 --
 
 ```html
-<h1>Rubrik med <i>kursiv text</i></h1>
-<p>Här kommer det lite <i>kursiv</i> text samt lite <b><i>fet och kursiv text</i></b>.</p>
+<div>
+  <ol>
+    <li>Test</li>
+    <li>Mer test
+      <ol>
+        <li>Underlista</li>
+      </ol>
+    </li>
+  </ol>
+</div>
 ```
 
 --
 
-![Bild](images/css-01-07.png)
-
-Här ser vi att enbart i-taggen som är direkt barn till p-taggen påverkas av vår regel.
+![Bild](images/css-01-07.PNG)
 
 --
 
