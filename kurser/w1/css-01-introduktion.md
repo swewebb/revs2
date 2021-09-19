@@ -285,7 +285,7 @@ Här ser vi hur släktskapet är för taggarna. Som du ser så är den första i
 
 --
 
-![Bild](images/css-01-06-fixed.PNG)
+![Bild](images/css-01-06-fixed.png)
 
 --
 
