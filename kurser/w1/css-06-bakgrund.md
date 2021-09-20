@@ -383,7 +383,7 @@ Med egenskapen `background` kan vi ange följande:
   1. `background-clip`
   1. `background-color`
   1. `background-image`
-  1. `background-orgin`
+  1. `background-origin`
   1. `background-position`
   1. `background-repeat`
   1. `background-size`
