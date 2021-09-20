@@ -247,7 +247,7 @@ p {
 
 --
 
-## Ättlingar (descendant)
+## Ättlingar/släktingar (descendant)
 
 ```css [ ]
 selektorA selektorB {
