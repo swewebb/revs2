@@ -1,4 +1,4 @@
-# CSS - 09 - Tabeller och Listor
+# CSS - Tabeller och Listor
 
 ## Webbutveckling 1
 

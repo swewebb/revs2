@@ -1,4 +1,4 @@
-# CSS - 07 - Bilder
+# CSS - Bilder
 
 ## Webbutveckling 1
 

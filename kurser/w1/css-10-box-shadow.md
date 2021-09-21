@@ -1,4 +1,4 @@
-# CSS - 10 - Skugga
+# CSS - Skugga
 
 ## Webbutveckling 1
 

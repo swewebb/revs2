@@ -1,4 +1,4 @@
-# CSS - 02 - Texthantering
+# CSS - Texthantering
 
 ## Webbutveckling 1
 

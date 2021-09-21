@@ -1,4 +1,4 @@
-# CSS - 01 - Introduktion
+# CSS - Introduktion
 
 ## Webbutveckling 1
 

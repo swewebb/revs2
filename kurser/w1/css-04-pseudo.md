@@ -1,4 +1,4 @@
-# CSS - 04 - Pseudoklasser & pseudoelement
+# CSS - Pseudoklasser & pseudoelement
 
 ## Webbutveckling 1
 

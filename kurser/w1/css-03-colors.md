@@ -1,4 +1,5 @@
-# CSS - 03 - Färger
+# CSS - Färger
+
 ## Webbutveckling 1
 
 ---
@@ -39,7 +40,7 @@ Se [https://htmlcolorcodes.com/color-names/](https://htmlcolorcodes.com/color-na
 
 ---
 
-# Hexadecimalt 
+# Hexadecimalt
 
 --
 

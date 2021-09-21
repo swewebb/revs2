@@ -1,4 +1,4 @@
-# CSS - 06 - Bakgrund
+# CSS - Bakgrund
 
 ## Webbutveckling 1
 
