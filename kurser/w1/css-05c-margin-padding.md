@@ -14,65 +14,136 @@ Anges med egenskaperna **margin**, **margin-top**, **margin-right**, **margin-bo
 
 --
 
-```css [ ]
-div {
-  background-color: powderblue;
-  height: 100px;
+## Lite förberande kod
+
+Här kommer den kod vi kommer att utgå för att förklara margin. Kolla igenom den om du vill, inget krav!
+
+--
+
+```html []
+<div class="box box__1">Box 1</div>
+<div class="box box__2">Box 2</div>
+```
+
+--
+
+```css []
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
   width: 100px;
-}
-.ex1 {
-  /*margin: top right bottom left;*/
-  margin: 5px 10px 15px 20px;
-}
-.ex2 {
-  /*margin: top right|left bottom;*/
-  margin: 5px 10px 15px;
-}
-.ex3 {
-  /*margin: top|bottom right|left;*/
-  margin: 5px 10px;
-}
-```
+  height: 100px;
 
-```html
-<div class="ex1"></div>
-<div class="ex2"></div>
-<div class="ex3"></div>
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  color: #FFF;
+}
+
+.box__1 {
+    background:#0984E3;
+}
+
+.box__2 {
+    background-color: #E84393;
+}
 ```
 
 --
 
-![margin-inspekterare](images/css-05-margin-inspekterare.png)
+![bild](images/css-margin-padding-1.png)
 
 --
 
-### Ett till exempel
+## Marginal med ett värde
 
-```css [ ]
-div {
-  background-color: powderblue;
-  height: 50px;
-  width: 50px;
+```css [3]
+.box__1 {
+  background:#0984E3;
+  margin: 20px;
+}
+
+.box__2 {
+    background-color: #E84393;
+}
+```
+
+Anger vi ett värde så kommer vi få samma marginal på alla fyra sidor.
+
+--
+
+![bild](images/css-margin-padding-2.png)
+
+--
+
+## Marginal med två värden
+
+```css [3]
+.box__1 {
+  background:#0984E3;
+  margin: 20px 50px;
+}
+
+.box__2 {
+  background-color: #E84393;
+}
+```
+
+Anger vi två värden så kommer det första värdet ange **top/bottom** och det andra **left/right**.
+
+--
+
+![bild](images/css-margin-padding-3.png)
+
+--
+
+## Marginal med fyra värden
+
+```css [3]
+.box__1 {
+  background:#0984E3;
+  margin: 20px 30px 40px 50px;
+}
+
+.box__2 {
+  background-color: #E84393;
+}
+```
+
+Anger vi två värden så kommer vi ange **top**, **right**, **bottom**, **left**
+
+--
+
+![bild](images/css-margin-padding-4.png)
+
+--
+
+## Margin Collapse
+
+
+```css [3, 8]
+.box__1 {
+  background:#0984E3;
+  margin: 20px;
+}
+
+.box__2 {
+  background-color: #E84393;
   margin: 20px;
 }
 ```
 
-Vi har nu angivit att vi har en marginal på 10px åt alla håll.
-
-```html
-<div></div>
-<div></div>
-```
+Om vi anger en marginal även för **box__2** så skulle man kunna tro att den totala marginalen mellan de två boxarna skulle bli 40px, men så blir det inte utan de går över varandra och den marginal med störst värde vinner.
 
 --
 
-![margin-inspekterare](images/css-05-margin-inspekterare-2.png)
-
---
-
-Via *Inspekteraren* ser vi marginalen för den första boxen.
-
-Som du ser så får vi inte 20px mellan boxarna då vi får något som kallas [margin collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+![bild](images/css-margin-padding-5.png)
 
 ---
 
