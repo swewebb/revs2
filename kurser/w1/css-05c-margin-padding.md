@@ -157,36 +157,7 @@ Anges med egenskaperna **padding**, **padding-top**, **padding-right**, **paddin
 
 --
 
-```css [ ]
-div {
-  background-color: powderblue;
-  margin: 5px;
-  width: 100px;
-}
-.ex1 {
-  /*padding: top right bottom left;*/
-  padding: 5px 10px 15px 20px;
-}
-.ex2 {
-  /*padding: top right|left bottom;*/
-  padding: 5px 10px 15px;
-}
-.ex3 {
-  /*padding: top|bottom right|left;*/
-  padding: 5px 10px;
-}
-```
-
-```html
-<div>Utan padding</div>
-<div class="ex1">Med padding #1</div>
-<div class="ex2">Med padding #2</div>
-<div class="ex3">Med padding #3</div>
-```
-
---
-
-![padding-1](images/css-05-padding-1.PNG)
+Doh!
 
 ---
 
