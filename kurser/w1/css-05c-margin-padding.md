@@ -151,16 +151,94 @@ Om vi anger en marginal även för **box__2** så skulle man kunna tro att den t
 
 --
 
-Med *padding* menas avståndet från kanten på en tagg till själva innehållet.
+Med **padding** menas avståndet från kanten på en tagg till själva innehållet.
 
 Anges med egenskaperna **padding**, **padding-top**, **padding-right**, **padding-bottom** och **padding-left**.
 
 --
 
-Doh!
+## Ingen padding
+
+--
+
+![bild](images/css-margin-padding-7.png)
+
+--
+
+## Padding med ett värde
+
+--
+
+```css [10]
+.box {
+  width: 400px;
+
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  color: #FFF;
+
+  background:#0984E3;
+
+  padding: 2rem;
+}
+```
+
+--
+
+![bild](images/css-margin-padding-8.png)
+
+--
+
+## Padding med två värden
+
+--
+
+```css [10]
+.box {
+  width: 400px;
+
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  color: #FFF;
+
+  background:#0984E3;
+
+  padding: 4rem 2rem;
+}
+```
+
+--
+
+![bild](images/css-margin-padding-9.png)
+
+--
+
+## Padding med fyra värden
+
+--
+
+```css [10]
+.box {
+  width: 400px;
+
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  color: #FFF;
+
+  background:#0984E3;
+
+  padding: 1rem 2rem 3rem 4rem;
+}
+```
+
+--
+
+![bild](images/css-margin-padding-10.png)
+
+--
+
+![bild](images/css-margin-padding-11.png)
 
 ---
 
-## Räkna ut den totala bredden
-
-Total bredd = width + left padding + right padding + left border + right border
+# SLUT
