@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "brand": "brand-value-1",
+        "model": "model-value-1",
+        "length": "lengh-value-1",
+        "width": "width-value-1",
+        "wheelbase": "wheelbase-value-1",
+        "truckpattern": "truckpattern-value-1",
+        "condition": "condition-value-1",
+        "thumbnail": "thumbnail-value-1",
+        "images": {
+            "top": "top-value-1",
+            "bottom": "bottom-value-1",
+            "side": "side-value-1"
+        },
+        "infotext": "infotext-value-1"
+    },
+    {
+        "id": 2,
+        "brand": "brand-value-2",
+        "model": "model-value-2",
+        "length": "lengh-value-2",
+        "width": "width-value-2",
+        "wheelbase": "wheelbase-value-2",
+        "truckpattern": "truckpattern-value-2",
+        "condition": "condition-value-2",
+        "thumbnail": "thumbnail-value-2",
+        "images": {
+            "top": "top-value-2",
+            "bottom": "bottom-value-2",
+            "side": "side-value-2"
+        },
+        "infotext": "infotext-value-2"
+    }
+]
