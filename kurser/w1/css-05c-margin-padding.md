@@ -145,6 +145,25 @@ Om vi anger en marginal även för **box__2** så skulle man kunna tro att den t
 
 ![bild](images/css-margin-padding-5.png)
 
+--
+
+## Margin med auto
+
+```css [2]
+.box {
+  margin: 0 auto;
+  width: 60%;
+  max-width: 800px;
+  background:#0984E3;
+}
+```
+
+Med värdet **auto** kan vi centrera ett element horisontellt.
+
+--
+
+![css-margin-padding-auto](images/css-margin-padding-auto.png)
+
 ---
 
 # Padding
