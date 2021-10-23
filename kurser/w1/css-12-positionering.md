@@ -48,6 +48,14 @@ Anger vi relativ position på föräldern och absolut på ett barn-element så k
 
 --
 
+```html
+<div class="parent">
+  <div class="child"></div>
+</div>
+```
+
+--
+
 ### Absolut inuti utan relativ förälder
 
 I det här fallet kommer barnet som har positionen absolut att ignorera sin förälder
