@@ -167,15 +167,13 @@ npm install sass -D
 
 ## Installera moduler - Parcel
 
-```
+```text
 npm install parcel-bundler -D
 ```
 
 ![npm-moduler-p](images/w2-sass-01-13.png)
 
 --
-
-![npm-moduler-p](images/w2-sass-01-14.png)
 
 ![npm-moduler-p](images/w2-sass-01-14.png)
 
