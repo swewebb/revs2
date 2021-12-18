@@ -68,6 +68,52 @@
 
 # 1010111 till decimalt
 
+<p>
+<span class="bluetext">1 * 2<sup>6</sup></span> +
+<span class="greentext">0 * 2<sup>5</sup></span> +
+<span class="redtext">1 * 2<sup>4</sup></span> +
+<span class="purpletext">0 * 2<sup>3</sup></span> +
+<span class="orangetext">1 * 2<sup>2</sup></span> +
+<span class="pinktext">1 * 2<sup>1</sup></span> +
+<span class="turkostext">1 * 2<sup>0</sup></span>
+</p>
+
+<p>
+<span class="bluetext">1 * 64</span> +
+<span class="greentext">0 * 32</span> +
+<span class="redtext">1 * 16</span> +
+<span class="purpletext">0 * 8</span> +
+<span class="orangetext">1 * 4</span> +
+<span class="pinktext">1 * 2</span> +
+<span class="turkostext">1 * 1</span>
+</p>
+
+<p>
+<span class="bluetext">1 * 64</span> +
+<span class="redtext">1 * 16</span> +
+<span class="orangetext">1 * 4</span> +
+<span class="pinktext">1 * 2</span> +
+<span class="turkostext">1 * 1</span>
+</p>
+
+<p>
+<span class="bluetext">64</span> +
+<span class="redtext">16</span> +
+<span class="orangetext">4</span> +
+<span class="pinktext">2</span> +
+<span class="turkostext">1</span> = 87
+</p>
+
+<p><b>1010111b = 87d</b></p>
+
+---
+
+# BIN till DEC - Metod 2
+
+--
+
+# 1010111 till decimalt
+
 ![bin](images/talsystem/bin-dec-1.png)
 
 <p style="text-align: center">64 + 16 + 4 + 2 + 1 = 87</p>
@@ -96,7 +142,7 @@
 
 ---
 
-# BIN till DEC - Metod 2
+# BIN till DEC - Metod 3
 
 --
 

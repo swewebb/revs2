@@ -387,7 +387,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .redtext {
-  color: #eb4d4b;
+  color: crimson;
 }
 
 .bluetext {
@@ -396,6 +396,18 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .purpletext {
   color: #8e44ad;
+}
+
+.orangetext {
+  color: #d35400;
+}
+
+.pinktext {
+  color: deeppink;
+}
+
+.turkostext {
+  color: #00cec9;
 }
 
 td, th, table {
