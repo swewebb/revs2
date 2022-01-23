@@ -46,7 +46,7 @@ l = mjuk/symbolisk länk
 
 Betyder att även om en användare har skrivrättigheter i mappen, så får denne bara skrivrättighet på filer som man är ägare till, och kan således inte ta bort andra användares filer eller mappar själv (om denne inte är ägare till mappen eller medlem i gruppen som äger mappen).
 
-En typisk sådan mapp är **/tmp**, i denna kan alla användare skriva, men inte radera saker som inte är deras egna. 
+En typisk sådan mapp är **/tmp**, i denna kan alla användare skriva, men inte radera saker som inte är deras egna.
 
 Inte heller kan de radera själva mappen **/tmp**.
 
@@ -142,7 +142,7 @@ Jo, filer får INTE x (execute) som standard av säkerhetsskäl.
 Om vi vill ändra standard-rättigheterna till rwx r-x ---
 
 ```html
-rwx r-x --- 
+rwx r-x ---
 000 010 111 = 027
 ```
 
@@ -212,7 +212,7 @@ Innehåller alla användare i systemet
 Här återfinns lösenorden för användarna i krypterad form. Innehåller även annan information, t ex när kontot senast bytte lösenord.
 
 Kvällsläsning (inget som kommer på något prov):
-- [https://www.cyberciti.biz/faq/understanding-etcshadow-file/](https://www.cyberciti.biz/faq/understanding-etcshadow-file/) 
+- [https://www.cyberciti.biz/faq/understanding-etcshadow-file/](https://www.cyberciti.biz/faq/understanding-etcshadow-file/)
 
 --
 

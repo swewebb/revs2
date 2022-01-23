@@ -1,5 +1,7 @@
 # linux-05
 
+## Filsystemet
+
 ---
 
 # Filsystemet
@@ -222,7 +224,7 @@ Loggfiler
 
 --
 
-```
+```html
 cd /etc/apt/
 ```
 
@@ -230,7 +232,7 @@ Förflyttar dig till katalogen **/etc/apt** oavsett var i filträdet du befinner
 
 --
 
-```
+```html
 cd /
 ```
 
@@ -238,7 +240,7 @@ Förflyttar dig till roten på filträdet oavsett var i filträdet du befinner d
 
 --
 
-```
+```html
 cd ~
 cd
 ```
@@ -247,7 +249,7 @@ Förflyttar dig till din hemkatalog (t.ex **/home/pelle**) oavsett var i filträ
 
 --
 
-```
+```html
 cd ..
 ```
 
@@ -255,7 +257,7 @@ Förflyttar dig ett steg bakåt/uppåt i filträdet, t.ex från **/home/pelle** 
 
 --
 
-```
+```html
 cd ../..
 ```
 
@@ -263,7 +265,7 @@ Förflyttar dig ett steg bakåt/uppåt i filträdet, t.ex från **/home/pelle** 
 
 --
 
-```
+```html
 cd musik
 ```
 
@@ -281,8 +283,6 @@ Förflyttar dig in i katalogen **musik**, som återfinns i katalogen där du bef
 
 ## Enkel listning
 
-`ls`
-
 ![linux05-01](images/linux-05-01.png)
 
 Vit = fil, blå = katalog, turkos = mjuk länk
@@ -291,26 +291,18 @@ Vit = fil, blå = katalog, turkos = mjuk länk
 
 ## Lista i långt format
 
-```
-ls -l
-```
-
 ![linux05-02](images/linux-05-02.png)
 
 
 --
 
-## Lista dolda filer/kataloger
-
-```
-ls -a
-```
+## Lista ALLA dolda filer/kataloger
 
 ![linux05-03](images/linux-05-03.png)
 
-```
-ls -A
-```
+--
+
+## Lista dolda filer/kataloger
 
 ![linux05-04](images/linux-05-04.png)
 
@@ -318,21 +310,13 @@ ls -A
 
 ## Kombinera flera växlar
 
-```
-ls -Al
-```
-
 ![linux05-05](images/linux-05-05.png)
 
 --
 
 ## Lista annan plats
 
-```
-ls ~/start
-```
-
-![linux05-20](images/linux-05-20.png)
+![linux05-20](images/linux-05-06.png)
 
 ---
 
@@ -340,9 +324,10 @@ ls ~/start
 
 --
 
+![linux05-06](images/linux-05-pwd.png)
+
 `pwd` = print name of current/working directory
 
-![linux05-06](images/linux-05-06.png)
 
 ---
 
@@ -366,7 +351,9 @@ ls ~/start
 
 --
 
-Ibland får inte innehållet plats på skärmen och då vi inte kan skrolla så kommer vi inte att kunna se all information. Det här kan vi lösa mha kommandona `more` eller `less`.
+Ibland får inte innehållet plats på skärmen och då vi inte kan skrolla så kommer vi inte att kunna se all information.
+
+Det här kan vi lösa mha kommandona `more` eller `less`.
 
 --
 
@@ -378,16 +365,17 @@ Ibland får inte innehållet plats på skärmen och då vi inte kan skrolla så 
 
 --
 
-```
-ls /etc | more
-more dump
-```
+![linux05-09](images/linux-05-more.gif)
 
 --
 
 `less`
 
 Med `less` kan du använda upp/ned-pil för att förflytta dig i utdatat.
+
+--
+
+![linux05-09](images/linux-05-less.gif)
 
 ---
 
@@ -399,40 +387,28 @@ Med `less` kan du använda upp/ned-pil för att förflytta dig i utdatat.
 
 --
 
-```
-touch kaka
-```
+![linux05-09](images/linux-05-10.png)
 
 Skapar en tom fil med namnet kaka
 
-![linux05-09](images/linux-05-10.png)
-
 --
-
-```
-touch anka1 anka2 anka3
-```
-
-Skapar tre tomma filer
 
 ![linux05-11](images/linux-05-11.png)
 
---
+Skapar tre tomma filer
 
-```
-touch --date="2020-12-24 15:00:00" anka1
-```
+--
 
 ![linux05-12](images/linux-05-12.png)
 
-![linux05-13](images/linux-05-13.png)
-
+Här sätter vi en visst datum på filen
 
 --
 
-`cat >`, avsluta med `CTRL + D`
 
 ![linux05-08](images/linux-05-08.png)
+
+`cat > namn`, avsluta med `CTRL + D`
 
 ---
 
@@ -458,36 +434,23 @@ Här kan vi bland annat se när filen senast öppnades eller modifierades.
 
 --
 
-```
-mkdir test
-```
+![linux05-17](images/linux-05-17.png)
 
 Skapar en katalog där du befinner dig.
 
-![linux05-17](images/linux-05-17.png)
-
 --
-
-```
-mkdir ~/test
-```
-
-Skapar en katalog i din hemkatalog oavsett var du befinner dig.
 
 ![linux05-18](images/linux-05-18.png)
 
+Skapar en katalog i din hemkatalog oavsett var du befinner dig.
+
 --
 
-```html
-mkdir -p start/del-1
-mkdir -p start/del-2
-```
+![linux05-19](images/linux-05-19.png)
 
 Skapar katalogen start(om den inte finns) för att sedan skapa katalogen del-1 i den.
 
 Skapar del-2 i mappen start (som vi skapade på raden innan).
-
-![linux05-19](images/linux-05-19.png)
 
 ---
 
@@ -499,17 +462,9 @@ Skapar del-2 i mappen start (som vi skapade på raden innan).
 
 --
 
-```
-rm kaka
-```
-
 ![linux05-15](images/linux-05-15.png)
 
 --
-
-```
-rm *.txt
-```
 
 ![linux05-15](images/linux-05-16.png)
 
@@ -523,25 +478,18 @@ rm *.txt
 
 --
 
-```
-rmdir musik
-```
-
 ![linux05-21](images/linux-05-21.png)
 
 --
 
-```
-rmdir filer
-```
-
 ![linux05-22](images/linux-05-22.png)
+
+Mappen måste vara tom för att den ska gå att ta bort.
 
 --
 
-```
-rm -rf filer
-```
+![linux05-22](images/linux-05-rm-folder.png)
+
 
 ---
 
@@ -551,35 +499,22 @@ rm -rf filer
 
 `cp` = copy files and directories
 
---
 
-```
-cp fil.md fil2.md
-```
+`cp orginal kopia`
+
+--
 
 ![linux05-23](images/linux-05-23.png)
 
 --
 
-```
-cp /etc/rsyslog.conf .
-```
-
 ![linux05-24](images/linux-05-24.png)
 
 --
 
-```
-cp -r ../filer .
-```
-
 ![linux05-25](images/linux-05-25.png)
 
 --
-
-```html
-cp -r filer/ backup
-```
 
 ![linux05-26](images/linux-05-26.png)
 
@@ -595,21 +530,13 @@ cp -r filer/ backup
 
 ## Filer
 
-```
-mv fil.md filer/
-```
-
-![linux05-26](images/linux-05-26.png)
+![linux05-26](images/linux-05-mv-filer.png)
 
 --
 
 ## Kataloger
 
-```
-mv backup/ filer/
-```
-
-![linux05-27](images/linux-05-27.png)
+![linux05-27](images/linux-05-mv-folder.png)
 
 --
 
@@ -619,11 +546,7 @@ mv backup/ filer/
 
 --
 
-```
-mv fil2.md haha.md
-```
-
-![linux05-28](images/linux-05-28.png)
+![linux05-28](images/linux-05-mv-rename.png)
 
 ---
 
@@ -647,15 +570,19 @@ mv fil2.md haha.md
 
 --
 
+```html
+ln -s orginalet länken
 ```
-ln -s orginalet linken
-```
-
-![linux05-29](images/linux-05-29.png)
 
 --
 
-![linux05-30](images/linux-05-30.png)
+![linux-05-link-soft-1](images/linux-05-link-soft-1.png)
+
+--
+
+![linux-05-link-soft-2](images/linux-05-link-soft-2.png)
+
+![linux-05-link-soft-3](images/linux-05-link-soft-3.png)
 
 <span class="fragment">Vi öppnar nu länken (linken) i nano och skriver in lite text för att sedan avsluta nano (givetvis sparar vi).</span>
 
@@ -665,25 +592,25 @@ ln -s orginalet linken
 
 --
 
-![linux05-31](images/linux-05-31.png)
+![linux-05-link-soft-4](images/linux-05-link-soft-4.png)
 
 Här har vi raderat originalet och då ser vi att vår länk blir röd = trasig
 
 --
 
-![linux05-32](images/linux-05-32.png)
+![linux-05-link-soft-5](images/linux-05-link-soft-5.png)
 
-Öppnar vi länken (linken) i nano så ser vi att det är tomt.
+Öppnar vi länken i nano så ser vi att det är tomt.
 
 --
 
-![linux05-33](images/linux-05-33.png)
+![linux-05-link-soft-6](images/linux-05-link-soft-6.png)
 
 Vi passar på att skriva in lite innehåll… och spar ändringarna.
 
 --
 
-![linux05-34](images/linux-05-34.png)
+![linux-05-link-soft-7](images/linux-05-link-soft-7.png)
 
 Aha! Nu skapas originalet igen
 
@@ -703,21 +630,23 @@ Aha! Nu skapas originalet igen
 
 --
 
-```
+```html
 ln orginalet link
 ```
 
-![linux05-35](images/linux-05-35.png)
+--
+
+![linux-05-hard-1](images/linux-05-hard-1.png)
 
 --
 
-![linux05-36](images/linux-05-36.png)
+![linux-05-hard-2](images/linux-05-hard-2.png)
 
 Tar vi bort originalet så kommer länken fortfarande att fungera.
 
 --
 
-![linux05-37](images/linux-05-37.png)
+![linux-05-hard-2](images/linux-05-hard-3.png)
 
 ---
 
@@ -725,26 +654,26 @@ Tar vi bort originalet så kommer länken fortfarande att fungera.
 
 --
 
-* = Okänt antal tecken
+## Okänt antal tecken
 
-- *.txt = Alla txt-filer
-- f*.txt = Alla txt-filer som börjar på f
-- i*.* = Alla filer som börjar på i
-
---
-
-? = Ett okänt tecken
-
-- ?.txt = Alla txt-filer som har ett tecken i filnamnet
-- f??.txt = Alla txt-filer som börjar på f och har två tecken därefter
-- f*.p? = Alla filer som börjar på f och vars filändelse börjar på p och följs av ett tecken
+- **\*.txt** = Alla txt-filer
+- **f\*.txt** = Alla txt-filer som börjar på f
+- **i\*.\*** = Alla filer som börjar på i
 
 --
 
-[] = Område
+## Ett okänt tecken
 
-- [bf]*.txt = Alla txt-filer som börjar på b eller f
-- *[2-4].html = Alla html-filer som slutar på 2, 3 eller 4.
+- **?.txt** = Alla txt-filer som har ett tecken i filnamnet
+- **f??.txt** = Alla txt-filer som börjar på f och har två tecken därefter
+- **f\*.p?** = Alla filer som börjar på f och vars filändelse börjar på p och följs av ett tecken
+
+--
+
+## Område
+
+- **[bf]*.txt** = Alla txt-filer som börjar på b eller f
+- **\*[2-4].html** = Alla html-filer som slutar på 2, 3 eller 4.
 
 ---
 

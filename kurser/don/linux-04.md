@@ -1,5 +1,7 @@
 # linux-04
 
+## Kommandoraden
+
 ---
 
 # En kort introduktion till kommandoraden
@@ -16,6 +18,9 @@
 
 Det är vid prompten vi skriver våra kommandon.
 Kan skilja sig åt i utseende, men i vårt fall ser den ut så här….
+
+--
+
 - <span class=bluetext>pelle</span>@<span class=redtext>mediaserver</span>:<span class=greentext>~/filmer</span><span class=orangetext>$</span>
 - <span class=bluetext>pelle</span> = användaren som är inloggad
 - <span class=redtext>mediaserver</span> = datorn man är inloggad på
@@ -41,12 +46,17 @@ man ls
 | 1       | Vanliga exekverbara kommandon och program|
 | 2       | Systemanrop(funktioner som tillhandahålls av kärnan)|
 | 3       | Biblioteksanrop(funktioner som tillhandahålls av programbiblitek)|
+
+--
+
+| Kapilel |Innehåller                    |
+|:--------|------------------------------|
 | 4       | Specialfiler, ex. enheter i /dev|
 | 5       | Konfigurationsfiler och filformat|
 | 6       | Spel|
 | 7       | Blandat och övrigt|
 | 8       | Kommandon för systemadministration|
-| (9)       | (Specifikt för kärnan och dess rutiner)|
+| (9)     | (Specifikt för kärnan och dess rutiner)|
 
 --
 
@@ -79,6 +89,11 @@ Se [https://www.kernel.org/doc/man-pages/](https://www.kernel.org/doc/man-pages/
 | Nedåtpil   | Rullar ner på sidan en taget               |
 | Mellanslag | Rullar ner på sidan en sida i taget        |
 | Uppåtpil   | Rullar uppåt på sidan en rad i taget       |
+
+--
+
+| Tangent    |Åstadkommer                                 |
+|:-----------|--------------------------------------------|
 | b          | Rullar uppåt på sidan en sida i taget      |
 | /          | Öppnar sökfältet                           |
 | n          | Sök efter nästa förekomst av sökordet      |
