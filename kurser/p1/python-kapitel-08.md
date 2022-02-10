@@ -12,7 +12,7 @@ En lista är helt enkelt en ordnad samling element som var och en kan identifier
 
 --
 
-```python
+```python []
 tal = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 ```
 
@@ -20,7 +20,7 @@ Numreringen börjar på 0 och slutar på längden-1
 
 --
 
-```python
+```python []
 gottOchBlandat = ['Frukt', 1,'Lakrits', 2, False]
 ```
 
@@ -28,37 +28,37 @@ Elementen behöver inte heller vara av samma typ
 
 --
 
-```python
+```python []
 tal = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 
 print(tal)
 ```
 
-```python
+```python []
 [1, 2, 4, 8, 16, 32, 64, 128, 256]
 ```
 
 --
 
-```python
+```python []
 tal = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 
 print(tal[1])
 ```
 
-```python
+```python []
 2
 ```
 
 --
 
-```python
+```python []
 tal = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 
 print(tal[15])
 ```
 
-```python
+```python []
 Traceback (most recent call last):
   File "c:/Users/elev/git/P1/chapter-08/exempel/ex1.py", line 7, in <module>
     print(tal[15])
@@ -67,14 +67,14 @@ IndexError: list index out of range
 
 --
 
-```python
+```python []
 gottOchBlandat = ['Frukt', 1,'Lakrits', 2, False]
 
 print(gottOchBlandat[-1])
 ```
 
 
-```python
+```python []
 False
 ```
 
@@ -92,38 +92,38 @@ Indexeras med dubbla hakparenteser
 
 --
 
-```python
+```python []
 matrix = [[1, 2, 3], [4 ,5, 6], [7, 8, 9, 10]]
 
 print(matrix[1])
 ```
 
-```python
+```python []
 [4, 5, 6]
 ```
 
 --
 
-```python
+```python []
 matrix = [[1, 2, 3], [4 ,5, 6], [7, 8, 9, 10]]
 
 print(matrix[1][0])
 ```
 
-```python
+```python []
 4
 ```
 
 --
 
-```python
+```python []
 tictactoe = [['X',' ','O'],[' ','X','O'],[' ','O','X']]
 
 for row in tictactoe:
     print(row)
 ```
 
-```
+``` []
 ['X', ' ', 'O']
 [' ', 'X', 'O']
 [' ', 'O', 'X']
@@ -150,7 +150,7 @@ lista.append(5)
 print(lista)
 ```
 
-```python
+```python []
 [1, 2, 3, 4, 5]
 ```
 
@@ -158,14 +158,14 @@ print(lista)
 
 ## Ändra ett värde
 
-```python
+```python []
 lista = [1, 2, 3, 4]
 lista[2] = 3.14
 
 print(lista)
 ```
 
-```python
+```python []
 [1, 2, 3.14, 4, 5]
 ```
 
@@ -173,14 +173,14 @@ print(lista)
 
 ## Radera ett värde (1)
 
-```python
+```python []
 lista = [1, 2, 3, 4]
 lista.pop(2)
 
 print(lista)
 ```
 
-```python
+```python []
 [1, 2, 4]
 ```
 
@@ -188,14 +188,14 @@ print(lista)
 
 ## Radera ett värde (2)
 
-```python
+```python []
 lista = [1, 2, 3, 4]
 lista.pop(-1)
 
 print(lista)
 ```
 
-```python
+```python []
 [1, 2, 3]
 ```
 
@@ -203,14 +203,14 @@ print(lista)
 
 ## Lägga till på en specifik plats
 
-```python
+```python []
 lista = [1, 2, 4]
 lista.insert(2, 3)
 
 print(lista)
 ```
 
-```python
+```python []
 [1, 2, 3, 4]
 ```
 
@@ -222,7 +222,7 @@ print(lista)
 
 # For
 
-```python
+```python []
 mylist = [5, 6,8 ,9, 10, 2.58, 8.19]
 product = 1;
 
@@ -233,7 +233,7 @@ print(product)
 print('{:.2f}'.format(product))
 ```
 
-```python
+```python []
 456412.31999999995
 456412.32
 ```
@@ -242,7 +242,7 @@ print('{:.2f}'.format(product))
 
 ## While
 
-```python
+```python []
 mylist = [5, 6, 8, 9, 10, 2.58, 8.19]
 product = 1
 i = 0
@@ -255,7 +255,7 @@ print(product)
 print(f'{product:.2f}')
 ```
 
-```python
+```python []
 456412.31999999995
 456412.32
 ```
@@ -266,21 +266,21 @@ print(f'{product:.2f}')
 
 --
 
-```python
+```python []
 mening = input("Skriv en mening: ")
 lista = list(mening)
 
 print(lista)
 ```
 
-```python
+```python []
 Skriv en mening: Teknik är bäst
 ['T', 'e', 'k', 'n', 'i', 'k', ' ', 'ä', 'r', ' ', 'b', 'ä', 's', 't']
 ```
 
 --
 
-```python
+```python []
 mening = input("Skriv en mening: ")
 lista = list(mening)
 
@@ -299,13 +299,13 @@ print("Din mening är nu: " + ''.join(lista))
 
 --
 
-```html
+```html []
 Skriv en mening: Pelle
 Ange index på bokstaven du vill ändra (return avslutar):
 Din mening är nu: Pelle
 ```
 
-```html
+```html []
 Skriv en mening: Pälle
 Ange index på bokstaven du vill ändra (return avslutar):1
 Skriv ny bokstav för index 1: e
@@ -319,22 +319,22 @@ Din mening är nu: Pelle
 
 --
 
-```python
+```python []
 list = [0] * 15
 
 print(list)
 ```
 
-```python
+```python []
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-```python
+```python []
 list = [0 for i in range(15)]
 print(list)
 ```
 
-```python
+```python []
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
@@ -344,7 +344,7 @@ print(list)
 
 --
 
-```python
+```python []
 tal = []
 
 for i in range(1,6):
@@ -356,7 +356,7 @@ for j in tal:
     print(j)
 ```
 
-```python
+```python []
 Ange tal 1 : 5
 Ange tal 2 : 5.5
 Ange tal 3 : 6.6
@@ -376,7 +376,7 @@ Dina inmatade tal:
 
 --
 
-```python
+```python []
 tal = []
 
 for i in range(1,6):
@@ -395,7 +395,7 @@ for i in range(1, len(tal)):
 print('Minsta och största talen är {}, {}'.format(xmin,xmax))
 ```
 
-```python
+```python []
 Ange tal 1 : 4
 Ange tal 2 : 5
 Ange tal 3 : 9
@@ -406,7 +406,7 @@ Minsta och största talen är 1.0, 9.0
 
 --
 
-```python
+```python []
 tal = []
 
 for i in range(1,6):
@@ -419,7 +419,7 @@ print('xmin =', xmin)
 print('xmax =', xmax)
 ```
 
-```python
+```python []
 Ange tal 1 : 5
 Ange tal 2 : 6
 Ange tal 3 : 7
@@ -445,7 +445,7 @@ Definieras m.h.a vanliga parenteser istället för hakparenteser
 
 ## Lista
 
-```python
+```python []
 lista = [1, 2, 3]
 print(lista[1])
 
@@ -453,7 +453,7 @@ lista.append(4)
 print(lista)
 ```
 
-```python
+```python []
 2
 [1, 2, 3, 4]
 ```
@@ -462,26 +462,26 @@ print(lista)
 
 ## Tuplar
 
-```python
+```python []
 tippel = (1, 2, 3)
 
 print(tippel)
 print(tippel[1])
 ```
 
-```python
+```python []
 (1, 2, 3)
 2
 ```
 
 --
 
-```python
+```python []
 tippel = (1, 2, 3)
 tippel.append(4)
 ```
 
-```python
+```python []
 Traceback (most recent call last):
   File "c:/Users/elev/git/P1/chapter-08/exempel/ex9.py", line 17, in <module>
     tippel.append(4)
@@ -496,13 +496,13 @@ AttributeError: 'tuple' object has no attribute 'append'
 
 ## Packa ihop
 
-```python
+```python []
 multiple = 1, 2, 3, 4, 5
 
 print(multiple)
 ```
 
-```python
+```python []
 (1, 2, 3, 4, 5)
 ```
 
@@ -510,20 +510,20 @@ print(multiple)
 
 ## Packa upp
 
-```python
+```python []
 multiple = 1, 2, 3, 4, 5
 
 ett, två, tre, fyra, fem = multiple
 print(fyra)
 ```
 
-```python
+```python []
 4
 ```
 
 --
 
-```python
+```python []
 multiple = 1, 2, 3, 4, 5
 
 ett, två, tre = tre, två, ett
@@ -533,7 +533,7 @@ print(två)
 print(tre)
 ```
 
-```python
+```python []
 3
 2
 1
@@ -545,7 +545,7 @@ print(tre)
 
 --
 
-```python
+```python []
 from timeit import timeit
 
 listTime = timeit(stmt='[1,2,3,4,5,6,7,8,9,10]', number=1000000)
@@ -557,7 +557,7 @@ print(tupleTime) # 0.007808499999999996
 
 --
 
-```python
+```python []
 listan = ['Kålle', 'Ada', 'Kalle', 'Lotta', 'Nicko', 'Pulver', 'Humle', 'Dumle']
 tupler = ('Kålle', 'Ada', 'Kalle', 'Lotta', 'Nicko', 'Pulver', 'Humle', 'Dumle')
 
@@ -565,7 +565,7 @@ print('listan=',listan.__sizeof__())
 print('tupler=',tupler.__sizeof__())
 ```
 
-```python
+```python []
 listan= 52
 tupler= 44
 ```
@@ -593,7 +593,7 @@ En lista i Python är en lång rad med referenser till olika data.
 
 ## Ändrar i samma lista
 
-```python
+```python []
 lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 lista2 = lista1
 lista1.append(10)
@@ -605,7 +605,7 @@ print('Lista2 = ', end='')
 print(lista2)
 ```
 
-```python
+```python []
 Lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 Lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
@@ -614,7 +614,7 @@ Lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 # Kopia av en lista
 
-```python
+```python []
 lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 lista2 = [x for x in lista1] # list comprehension
 lista2.append(11)
@@ -625,14 +625,14 @@ print('Lista2 = ', end='')
 print(lista2)
 ```
 
-```python
+```python []
 Lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
 
 --
 
-```python
+```python []
 lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 lista2 = lista1[:]
 lista2.append(11)
@@ -643,14 +643,14 @@ print('Lista2 = ', end='')
 print(lista2)
 ```
 
-```python
+```python []
 Lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Lista2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 ```
 
 --
 
-```python
+```python []
 lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 lista2 = lista1[::-1]
 
@@ -660,7 +660,7 @@ print('Lista2 = ', end='')
 print(lista2)
 ```
 
-```python
+```python []
 Lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Lista2 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 ```
@@ -669,7 +669,7 @@ Lista2 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 ## Slå ihop listor
 
-```python
+```python []
 a = [1,2,3,4,5]
 b = [6,7,8,9,10]
 b.append(a)
@@ -677,7 +677,7 @@ b.append(a)
 print(b)
 ```
 
-```python
+```python []
 [6, 7, 8, 9, 10, [1, 2, 3, 4, 5]]
 ```
 
@@ -685,7 +685,7 @@ Hoppsan!
 
 --
 
-```python
+```python []
 a = [1,2,3,4,5]
 b = [6,7,8,9,10]
 c = a + b
@@ -693,13 +693,13 @@ c = a + b
 print(c)
 ```
 
-```python
+```python []
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 --
 
-```python
+```python []
 a = [1,2,3,4,5]
 b = [6,7,8,9,10]
 a.extend(b)
@@ -707,7 +707,7 @@ a.extend(b)
 print(a)
 ```
 
-```python
+```python []
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
@@ -715,7 +715,7 @@ print(a)
 
 ## "List comprehensions"
 
-```python
+```python []
 factors = [1, 2, 3, 4, 5]
 squares = []
 cubics = []
@@ -730,7 +730,7 @@ for i in range(len(factors)):
 
 --
 
-```python
+```python []
 factors = [1, 2, 3, 4, 5]
 squares = [factor**2 for factor in factors]
 cubics = [factor**3 for factor in factors]
@@ -739,7 +739,7 @@ for i in range(0,len(factors)):
     print(factors[i], squares[i], cubics[i])
 ```
 
-```html
+```html []
 1 1 1
 2 4 8
 3 9 27
@@ -749,7 +749,7 @@ for i in range(0,len(factors)):
 
 --
 
-```python
+```python []
 factors = [1,2,3,4,5]
 squares = [factor**2 for factor in factors]
 cubics = [factor**3 for factor in factors]
@@ -761,7 +761,7 @@ for i in range(0,len(factors)):
     print(f, s, c)
 ```
 
-```html
+```html []
    1    1    1
    2    4    8
    3    9   27
@@ -771,7 +771,7 @@ for i in range(0,len(factors)):
 
 --
 
-```python
+```python []
 numbers = list(range(1,21))
 odd = []
 even = []
@@ -788,7 +788,7 @@ print(odd)
 
 --
 
-```python
+```python []
 numbers = list(range(1,21))
 even = [num for num in numbers if num % 2 == 0]
 odd = [num for num in numbers if num % 2 == 1]
@@ -797,7 +797,7 @@ print(even)
 print(odd)
 ```
 
-```python
+```python []
 [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 ```
@@ -810,7 +810,7 @@ print(odd)
 
 ## len()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada']
 
 längd = len(lista)
@@ -818,7 +818,7 @@ print(längd)
 print(lista[längd - 1])
 ```
 
-```python
+```python []
 4
 ada
 ```
@@ -829,12 +829,12 @@ Längden av listan.
 
 ## sorted()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada']
 sorterad = sorted(lista)
 ```
 
-```python
+```python []
 print(sorterad)
 ['ada', 'kalle', 'kålle', 'lotta']
 ```
@@ -843,13 +843,13 @@ Returnerar en sorterad lista, där elementen måste vara av samma typ
 
 --
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada']
 sorterad = sorted(lista)
 fallande = sorterad[::-1]
 ```
 
-```python
+```python []
 print(fallande)
 ['lotta', 'kålle', 'kalle', 'ada']
 ```
@@ -858,14 +858,14 @@ print(fallande)
 
 ## .append()
 
-```python
+```python []
 listan = ['a','b','c', 'd']
 listan.append('e')
 
 print(listan)
 ```
 
-```python
+```python []
 ['a', 'b', 'c', 'd', 'e']
 ```
 
@@ -875,7 +875,7 @@ Lägger till elementet x i slutet av listan
 
 ## .extend()
 
-```python
+```python []
 list1 = ['a','b','c']
 list2 = [1, 2, 3]
 list1.extend(list2)
@@ -884,7 +884,7 @@ print(list1)
 print(list2)
 ```
 
-```python
+```python []
 ['a', 'b', 'c', 1, 2, 3]
 [1, 2, 3]
 ```
@@ -895,7 +895,7 @@ Förlänger listan med en annan lista (jfr +-operatorn)
 
 ## .insert()
 
-```python
+```python []
 listan = ['a','b','c']
 x=1
 listan.insert(1, x)
@@ -903,7 +903,7 @@ listan.insert(1, x)
 print(listan)
 ```
 
-```python
+```python []
 ['a', 1, 'b', 'c']
 ```
 
@@ -913,14 +913,14 @@ Infogar elementet **x** på plats **i**.
 
 ## .remove()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada', 'lotta']
 lista.remove('lotta')
 
 print(lista)
 ```
 
-```python
+```python []
 ['kalle', 'kålle', 'ada', 'lotta']
 ```
 
@@ -930,14 +930,14 @@ Tar bort första elementet med värdet **x**
 
 ## .pop()
 
-```python
+```python []
 listan = ['a','b','c']
 listan.pop()
 
 print(listan)
 ```
 
-```python
+```python []
 ['a', 'b']
 ```
 
@@ -947,14 +947,14 @@ Tar bort elementet med index **i** och returnerar värdet. Om **i** utelämnas �
 
 ## .index()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada', 'lotta']
 x = lista.index('ada')
 
 print(x)
 ```
 
-```python
+```python []
 3
 ```
 
@@ -964,14 +964,14 @@ Returnerar index för första förekomst av element **x**
 
 ## .count()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada', 'lotta', 'lotta']
 x = lista.count('lotta')
 
 print(x)
 ```
 
-```python
+```python []
 3
 ```
 
@@ -981,14 +981,14 @@ Returnerar antalet element med värdet **x**.
 
 ## .sort()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada', 'lotta', 'lotta']
 lista.sort()
 
 print(lista)
 ```
 
-```python
+```python []
 ['ada', 'kalle', 'kålle', 'lotta', 'lotta', 'lotta']
 ```
 
@@ -998,14 +998,14 @@ Sorterar listan på plats
 
 ## .reverse()
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada', 'lotta', 'lotta']
 lista.reverse()
 
 print(lista)
 ```
 
-```python
+```python []
 ['lotta', 'lotta', 'ada', 'kålle', 'lotta', 'kalle']
 ```
 
@@ -1015,14 +1015,14 @@ Vänder på ordningen av elementen i listan.
 
 ## .join
 
-```python
+```python []
 lista = ['kalle', 'lotta', 'kålle', 'ada']
 x = ", ".join(lista)
 
 print(x)
 ```
 
-```python
+```python []
 kalle, lotta, kålle, ada
 ```
 

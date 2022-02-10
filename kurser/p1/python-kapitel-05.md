@@ -27,7 +27,7 @@ Den vanligaste loopkonstruktionen i många språk är `for`, men även `while` �
 
 --
 
-```python
+```python []
 for a in ['Kurt', 'Ada', 15, 3.14, 'Olle']:
     print(a)
 
@@ -42,7 +42,7 @@ print('\nUtanför loopen')
 
 --
 
-```python
+```python []
 for a in [1, 2, 3]:
     product = a * a
     print(product)
@@ -58,7 +58,7 @@ print('\nUtanför loopen')
 
 --
 
-```python
+```python []
 for a in range(1, 4):
     print(a + a)
 
@@ -89,7 +89,7 @@ print('\nUtanför loopen')
 
 --
 
-```python
+```python []
 start = 1
 stop = 10
 step = 2
@@ -113,7 +113,7 @@ Vad kommer resultatet att bli?
 
 --
 
-```python
+```python []
 text = "Teknik"
 
 for char in text:
@@ -128,7 +128,7 @@ print('\nUtanför loopen')
 
 ## Exempel 5
 
-```python
+```python []
 for i in range(3):
     print(i)
 else:
@@ -153,7 +153,7 @@ Många `for`-loopar kan skrivas om som `while` och tvärtom.
 
 ## Exempel 1
 
-```python
+```python []
 start = 1
 stop = 10
 step = 2
@@ -175,7 +175,7 @@ print('\nUtanför loopen')
 
 ## Exempel 2
 
-```python
+```python []
 count = 0
 the_sum = 0
 
@@ -197,7 +197,7 @@ if count != 0:
 --
 
 
-```python
+```python []
 count = 0
 the_sum = 0
 
@@ -227,7 +227,7 @@ if count != 0:
 
 --
 
-```python
+```python []
 while True:
     n = input('Please enter "hello": ')
     if n.strip() == 'hello':
@@ -246,7 +246,7 @@ print('\nUtanför loopen')
 
 --
 
-```python
+```python []
 for i in range(1, 4):
     print('i =', i)
 

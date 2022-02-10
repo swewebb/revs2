@@ -22,7 +22,7 @@ I många programmeringsspråk används if-konstruktionen för att göra olika va
 
 --
 
-```python
+```python []
 if test expression:
 	statement(s)
 ```
@@ -33,7 +33,7 @@ Hela programblocket som hör till if-satsen **måste** ha samma indrag.
 
 --
 
-```python
+```python []
 if test expression:
 	statement(s)
 	if other test expression:
@@ -49,7 +49,7 @@ If-satsen kan nästlas (även om det kanske inte blir vackert)
 
 --
 
-```python
+```python []
 # If the number is positive, we print a message
 num = 3
 
@@ -91,7 +91,7 @@ print("This is also always printed.")
 
 --
 
-```python
+```python []
 num = int(input("Give a number: "))
 
 if num > 0:
@@ -116,7 +116,7 @@ print("This is always printed.")
 
 --
 
-```python
+```python []
 num = int(input("Give a number: "))
 
 if num > 0:
@@ -147,7 +147,7 @@ print("This is always printed.")
 
 --
 
-```python
+```python []
 p = int(input('Ange poäng på provet (0-100): '))
 
 if p >= 90:
@@ -170,7 +170,7 @@ else:
 
 --
 
-```python
+```python []
 p = int(input('Ange poäng på provet (0-100): '))
 
 if p >= 90:
@@ -199,7 +199,7 @@ print('Betyg = ', grade)
 
 --
 
-```python
+```python []
 num1 = 3
 num2 = 3
 
@@ -237,7 +237,7 @@ Dessa kan kombineras med logiska operatorerna `and`, `or`, `not`.
 
 --
 
-```python
+```python []
 num1 = 3
 num2 = 3
 

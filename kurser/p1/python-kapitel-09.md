@@ -24,7 +24,7 @@ strukturerar upp sin kod för att få bitar som är återanvändbara</span>
 --
 
 
-```python
+```python []
 # Exempel på en funktion med två parametrar
 def skriv_summa(x, y):
     summa = x + y
@@ -66,7 +66,7 @@ Summan är: 7
 
 --
 
-```python
+```python []
 # Exempel på en funktion med två parametrar
 def skriv_summa(x, y = 1):
     summa = x + y
@@ -80,7 +80,7 @@ skriv_summa(a, b)
 skriv_summa(b)
 ```
 
-```html
+```html []
 Summan är: 7
 Summan är: 5
 ```
@@ -99,7 +99,7 @@ Summan är: 5
 
 --
 
-```python
+```python []
 # Exempel på en funktion som returnerar ett värde
 def medelvarde(x, y):
     medel = (x + y ) / 2
@@ -113,7 +113,7 @@ m = medelvarde(a, b)
 print('Medelvärdet är:', m)
 ```
 
-```html
+```html []
 Medelvärdet är: 3.5
 ```
 
@@ -125,7 +125,7 @@ Detta gör vi med **return**, och värdet "förs över" till utanför funktionsa
 
 --
 
-```python
+```python []
 # Exempel på en funktion som returnerar ett värde
 def medelvarde(x, y):
     """Returnerar medelvärdet av parametrarna x och y"""
@@ -145,14 +145,14 @@ help(medelvarde)
 --
 
 
-```html
+```html []
 medelvarde(x, y)
     Returnerar medelvärdet av parametrarna x och y
 ```
 
 --
 
-```python
+```python []
 # Exempel på en funktion som returnerar ett värde
 def medelvarde(x, y):
     """Returnerar medelvärdet av parametrarna x och y"""
@@ -180,7 +180,7 @@ print('Medelvärdet är:', m)
 
 --
 
-```python
+```python []
 b = 6
 
 def leppard():
@@ -192,7 +192,7 @@ leppard()
 print(b)
 ```
 
-```html
+```html []
 6
 10
 6
@@ -200,7 +200,7 @@ print(b)
 
 --
 
-```python
+```python []
 b = 6
 
 def leppard():
@@ -239,7 +239,7 @@ Vill man tilldela en **global variabel** inne i en funktion måste man deklarera
 
 --
 
-```python
+```python []
 import math
 
 pi = math.pi
@@ -251,7 +251,7 @@ print(pi, sq, sin)
 
 --
 
-```python
+```python []
 from math import *
 
 pi = pi
@@ -263,7 +263,7 @@ print(pi, sq, sin)
 
 --
 
-```python
+```python []
 from math import pi, sqrt, sin
 
 pi = pi
@@ -275,7 +275,7 @@ print(pi, sq, sin)
 
 --
 
-```python
+```python []
 import math
 
 for method in dir(math):
@@ -293,13 +293,13 @@ prod radians remainder sin sinh sqrt tan tanh tau trunc
 
 --
 
-```python
+```python []
 import math
 
 help(math)
 ```
 
-```html
+```html []
 NAME
     math
 
@@ -321,7 +321,7 @@ FUNCTIONS
 
 --
 
-```python
+```python []
 """Förklarande text om vad funktionen gör
 
 Args:
