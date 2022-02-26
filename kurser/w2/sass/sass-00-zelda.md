@@ -6,7 +6,7 @@
 
 # Vad ska vi skapa?
 
-BILD
+![zelda](images/zelda-00.png)
 
 ---
 
