@@ -6,6 +6,8 @@
 
 # Vad ska vi skapa?
 
+--
+
 ![zelda](images/zelda-00.png)
 
 ---
