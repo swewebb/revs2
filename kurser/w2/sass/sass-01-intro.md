@@ -54,10 +54,6 @@ html {
 
 ---
 
-# Installation
-
----
-
 # Node.js
 
 --
