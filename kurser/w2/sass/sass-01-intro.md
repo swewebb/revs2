@@ -172,7 +172,7 @@ Du kommer nu ha en ny fil med namnet **package.json**.
 ## Installera globala moduler/paket
 
 ```text []
-npm install --global gulp gulp-cli sass
+npm install --global gulp-cli sass
 ```
 
 ---
