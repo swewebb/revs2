@@ -8,102 +8,165 @@
 
 --
 
-Mixins kan vi använda oss av för att kunna återanvända en gruppering av CSS-regler.
+**Mixins** kan vi använda oss av för att kunna återanvända en gruppering av CSS-regler.
 
 --
 
-```scss []
-@mixin clearfix() {
-  *zoom: 1;
-  &::before, &::after {
-    content: '';
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-}
-```
-
-I det här fallet har vi en mixin som heter **clearfix** och den återfinns i **_mixins.scss**.
+# Demo
 
 --
 
-```scss []
-@import "mixins";
+## src/index.html
 
-.wrapper {
-  @include clearfix;
-}
+```html
+<div class="demo"></div>
 ```
-
-Här ser vi ett exempel på hur vi kan inkludera vår mixin clearfix.
 
 --
 
+## src/mixins/_demo.scss
+
 ```scss []
-@mixin roundcorners($radius) {
-  border-top-left-radius: $radius;
-  border-bottom-right-radius: $radius;
+@mixin test() {
+  border: .5rem solid #000;
+
+  width: 20rem;
+  aspect-ratio: 2/1;
+
+  margin: 2rem;
 }
 ```
 
-Man kan även skicka med ett eller flera värden till sin mixins parametrar (här **$radius**).
-
-I det här fallet skickar vi med vilken radie vi vill ha i de två hörnen.
+Vi skapar en mixin genom att ange nyckelordet **@mixin**.
 
 --
 
-```scss []
-@import "mixins";
+## src/style.scss
 
-.box {
-    @include roundcorners(1.5rem);
+```scss [3, 6]
+@use 'base/' as *;
+@use 'partials/' as *;
+@use 'mixins/demo';
+
+.demo {
+  @include demo.test()
 }
 ```
 
-Så här kan det se ut när vi använder oss av vår mixin och skickar med ett värde.
+Här har vi importerat vår fil med vår mixin för att sedan inkludera den.
 
 --
 
-```scss []
-@import "mixins";
-
-$val: 1.5rem;
-
-.box {
-    @include roundcorners($val);
-}
-```
-
-Givetvis kan värdet vi skickar med återfinnas i en variabel.
+![mixin](images/mixin-01.png)
 
 --
 
-```scss []
-@mixin roundcorners($radius: 1rem) {
-  border-top-left-radius: $radius;
-  border-bottom-right-radius: $radius;
+## src/mixins/_demo.scss
+
+```scss [1, 4]
+@use '../partials/colors' as c;
+
+@mixin test() {
+  border: .5rem solid c.$secondary-color;
+
+  width: 20rem;
+  aspect-ratio: 2/1;
+
+  margin: 2rem;
 }
 ```
-
-Vi kan även ange ett standardvärde.
 
 --
 
-```scss []
-@import "mixins";
+![mixin](images/mixin-02.png)
 
-.box1 {
-    @include roundcorners(); // 1rem
-}
+--
 
-.box2 {
-    @include roundcorners(1.5rem); // 1.5rem
+## src/mixins/_demo.scss
+
+```scss [3-4, 6]
+@use '../partials/colors' as c;
+
+@mixin test($w, $b: .5rem) {
+  border: $b solid c.$secondary-color;
+
+  width: $w;
+  aspect-ratio: 2/1;
+
+  margin: 2rem;
 }
 ```
 
-Här ser vi två exempel, ett utan att vi skickar med något argument och ett där vi skickar med ett argument.
+--
+
+## src/style.scss
+
+```scss [3, 6]
+@use 'base/' as *;
+@use 'partials/' as *;
+@use 'mixins/demo';
+
+.demo {
+  @include demo.test(5rem);
+}
+```
+
+--
+
+![mixin](images/mixin-03.png)
+
+--
+
+## src/style.scss
+
+```scss [3, 6]
+@use 'base/' as *;
+@use 'partials/' as *;
+@use 'mixins/demo';
+
+.demo {
+  @include demo.test(10rem, 1rem);
+}
+```
+
+--
+
+![mixin](images/mixin-04.png)
+
+--
+
+## src/mixins/_demo.scss
+
+```scss [1, 3-4]
+//@use '../partials/colors' as c;
+
+@mixin test($w, $c, $b: .5rem) {
+  border: $b solid $c;
+
+  width: $w;
+  aspect-ratio: 2/1;
+
+  margin: 2rem;
+}
+```
+
+--
+
+## src/style.scss
+
+```scss [3, 6]
+@use 'base/' as *;
+@use 'partials/' as *;
+@use 'mixins/demo';
+
+.demo {
+  @include demo.test(10rem, $primary-color, 1rem);
+}
+```
+
+--
+
+![mixin](images/mixin-05.png)
 
 ---
 

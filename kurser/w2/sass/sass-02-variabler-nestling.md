@@ -92,7 +92,7 @@ Så här kommer formatmallen se ut när vi har konverterat scss:en till css.
 }
 ```
 
-I det här exemplet använder vi **&-tecknet** för att lägga till i slutet på klassnamnet **.article**, till exempel **.article-100**.
+I det här exemplet använder vi **&-tecknet** för att lägga till i slutet på klassnamnet **.article**, nämligen **.article-100**, **.article-50** samt **.article-25**.
 
 --
 

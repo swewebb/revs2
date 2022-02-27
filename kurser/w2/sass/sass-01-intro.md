@@ -28,7 +28,7 @@ I **scss** använder man klammerparenteser som vi är vana med, så när vi prat
 
 ## Sass
 
-```scss
+```scss []
 $font-size: 18px;
 $text-color: #000;
 
@@ -42,7 +42,7 @@ html
 
 ## Scss
 
-```scss
+```scss []
 $font-size: 18px;
 $text-color: #000;
 
@@ -60,15 +60,21 @@ html {
 
 Hämta hem **node.js** från [https://nodejs.org/en/](https://nodejs.org/en/).
 
---
+Välj senaste versionen!
 
-![node](images/w2-sass-01-01.png)
-
-Under installationen ser du till att bocka i rutan för att installera nödvändiga verktyg.
+Installera programmet (next-next-next...)
 
 --
 
-![Node-kontroll](images/w2-sass-01-02.png)
+## Kontroll att node och npm fungerar
+
+```txt
+PS D:\git\> node --version
+v17.6.0
+
+PS D:\git\> npm --version
+8.5.1
+```
 
 När installationen är klar kontrollerar du att **node** och **npm** (_Node Package Manager_) finns.
 
@@ -80,11 +86,11 @@ När installationen är klar kontrollerar du att **node** och **npm** (_Node Pac
 
 1. Skapa förvaringsplats
 1. Klona ner
+1. Mappstruktur
 1. Initiera projektet
-1. Installera moduler - sass
-1. Kontroll - sass
-1. Installera moduler - parcel
-1. Kontroll - parcel
+1. Installera globala moduler/paket
+1. Installera lokala moduler/paket
+1. Konfigurera gulpfile.js
 1. Gitignore
 1. Pusha
 
@@ -92,7 +98,7 @@ När installationen är klar kontrollerar du att **node** och **npm** (_Node Pac
 
 ## Skapa förvaringsplats
 
-Skapa en ny privat förvaringsplats med namnet **w2-sass**.
+Skapa en ny privat förvaringsplats med namnet <br> **w2-sass**.
 
 Glöm inte att bjuda in läraren!
 
@@ -100,7 +106,7 @@ Glöm inte att bjuda in läraren!
 
 ## Klona ner
 
-```text
+```text []
 git clone https://github.com/swewebb/w2-sass.git
 ```
 
@@ -108,96 +114,201 @@ Klona ner förvaringsplatsen i mappen **C:\git**
 
 ---
 
+## Mappstruktur
+
+```text []
+src/
+  scss/
+    base/
+      _bg.scss
+      _center.scss
+      _flex.scss
+      _index.scss
+      _reset.scss
+    partials/
+      _index.scss
+    style.scss
+index.html
+```
+
+Vi kommer att hålla mappstrukturen relativt enkel.
+
+Ladda ner zippen!
+
+---
+
 ## Initiera projektet
 
-![npm-init-1](images/w2-sass-01-03.png)
+```text []
+npm init -y
+```
 
 --
 
-![npm-init-2](images/w2-sass-01-04.png)
+```text []
+PS D:\git\w2-sass> npm init -y
+Wrote to D:\git\w2-sass\package.json:
+
+{
+  "name": "w2-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
 
 --
 
-![npm-init-3](images/w2-sass-01-05.png)
-
---
-
-![npm-init-3](images/w2-sass-01-06.png)
+Du kommer nu ha en ny fil med namnet **package.json**.
 
 ---
 
-## Installera moduler - Sass
+## Installera globala moduler/paket
 
-```
-npm install sass -g
-npm install sass -D
+```text []
+npm install --global gulp gulp-cli sass
 ```
 
 ---
 
-![npm-installerade](images/w2-sass-01-07.png)
+## Installera lokala moduler/paket
+
+```text []
+npm install --save-dev gulp gulp-sass gulp-postcss cssnano sass
+```
+
+Det kommer nu att dyka upp en ny mapp som heter **node_modules**.
+
+--
+
+```js []
+"devDependencies": {
+    "cssnano": "^5.0.17",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+}
+```
+
+I **package.json** kommer vi nu finna vilka paket vårt projekt behöver.
 
 ---
 
-## Kontroll - Sass
+## Konfigurera gulpfile.js
 
-![npm-kontroll-1](images/w2-sass-01-08.png)
-
---
-
-![npm-kontroll-2](images/w2-sass-01-09.png)
-
---
-
-![npm-kontroll-3](images/w2-sass-01-10.png)
-
---
-
-![npm-kontroll-3](images/w2-sass-01-11.png)
-
---
-
-![npm-kontroll-3](images/w2-sass-01-12.png)
-
----
-
-## Installera moduler - Parcel
-
-```text
-npm install parcel-bundler -D
+```js []
+const {src, dest, watch, series} = require('gulp')
+const sass = require('gulp-sass')(require('sass'))
+const postcss = require('gulp-postcss')
+const cssnano = require('cssnano')
 ```
 
-![npm-moduler-p](images/w2-sass-01-13.png)
+Börja med att skapa filen **gulpfile.js**.
 
 --
 
-![npm-moduler-p](images/w2-sass-01-14.png)
+```js []
+// HTML-hanteraren
+function copyHtml() {
+    return src('src/**/*.html')
+      .pipe(dest('dist'))
+}
 
----
-
-## Kontroll - Parcel
-
-![npm-kontroll-p1](images/w2-sass-01-15.png)
+exports.default = series(
+  copyHtml
+)
+```
 
 --
 
-![npm-kontroll-p2](images/w2-sass-01-16.png)
+```text []
+PS D:\git\w2-sass>gulp
+[11:06:17] Using gulpfile D:\git\w2-sass\gulpfile.js
+[11:06:17] Starting 'default'...
+[11:06:17] Starting 'copyHtml'...
+[11:06:17] Finished 'copyHtml' after 29 ms
+[11:06:17] Finished 'default' after 32 ms
+```
+
+Om vi nu kör **gulp** så kommer vår funktion att köras.
+
+Vi kommer nu att se en ny mapp **dist** och det är i den här mappen allt som vi vill publicera återfinnas, i vårt fall **index.html**.
+
+--
+
+```js []
+// Sass-hanteraren ,
+function scssTask() {
+  return src('src/scss/**/*.scss', {sourcemaps: true})
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('dist/css', {sourcemaps: '.'}))
+}
+
+exports.default = series(
+  scssTask,
+  copyHtml
+)
+```
+
+Nu bygger vi upp funktionen för att hantera scss:en.
 
 --
 
 ```
-npm run dev
+PS D:\git\w2-sass> gulp
+[11:11:59] Using gulpfile D:\git\w2-sass\gulpfile.js
+[11:11:59] Starting 'default'...
+[11:11:59] Starting 'scssTask'...
+[11:12:00] Finished 'scssTask' after 898 ms
+[11:12:00] Starting 'copyHtml'...
+[11:12:00] Finished 'copyHtml' after 11 ms
+[11:12:00] Finished 'default' after 913 ms
 ```
 
-![npm-kontroll-p3](images/w2-sass-01-17.png)
+Vi kontrollerar även att den fungerar. Det kommer nu att dyka upp en ny mapp i **dist**, nämligen **css**.
+
+I den kommer det att finnas två filer, **style.css** och **style.css.map**.
 
 --
 
-![npm-kontroll-p3](images/w2-sass-01-18.png)
+```js []
+// Kontrollanten
+function watchTask() {
+  watch('src/scss/**/*.scss', scssTask)
+  watch('src/**/*.html', copyHtml)
+}
+
+exports.default = series(
+  scssTask,
+  copyHtml,
+  watchTask
+)
+```
+
+Vi vill inte behöva köra **gulp** om och om igen så vi skapar oss en kontrollant som håller koll på när vi sparar och kör då våra funktioner.
 
 --
 
-![npm-kontroll-p4](images/w2-sass-01-19.png)
+```text []
+PS D:\git\w2-sass> gulp
+[11:20:52] Using gulpfile D:\git\w2-sass\gulpfile.js
+[11:20:52] Starting 'default'...
+[11:20:52] Starting 'scssTask'...
+[11:20:53] Finished 'scssTask' after 883 ms
+[11:20:53] Starting 'copyHtml'...
+[11:20:53] Finished 'copyHtml' after 6.84 ms
+[11:20:53] Starting 'watchTask'...
+```
+
+När vi nu kör **gulp** så kan se ut som att allt har hängts sig... men så är inte fallet. Vår kontrollant körs nu och väntar på att få något att göra.
 
 ---
 
@@ -207,7 +318,7 @@ I den här filen lägger vi till sådant som INTE ska hanteras av Git.
 
 **Observera!** Filen heter **.gitignore**
 
-```
+``` []
 node_modules
 .cache
 ```
@@ -220,10 +331,19 @@ Pusha upp allt till GitHub.
 
 ---
 
+# Återanvändning
+
+```text
+npm install
+```
+
+Då vi har **package.json** kan vi använda den för att skapa ett nytt projekt. Glöm inte att sedan lägga till **gulpfile.js** och **.gitignore**.
+
+---
+
 # Länkar
 
 - [https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/)
-- [https://parceljs.org/getting_started.html](https://parceljs.org/getting_started.html)
 
 ---
 
