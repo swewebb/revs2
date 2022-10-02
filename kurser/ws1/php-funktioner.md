@@ -415,5 +415,5 @@ function repeater(int $number, string $text): string
 
 Installera **PHP DocBlocker** i VSC.
 
-För att skapa en grund för din dokumentation skriver du **/**** och trycker enter.
+För att skapa en grund för din dokumentation skriver du **/\*\*** och trycker enter.
 
