@@ -374,3 +374,41 @@ Vi kan även lägga till en **type hint** som beskriver vilken datatyp som funkt
 
 Läs artikeln [PHP Type Hints](https://www.phptutorial.net/php-tutorial/php-type-hints/)
 
+---
+
+# Dokumentera funktioner
+
+--
+
+```php [5-11]
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Repeats a string x number of times and is returned comma separated.
+ *
+ * @param integer $number
+ * @param string $text
+ * @return string
+ */
+function repeater(int $number, string $text): string
+{
+    $arr = [];
+
+    for ($i = 0; $i < $number; $i++) {
+        $arr[] = $text;
+    }
+
+    return implode(", ", $arr);
+}
+
+```
+
+--
+
+## PHP DocBlocker
+
+Installera **PHP DocBlocker** i VSC.
+
+För att skapa en grund för din dokumentation skriver du **/**** och trycker enter.
