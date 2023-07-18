@@ -129,7 +129,7 @@ echo get_counter() .  '<br>'; // 3
 
 ## Superglobal variabler
 
-Globala variabler som är inbyggda i PHP, t.ex **$_POST** och **$_GET**.
+Globala variabler som är inbyggda i PHP, t.ex **$_POST** och **\$_GET**.
 
 Dessa kan man nå överallt.
 
@@ -266,7 +266,7 @@ echo "<h1>" . $answer . "</h1>";
 
 --
 
-Vi kan förbättra våra funktioner genom att göra dem "hårda".
+Vi kan (läs ska) förbättra våra funktioner genom att göra dem "hårda".
 
 Det menas att vi anger vilken typ av data vi förväntar oss i argumentlistan.
 
