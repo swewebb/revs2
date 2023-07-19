@@ -128,4 +128,29 @@ echo "</ul>";
 
 ---
 
+# Alternativ syntax
+
+--
+
+```php []
+<?php for ($i = 1; $i < 4; $i++): ?>
+  <div class="box">
+    <h1>Det här är box <?= $i; ?></h1>
+    <p>Lorem ipsum...</p>
+  </div>
+<?php endfor; ?>
+```
+
+`<?= $i; ?>` == `<?php echo $i; ?>`
+
+--
+
+![bild](bilder/php-loopar-for-alt.png)
+
+--
+
+[https://www.php.net/manual/en/control-structures.alternative-syntax.php](https://www.php.net/manual/en/control-structures.alternative-syntax.php)
+
+---
+
 # SLUT!
