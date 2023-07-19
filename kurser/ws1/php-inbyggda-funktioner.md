@@ -10,7 +10,8 @@ Det finns idag över 1000 inbyggda funktioner.
 
 Vi kommer att titta på några av dessa nu medan vissa andra kommer du att få söka upp i manualen.
 
-Manualen finns som du vet på [http://php.net](http://php.net)
+- [http://php.net](http://php.net)
+- [https://www.w3schools.com/php/php_ref_overview.asp](https://www.w3schools.com/php/php_ref_overview.asp)
 
 ---
 
