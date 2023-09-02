@@ -103,7 +103,7 @@ Två rader med tre celler i varje.
 
 # Rubrikceller
 
-```html [ ]
+```html [3-4]
 <table>
   <tr>
     <th>R1K1</th>
@@ -122,11 +122,34 @@ Två rader med tre celler i varje.
 
 ![th](images/th.png)
 
+--
+
+```html [3-4]
+<table>
+  <tr>
+    <th>Förnamn</th>
+    <th>Efternamn</th>
+  </tr>
+  <tr>
+    <td>Kalle</td>
+    <td>Kanin</td>
+  </tr>
+  <tr>
+    <td>Billy</td>
+    <td>Bäver</td>
+  </tr>
+</table>
+```
+
+--
+
+![th2](images/th2.png)
+
 ---
 
 # Tabellrubrik
 
-```html [ ]
+```html [2]
 <table>
   <caption>Tabellrubrik</caption>
   <tr>
@@ -173,10 +196,11 @@ Första tabellen innan sammanslagning.
 
 --
 
-```html [ ]
+```html [3-4]
 <table>
   <tr>
     <td colspan="2">Cell 1</td>
+    <-! Cell 2 raderad ->
   </tr>
   <tr>
     <td>Cell 3</td>
@@ -218,14 +242,15 @@ Första tabellen innan sammanslagning.
 
 --
 
-```html [ ]
+```html [3-4, 7-8]
 <table>
   <tr>
     <td rowspan="2">Cell 1</td>
     <td>Cell 2</td>
   </tr>
   <tr>
-    <td>Cell 3</td>
+    <-! Cell 3 raderad ->
+    <td>Cell 4</td>
   </tr>
   <tr>
     <td>Cell 5</td>
