@@ -184,4 +184,41 @@ echo "<p>Färg: $result</p>";
 
 ---
 
+# Ternary Operator
+
+--
+
+```php []
+<?php
+$a = 10;
+$b = 20;
+
+if ($a == $b) {
+  $r = "Hej";
+} else {
+  $r = "Hallå";
+}
+?>
+
+<p>Svar: <?= $r ?></p>
+```
+
+--
+
+```php [6]
+<?php
+
+$a = 110;
+$b = 10;
+
+$r = $a == $b ? "Hej" : "Hallå";
+?>
+
+<p>Svar: <?= $r ?></p>
+```
+
+
+
+---
+
 # SLUT!
