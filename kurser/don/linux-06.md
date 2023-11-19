@@ -6,29 +6,37 @@
 
 # Många alternativ
 
+--
+
 vi, wim, emacs, pico, **nano**, ...
 
 ---
 
 # Öppna
 
+--
+
 ```html
 nano
 ```
 
-Öppnar nano och skapar en ny buffer
+Öppnar **nano** och skapar en ny **buffer**
+
+--
 
 ```html
 nano ny-fil.txt
 ```
 
-Öppnar nano och skapar en ny buffer
+Öppnar **nano** och skapar en ny **buffer**
+
+--
 
 ```html
 nano fil-finns.txt
 ```
 
-Öpnnar filen fil-finns.txt
+Öppnar filen **fil-finns.txt**
 
 ---
 
@@ -39,7 +47,9 @@ nano fil-finns.txt
 
 --
 
-Förflyttar markören åt valt håll (upp, ner, höger, vänster)
+Förflyttar markören åt valt håll:
+
+**upp**, **ner**, **höger**, **vänster**
 
 ---
 
@@ -49,12 +59,13 @@ Förflyttar markören åt valt håll (upp, ner, höger, vänster)
 
 --
 
-`CTRL + v` eller `PgDn`
 
+`CTRL + v` eller `PgDn`
 
 Flyttar framåt en sida/skärm i taget
 
 --
+
 
 `CTRL + y` eller `PgUp`
 
@@ -111,13 +122,6 @@ Förflyttar dig ett stycke bakåt
 
 --
 
-`CTRL + V` NOOOOO!!!!
-
-Förflyttar dig till slutet på dokumentet
-
-
---
-
 `CTRL + N`
 
 Förflyttar dig en rad ner till samma kolumn om den finns. Om inte så hamnar du i slutet på raden.
@@ -132,7 +136,7 @@ Förflyttar dig en rad ner till samma kolumn om den finns. Om inte så hamnar du
 
 `ALT + A` eller `CTRL + 6`
 
-Låtor dig markera del av text.
+Låter dig markera del av text.
 
 Ångra markering == Samma kommando
 
@@ -213,6 +217,7 @@ Låtor dig markera del av text.
 ---
 
 # Visa information om rad
+
 --
 
 `CTRL + J`
@@ -239,7 +244,7 @@ Låtor dig markera del av text.
 
 --
 
-Doh!
+`CTRL + X`
 
 ---
 

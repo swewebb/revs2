@@ -14,11 +14,11 @@
 
 ## Första tecknet
 
-\- = fil
+**\-** = fil
 
-d = mapp/katalog
+**d** = mapp/katalog
 
-l = mjuk/symbolisk länk
+**l** = mjuk/symbolisk länk
 
 --
 
@@ -327,4 +327,4 @@ Vi kan använda oss av kommandot **deluser** för att ta bort en användare frå
 
 ---
 
-Slut!
+# Slut!
