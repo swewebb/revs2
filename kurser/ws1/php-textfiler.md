@@ -2,335 +2,490 @@
 
 ---
 
-# Kontrollera om en fil finns
+# Kontrollera om filen finns
 
 --
 
 ```php []
 <?php
-$file = "demo.txt";
+// $file = "no_file.txt";
+// $file = "empty.txt";
+$file = "text.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
 
 if (file_exists($file)) {
-  $result = "Filen finns";
-} else {
-  $result = "Filen finns inte";
+  echo "Filen finns";
+}
+
+echo "<p>Mer kod...</p>";
+?>
+```
+
+--
+
+## Ingen fil
+
+![Bild](bilder/textfiler/file-exist-1.png)
+
+--
+
+## Tom fil
+
+![Bild](bilder/textfiler/file-exist-2.png)
+
+--
+
+## Fil med innehåll
+
+![Bild](bilder/textfiler/file-exist-3.png)
+
+---
+
+# Läsa filens innehåll - fread()
+
+--
+
+```php [9-20]
+<?php
+// $file = "empty.txt";
+$file = "text.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    $contents = fread($handle, filesize($file));
+    fclose($handle);
+
+    echo nl2br($contents);
+  } else {
+    echo "Filen är tom!";
+  }
 }
 ?>
 ```
 
-```html []
-<div class="posts">
-  <?= $result ?>
-</div>
-```
+--
+
+## Tom fil
+
+![Bild](bilder/textfiler/fread-1.png)
 
 --
 
-BILD
+## Fil med innehåll
+
+![Bild](bilder/textfiler/fread-2.png)
 
 --
 
-```php []
-<?php
-$file = "demo.txt";
+## HTML-koden
 
-$result = file_exists($file) ? "Filen finns" : "Filen finns inte";
-?>
-```
-
-```html []
-<div class="posts">
-  <?= $result ?>
-</div>
-```
-
---
-
-BILD
+![Bild](bilder/textfiler/fread-3.png)
 
 ---
 
-# Läsa hela filen
+# Läsa filens innehåll - fgets()
 
 --
 
+```php [12-16]
+<?php
+// $file = "empty.txt";
+$file = "text.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    $contents = fgets($handle);
+    fclose($handle);
+
+    var_dump($contents);
+  } else {
+    echo "Filen är tom!";
+  }
+}
+?>
+```
+
+--
+
+## Tom fil
+
+![Bild](bilder/textfiler/fgets-1.png)
+
+--
+
+## Fil med innehåll
+
+![Bild](bilder/textfiler/fgets-2.png)
+
+--
+
+```php [13-17]
+<?php
+// $file = "empty.txt";
+$file = "text.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    while (!feof($handle)) {
+      $lines[] = fgets($handle);
+    }
+
+    print_r($lines);
+
+    fclose($handle);
+  } else {
+    echo "Filen är tom!";
+  }
+}
+?>
+```
+
+--
+
+## Fil med innehåll
+
+![Bild](bilder/textfiler/fgets-4.png)
+
+--
+
+```php [19-23]
+<?php
+// $file = "empty.txt";
+$file = "text.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    while (!feof($handle)) {
+      $lines[] = fgets($handle);
+    }
+
+    fclose($handle);
+
+    echo "<ol>";
+    foreach ($lines as $row) {
+      echo "<li>" . $row . "</li>";
+    }
+    echo "</ol>";
+  } else {
+    echo "Filen är tom!";
+  }
+}
+?>
+```
+
+--
+
+## Fil med innehåll
+
+![Bild](bilder/textfiler/fgets-6.png)
+
+--
+
+```php [14-18]
+<?php
+// $file = "empty.txt";
+$file = "text.txt";
+// $file = "ooops.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    echo "<ol>";
+    while (!feof($handle)) {
+      echo "<li>" . fgets($handle) . "</li>";
+    }
+    echo "</ol>";
+
+    fclose($handle);
+  } else {
+    echo "Filen är tom!";
+  }
+}
+?>
+```
+
+--
+
+## Fil med innehåll
+
+![Bild](bilder/textfiler/fgets-8.png)
+
+--
+
+## Fil med innehåll #2 (ooops)
+
+![Bild](bilder/textfiler/fgets-9.png)
+
+--
+
+```php [16]
+<?php
+// $file = "empty.txt";
+// $file = "text.txt";
+$file = "ooops.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    echo "<ol>";
+    while (!feof($handle)) {
+      echo "<li>" . htmlentities(fgets($handle)) . "</li>";
+    }
+    echo "</ol>";
+  } else {
+    echo "Filen är tom!";
+  }
+
+  fclose($handle);
+}
+?>
+```
+
+--
+
+## Fil med innehåll (ooops)
+
+![Bild](bilder/textfiler/fgets-10.png)
+
+--
+
+```php [14]
+<?php
+$file = "ooops.txt";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
+}
+
+$handle = fopen($file, 'r');
+
+if ($handle) {
+  if (filesize($file) > 0) {
+    echo "<ol>";
+    while (!feof($handle)) {
+      echo "<li>" . strip_tags(fgets($handle)) . "</li>";
+    }
+    echo "</ol>";
+  } else {
+    echo "Filen är tom!";
+  }
+
+  fclose($handle);
+}
+?>
+```
+
+--
+
+## Fil med innehåll (ooops)
+
+![Bild](bilder/textfiler/fgets-11.png)
+
+
+---
+
+# Skriva till filer - Exempel #1
+
+--
+
+## fopen med w
+
 ```php []
 <?php
-$file = "demo.txt";
+$myFile = fopen("write.txt", "w") or die("Kan inte öppna filen!");
+$txt = "Örjan Ålhammare";
+
+fwrite($myFile, $txt);
+fclose($myFile);
+```
+
+--
+
+## Funderingar
+
+**F:** Vad händer om filen inte finns?
+
+**F:**  Vad händer när vi uppdaterar sidan?
+
+--
+
+**S:** Filen skapas, om vi har skrivrättigheter i mappen
+
+**S:** Filens innehåll skrivs över!
+
+--
+
+## DEMO
+
+Vi provkör!
+
+--
+
+## fopen med a
+
+```php []
+<?php
+$myFile = fopen("write.txt", "w") or die("Kan inte öppna filen!");
+$txt = "Örjan Ålhammare";
+
+fwrite($myFile, $txt);
+fclose($myFile);
+?>
+```
+
+--
+
+## Funderingar
+
+**F:** Vad händer om filen inte finns?
+
+**F:** Vad händer när vi uppdaterar sidan?
+
+--
+
+**S:** Filen skapas, om vi har skrivrättigheter i mappen
+
+**S:** Vi skriver in sist i filen.
+
+--
+
+## DEMO
+
+Vi provkör!
+
+--
+
+## fopens
+
+[Länk till övriga lägen](https://www.w3schools.com/php/func_filesystem_fopen.asp)
+
+---
+
+# Skriva till filer - Exempel #2
+
+```php []
+<?php
+$file = "write.txt";
+
+$txt = "Örjan Ålhammare";
+// $txt = "<h1>Hahaha</h1>";
 
 if (file_exists($file)) {
-  $result = file_get_contents($file);
+  $myFile = fopen($file, "a") or die("Kan inte öppna filen!");
+
+  $txt = strip_tags($txt);
+
+  if (filesize($file) === 0) {
+    fwrite($myFile, $txt);
+  } else {
+    fwrite($myFile, PHP_EOL . $txt);
+  }
+  fclose($myFile);
+
+  echo "Skrivet till filen: " . $txt;
 } else {
-  $result = "Filen finns inte";
+  echo "Filen finns inte";
 }
 ?>
 ```
 
-```html []
-<div class="posts">
-  <?= $result ?>
-</div>
-```
-
 --
 
-BILD
+## DEMO
 
---
-
-```php []
-<?php
-$file = "demo.txt";
-
-$result = file_exists($file) ? file_get_contents($file) : "Filen finns inte";
-?>
-```
-
-```html []
-<div class="posts">
-  <?= $result ?>
-</div>
-```
-
---
-
-BILD
+Vi provkör!
 
 ---
 
-# Dump and Die
+# Skriva till filer - Exempel #3
+
+--
 
 ```php []
 <?php
+$file = "write.txt";
 
-/**
- * Dump and Die
- *
- * @param  $data
- * @return void
- */
-function dd($data): void
-{
-  echo "<pre>";
-  var_dump($data);
-  echo "</pre>";
-  die();
+$txt = "Örjan Ålhammare";
+// $txt = "<h1>Hahaha</h1>";
+
+if (!file_exists($file)) {
+  die("Filen <mark>$file</mark> finns inte.");
 }
-```
 
----
+if (!is_writable($file)) {
+  die("Filen <mark>$file</mark> går inte att skriva till.");
+}
 
-# Läsa ut en rad i taget - A
+$myFile = fopen($file, "a") or die("Kan inte öppna filen!");
 
---
+$txt = strip_tags($txt);
 
-
-```php []
-<?php
-require "functions.php";
-
-$file = "demo.txt";
-
-if (file_exists($file)) {
-  $result = file($file);
-
-  if(empty($result)) {
-    $result = "Filen är tom";
-  }
+if (filesize($file) === 0) {
+  fwrite($myFile, $txt);
 } else {
-  $result = "Filen finns inte";
+  fwrite($myFile, PHP_EOL . $txt);
 }
-?>
-```
+fclose($myFile);
 
-```html []
-<div class="posts">
-  <?= dd($result) ?>
-</div>
+echo "Skrivet till filen: " . $txt;
+
 ```
 
 --
 
-BILD
+## DEMO
 
---
-
-
-```php []
-<div class="posts">
-  <?php
-  if (is_array($result)) {
-    foreach ($result as $post) {
-      echo "<div class='post'>";
-      echo "<p>$post</p>";
-      echo "</div>";
-    }
-  } else {
-    echo "<p>$result</p>";
-  }
-  ?>
-</div>
-```
-
---
-
-BILD
+Vi provkör!
 
 ---
 
-# Läsa ut en rad i taget - B
+# Länkar att läsa
 
 --
 
-```php []
-<?php
-require "functions.php";
+[PHP Filesystem Functions](https://www.w3schools.com/php/php_ref_filesystem.asp) (se de funktioner vi använder oss av)
 
-$file = "demo.txt";
+[PHP strip_tags() Function](https://www.w3schools.com/php/func_string_strip_tags.asp)
 
-$result = file_exists($file) ? file($file)?: "Filen är tom" : "Filen finns inte";
-
-$check = is_array($result);
-?>
-```
-
---
-
-```php []
-<div class="posts">
-  <?php
-  if ($check) {
-    foreach ($result as $post) {
-      echo <<<POST
-      <div class="post">
-        <p> $post </p>
-      </div>
-      POST;
-    }
-  }
-
-  if (!$check) {
-    echo "<p>$result</p>";
-  }
-  ?>
-</div>
-```
-
---
-
-BILD
-
+[PHP htmlspecialchars() Function](https://www.w3schools.com/php/func_string_htmlspecialchars.asp)
 
 ---
 
-# Dela upp rader - A
-
---
-
-```html []
-komplett.se|Komplett
-dustin.se|Dustin
-inet.se|Inet
-```
-
---
-
-```php []
-<?php
-  require "functions.php";
-
-  $file = "links.txt";
-
-  if (file_exists($file)) {
-    $result = file($file);
-
-    if(empty($result)) {
-      $result = "Filen är tom";
-    }
-  } else {
-    $result = "Filen finns inte";
-  }
-  ?>
-```
-
---
-
-```php [5-9]
-<div class="posts">
-  <?php
-  if (is_array($result)) {
-    foreach ($result as $post) {
-      $part = explode("|", $post);
-
-      echo "<div class='post'>";
-      echo "<p><a href='https://$part[0]'>$part[1]</a></p>";
-      echo "</div>";
-    }
-  } else {
-    echo "<p>$result</p>";
-  }
-  ?>
-</div>
-```
-
---
-
-BILD
-
----
-
-# Dela upp rader - B
-
---
-
-```html []
-komplett.se|Komplett
-dustin.se|Dustin
-inet.se|Inet
-```
-
---
-
-```php []
-<?php
-require "functions.php";
-
-$file = "links.txt";
-
-$result = file_exists($file) ? file($file)?: "Filen är tom" : "Filen finns inte";
-
-$check = is_array($result);
-?>
-```
-
---
-
-```php [5-11]
-<div class="posts">
-  <?php
-  if ($check) {
-    foreach ($result as $post) {
-      $part = explode("|", $post);
-
-      echo <<<POST
-      <div class="post">
-        <p><a href='https://$part[0]'>$part[1]</a></p>
-      </div>
-      POST;
-    }
-  }
-
-  if (!$check) {
-    echo "<p>$result</p>";
-  }
-  ?>
-</div>
-```
-
---
-
-BILD
-
----
-
-# SLUT!
+# Slut
