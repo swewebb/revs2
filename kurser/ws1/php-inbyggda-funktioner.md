@@ -390,8 +390,8 @@ Hoppsan!
 
 ```php [2,3]
 $text = "Kålle";
-// $splitted = mb_str_split($text);
-$splitted = mb_str_split($text, "utf-8");
+$splitted = mb_str_split($text);
+// $splitted = mb_str_split($text, $length = 2);
 
 print_r($splitted);
 ```
