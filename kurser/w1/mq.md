@@ -321,4 +321,18 @@ En annan vanlig teknik är att börja med mobilversionen och sedan skala upp med
 
 ---
 
+# Fördjupning
+
+--
+
+[MDN - Beginner's guide to media queries](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+
+[A Complete Guide to CSS Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+
+[Web-dev - Media queries](https://web.dev/learn/design/media-queries)
+
+[Web.dev - New syntax for range media queries](https://web.dev/articles/media-query-range-syntax)
+
+---
+
 # Slut
