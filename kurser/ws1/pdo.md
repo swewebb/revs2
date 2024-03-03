@@ -485,7 +485,6 @@ try {
 ## index.php
 
 - Visa senaste medlemmen
-- Visa senaste bil och vem som äger den
 
 --
 
@@ -502,14 +501,14 @@ try {
 
 --
 
-# Listning efter val
+# Listning efter märke
 
-- Lista bilar efter valt fält
-- Lista bilar efter valt fält, visa även ägare
+- Lista bilar efter märke
+- Lista bilar efter märke, visa även ägare
 
 --
 
-# Sökning
+# Sökning -- EJ KLAR
 
 - Visa resultatet för sökningen.
 
@@ -531,7 +530,9 @@ try {
 # Ta bort en medlem
 
 - Kunna ta bort en medlem
+- Kunna ta bort en medlem med verifikation
 - Kunna ta bort en medlem och alla dess bilar
+- Kunna ta bort en medlem och alla dess bilar med verifikation
 
 ---
 
