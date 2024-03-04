@@ -39,7 +39,6 @@ I DSN:en anges bland annat **database driver**, **host**, **db name** och **char
 ```php []
 <?php
 
-
 /**
  * PDO-connector
  *
@@ -79,6 +78,8 @@ function connectToDb(): PDO
 Här skapas ett **PDO-objekt** genom att använda **DSN-strängen** och anslutningsuppgifterna, tillsammans med de alternativ som definierats.
 
 **PDO-objekt** kommer att användas för att utföra SQL-satser mot databasen.
+
+[Läs mer här om Errmode](https://www.php.net/manual/en/pdo.error-handling.php)
 
 ---
 
@@ -469,70 +470,6 @@ try {
 [INSERT query with PDO](https://phpdelusions.net/pdo_examples/insert)
 
 [UPDATE query with PDO](https://phpdelusions.net/pdo_examples/update)
-
----
-
-# Uppgift
-
----
-
-- Bygg upp en webbplats för bildatabasen.
-- Se undersidor för krav för aktuell sida
-- Är du "rostig" när det gäller CSS-grid så finns det ett startpaket att ladda ner på Classroom.
-
---
-
-## index.php
-
-- Visa senaste medlemmen
-
---
-
-## Alla medlemmar
-
-- Lista alla medlemmar
-- Lista alla medlemmar och hur många bilar de har
-
---
-
-## Alla bilar med tillhörande ägare
-
-- Lista alla bilar med tillhörande ägare
-
---
-
-# Listning efter märke
-
-- Lista bilar efter märke
-- Lista bilar efter märke, visa även ägare
-
---
-
-# Sökning -- EJ KLAR
-
-- Visa resultatet för sökningen.
-
---
-
-# Lägga till en medlem
-
-- Kunna lägga till en medlem
-
---
-
-# Lägga till en bil
-
-- Kunna lägga till en bil
-- Kunna lägga till en bil efter kontroll att den inte redan finns i databasen
-
---
-
-# Ta bort en medlem
-
-- Kunna ta bort en medlem
-- Kunna ta bort en medlem med verifikation
-- Kunna ta bort en medlem och alla dess bilar
-- Kunna ta bort en medlem och alla dess bilar med verifikation
 
 ---
 
