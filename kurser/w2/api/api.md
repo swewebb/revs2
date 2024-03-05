@@ -198,13 +198,95 @@ fetch("https://jsonplaceholder.typicode.com/users/666")
 
 --
 
-```js []
+```js [9-13]
+fetch("https://jsonplaceholder.typicode.com/users/")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Server returned " + response.status);
+    }
 
+    return response.json();
+  })
+  .then((data) => {
+    data.forEach((post) => {
+      console.table(post);
+    });
+  })
+  .catch((error) => {
+    console.error("There was a problem with the Fetch operation:", error);
+  });
 ```
 
 --
 
 ![ex5](bilder/api-ex5.png)
+
+--
+
+```js [9-13]
+fetch("https://jsonplaceholder.typicode.com/users/")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Server returned " + response.status);
+    }
+
+    return response.json();
+  })
+  .then((data) => {
+    data.forEach((post) => {
+      console.log(post.name);
+    });
+  })
+  .catch((error) => {
+    console.error("There was a problem with the Fetch operation:", error);
+  });
+```
+
+--
+
+![ex5](bilder/api-ex5a.png)
+
+--
+
+```js [9-25]
+fetch("https://jsonplaceholder.typicode.com/users/")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Server returned " + response.status);
+    }
+
+    return response.json();
+  })
+  .then((data) => {
+    const app = document.querySelector(".app");
+    const list = document.createElement("ul");
+    let users = document.createDocumentFragment();
+
+    data.forEach((post) => {
+      const listitem = document.createElement("li");
+      const link = document.createElement("a");
+      link.textContent = post.name;
+      link.href = `https://jsonplaceholder.typicode.com/users/${post.id}`;
+
+      listitem.appendChild(link);
+      users.appendChild(listitem);
+    });
+
+    list.appendChild(users);
+    app.appendChild(list);
+  })
+  .catch((error) => {
+    console.error("There was a problem with the Fetch operation:", error);
+  });
+```
+
+--
+
+![ex5](bilder/api-ex5b.png)
+
+--
+
+![ex5](bilder/api-ex5c.png)
 
 ---
 
@@ -212,7 +294,7 @@ fetch("https://jsonplaceholder.typicode.com/users/666")
 
 --
 
-```js []
+```js [1-10]
 fetch("https://jsonplaceholder.typicode.com/users", {
   method: "POST",
   headers: {
@@ -223,7 +305,13 @@ fetch("https://jsonplaceholder.typicode.com/users", {
     email: "pelle@example.com",
   }),
 })
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Server returned " + response.status);
+    }
+
+    return response.json();
+  })
   .then((data) => console.table(data));
 ```
 
@@ -269,7 +357,13 @@ fetch("https://jsonplaceholder.typicode.com/users/5", {
     email: "pelle@example.com",
   }),
 })
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Server returned " + response.status);
+    }
+
+    return response.json();
+  })
   .then((data) => console.table(data));
 ```
 
