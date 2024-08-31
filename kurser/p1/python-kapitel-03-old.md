@@ -208,23 +208,17 @@ Går vi tillbaka till källkoden står ofta markören i närheten av den rad dä
 --
 
 ```python [ ]
-print('123' + 123)
-```
-
-```python [ ]
+>>> print('123' + 123)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: can only concatenate str (not "int") to str
+
 ```
 
 --
 
 ```python [ ]
-print(int('123') + 123)
-
-```
-
-```text
+>>> print(int('123') + 123)
 246
 ```
 
