@@ -21,16 +21,38 @@
 
 --
 
+## Mapp och filer
+
+- Vi skapar en mapp som heter **gcss**, det är här alla uppgifter i momentet kommer att finnas.
+- I mappen **gcss** skapar vi en till mapp som heter **01**.
+- I mappen **01** skapar vi filerna **index.html** och **style.css**
+
+--
+
 ## HTML
 
-```html [ ]
-<h1>Rubrik 1</h1>
-<h2>Rubrik 2</h2>
-<h3>Rubrik 3</h3>
-<h4>Rubrik 4</h4>
-<h5>Rubrik 5</h5>
-<h6>Rubrik 6</h6>
+```html [ 7, 11-16]
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundläggande CSS - Uppgift 01</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Rubrik 1</h1>
+    <h2>Rubrik 2</h2>
+    <h3>Rubrik 3</h3>
+    <h4>Rubrik 4</h4>
+    <h5>Rubrik 5</h5>
+    <h6>Rubrik 6</h6>
+  </body>
+</html>
 ```
+
+Här ser vi att vi har länkat in formatmallen.
 
 ---
 
@@ -53,6 +75,10 @@ h1 {
 
 --
 
+![ex1-h1](./images/gcss-01/ex1-h1.png)
+
+--
+
 ```css [7-11]
 h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -66,6 +92,10 @@ h2 {
   color: #2a3d4a;
 }
 ```
+
+--
+
+![ex1-h2](./images/gcss-01/ex1-h2.png)
 
 --
 
@@ -88,6 +118,10 @@ h3 {
   color: #f0bf11;
 }
 ```
+
+--
+
+![ex1-h3](./images/gcss-01/ex1-h3.png)
 
 --
 
@@ -116,6 +150,10 @@ h4 {
   color: #2a3d4a;
 }
 ```
+
+--
+
+![ex1-h4](./images/gcss-01/ex1-h4.png)
 
 --
 
@@ -150,6 +188,10 @@ h5 {
   color: #f0bf11;
 }
 ```
+
+--
+
+![ex1-h5](./images/gcss-01/ex1-h5.png)
 
 --
 
@@ -191,6 +233,10 @@ h6 {
 }
 ```
 
+--
+
+![ex1-h6](./images/gcss-01/ex1-h6.png)
+
 ---
 
 # Lösning 2
@@ -215,6 +261,10 @@ h6 {
 
 --
 
+![ex2-h1-h6](./images/gcss-01/ex2-h1-h6.png)
+
+--
+
 ```css [10-14]
 h1,
 h2,
@@ -231,6 +281,10 @@ h5 {
   color: #f0bf11;
 }
 ```
+
+--
+
+## ![ex2-odd](./images/gcss-01/ex2-odd.png)
 
 --
 
@@ -256,6 +310,10 @@ h6 {
   color: #2a3d4a;
 }
 ```
+
+--
+
+## ![ex2-even](./images/gcss-01/ex2-even.png)
 
 --
 
@@ -285,6 +343,10 @@ h1 {
   font-size: 3.5em;
 }
 ```
+
+--
+
+![ex2-h1](./images/gcss-01/ex2-h1.png)
 
 --
 
@@ -318,6 +380,10 @@ h2 {
   font-size: 3em;
 }
 ```
+
+--
+
+![ex2-h2](./images/gcss-01/ex2-h2.png)
 
 --
 
@@ -355,6 +421,10 @@ h3 {
   font-size: 2.5em;
 }
 ```
+
+--
+
+![ex2-h3](./images/gcss-01/ex2-h3.png)
 
 --
 
@@ -396,6 +466,10 @@ h4 {
   font-size: 2em;
 }
 ```
+
+--
+
+![ex2-h4](./images/gcss-01/ex2-h4.png)
 
 --
 
@@ -441,6 +515,10 @@ h5 {
   font-size: 1.5em;
 }
 ```
+
+--
+
+![ex2-h5](./images/gcss-01/ex2-h5.png)
 
 --
 
@@ -491,6 +569,10 @@ h6 {
 }
 ```
 
+--
+
+![ex2-h6](./images/gcss-01/ex2-h6.png)
+
 ---
 
 # Lösning 3
@@ -527,6 +609,10 @@ h1 {
 
 --
 
+![ex3-h1](./images/gcss-01/ex3-h1.png)
+
+--
+
 ```css [13-17]
 :root {
   --clr-primary: #f0bf11;
@@ -546,6 +632,10 @@ h2 {
   font-size: 3em;
 }
 ```
+
+--
+
+![ex3-h2](./images/gcss-01/ex3-h2.png)
 
 --
 
@@ -574,6 +664,10 @@ h3 {
   font-size: 2.5em;
 }
 ```
+
+--
+
+![ex3-h3](./images/gcss-01/ex3-h3.png)
 
 --
 
@@ -608,6 +702,10 @@ h4 {
   font-size: 2em;
 }
 ```
+
+--
+
+![ex3-h4](./images/gcss-01/ex3-h4.png)
 
 --
 
@@ -648,6 +746,10 @@ h5 {
   font-size: 1.5em;
 }
 ```
+
+--
+
+![ex3-h5](./images/gcss-01/ex3-h5.png)
 
 --
 
@@ -695,13 +797,17 @@ h6 {
 }
 ```
 
+--
+
+![ex3-h6](./images/gcss-01/ex3-h6.png)
+
 ---
 
 # Lösning 4
 
 --
 
-**Idé:** Skapa _CSS-variabler_ samt räkna ut storleken på texten utifrån h1:ans storlek
+**Idé:** Skapa _CSS-variabler_ samt räkna ut storleken på resten av rubriknivåerna utifrån h1:ans storlek
 
 --
 
@@ -710,7 +816,7 @@ h6 {
   --clr-primary: #f0bf11;
   --clr-secondary: #2a3d4a;
   --ff: Arial, Helvetica, sans-serif;
-  --headingSize1: 3.5em;
+  --headingSize1: 3.5rem;
   --headingSize2: calc(var(--headingSize1 * 0.86));
   --headingSize3: calc(var(--headingSize1 * 0.714));
   --headingSize4: calc(var(--headingSize1 * 0.571));
