@@ -817,11 +817,11 @@ h6 {
   --clr-secondary: #2a3d4a;
   --ff: Arial, Helvetica, sans-serif;
   --headingSize1: 3.5rem;
-  --headingSize2: calc(var(--headingSize1 * 0.86));
-  --headingSize3: calc(var(--headingSize1 * 0.714));
-  --headingSize4: calc(var(--headingSize1 * 0.571));
-  --headingSize5: calc(var(--headingSize1 * 0.428));
-  --headingSize6: calc(var(--headingSize1 * 0.286));
+  --headingSize2: calc(var(--headingSize1) * 0.86);
+  --headingSize3: calc(var(--headingSize1) * 0.714);
+  --headingSize4: calc(var(--headingSize1) * 0.571);
+  --headingSize5: calc(var(--headingSize1) * 0.428);
+  --headingSize6: calc(var(--headingSize1) * 0.286);
 }
 ```
 
@@ -832,7 +832,7 @@ h6 {
   --clr-primary: #f0bf11;
   --clr-secondary: #2a3d4a;
   --ff: Arial, Helvetica, sans-serif;
-  --headingSize1: 3.5em;
+  --headingSize1: 3.5rem;
   --headingSize2: calc(var(--headingSize1) * 0.86);
   --headingSize3: calc(var(--headingSize1) * 0.714);
   --headingSize4: calc(var(--headingSize1) * 0.571);
