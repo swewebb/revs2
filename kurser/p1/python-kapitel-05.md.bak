@@ -7,10 +7,9 @@
 --
 
 All (imperativ) programmering bygger på:
-
-- Satser (instruktioner i tur och ordning)
-- Val med villkor
-- Iterationer (upprepningar, ”loopar”)
+* Satser (instruktioner i tur och ordning)
+* Val med villkor
+* Iterationer (upprepningar, ”loopar”)
 
 Idag tar vi oss an **iterationer**
 
@@ -25,6 +24,37 @@ Den vanligaste loopkonstruktionen i många språk är `for`, men även `while` �
 --
 
 ## Exempel 1
+
+--
+
+```python []
+for a in ['Kurt', 'Ada', 15, 3.14, 'Olle']:
+    print(a)
+
+print('\nUtanför loopen')
+```
+
+![bild](images/python-05-ex1.png)
+
+--
+
+## Exempel 2
+
+--
+
+```python []
+for a in [1, 2, 3]:
+    product = a * a
+    print(product)
+
+print('\nUtanför loopen')
+```
+
+![bild](images/python-05-ex2.png)
+
+--
+
+## Exempel 3
 
 --
 
@@ -79,7 +109,7 @@ Vad kommer resultatet att bli?
 
 --
 
-## Exempel 2
+## Exempel 4
 
 --
 
@@ -96,9 +126,7 @@ print('\nUtanför loopen')
 
 --
 
-## Exempel 3
-
---
+## Exempel 5
 
 ```python []
 for i in range(3):
@@ -109,39 +137,7 @@ else:
 print('\nUtanför loopen')
 
 ```
-
 ![bild](images/python-05-ex10-for-else.png)
-
---
-
-## Exempel 4
-
---
-
-```python []
-for a in ['Kurt', 'Ada', 15, 3.14, 'Olle']:
-    print(a)
-
-print('\nUtanför loopen')
-```
-
-![bild](images/python-05-ex1.png)
-
---
-
-## Exempel 5
-
---
-
-```python []
-for a in [1, 2, 3]:
-    product = a * a
-    print(product)
-
-print('\nUtanför loopen')
-```
-
-![bild](images/python-05-ex2.png)
 
 ---
 
@@ -199,6 +195,7 @@ if count != 0:
 ![bild](images/python-05-ex6.png)
 
 --
+
 
 ```python []
 count = 0
