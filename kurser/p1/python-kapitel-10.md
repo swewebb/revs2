@@ -22,20 +22,20 @@ Vi använder slumptal i Python genom att importera modulen **random**
 
 --
 
-Ger ett flyttal i intervallet 0,..,1.0.
+Ger ett flyttal i intervallet **0 - 1.0**
 
-Blir aldrig exakt 0 eller 1.
+Blir _aldrig_ exakt **0** eller **1**.
 
 --
 
 ```python []
 import random
 
-r = random.random()
+r: float = random.random()
 print(r)
 ```
 
-```html []
+```python []
 0.33244833625067194
 ```
 
@@ -44,11 +44,11 @@ print(r)
 ```python []
 from random import random
 
-r = random()
+r: float = random()
 print(r)
 ```
 
-```html []
+```python []
 0.14875270475440316
 ```
 
@@ -66,11 +66,11 @@ Ger ett slumptal (heltal) i motsvarande range
 # 1-10 heltal
 from random import randrange
 
-r = randrange(1, 10 + 1)
+r: int = randrange(1, 10 + 1)
 print(r)
 ```
 
-```html []
+```python []
 3
 ```
 
@@ -80,11 +80,11 @@ print(r)
 # 1-10 udda heltal
 from random import randrange
 
-r = randrange(1, 10, 2)
+r: int = randrange(1, 10, 2)
 print(r)
 ```
 
-```html []
+```python []
 9
 ```
 
@@ -95,11 +95,11 @@ print(r)
 from random import randrange
 
 for i in range(10):
-    r = randrange(1, 10, 2)
+    r: int = randrange(1, 10, 2)
     print(r, end=" ")
 ```
 
-```html []
+```python []
 9 7 9 7 9 3 7 3 7 1
 ```
 
@@ -109,11 +109,11 @@ for i in range(10):
 # 0-10 jämna heltal
 from random import randrange
 
-r = randrange(0, 10, 2)
+r: int = randrange(0, 10, 2)
 print(r)
 ```
 
-```html []
+```python []
 4
 ```
 
@@ -124,11 +124,11 @@ print(r)
 from random import randrange
 
 for i in range(10):
-    r = randrange(0, 10, 2)
+    r: int = randrange(0, 10, 2)
     print(r, end=" ")
 ```
 
-```html []
+```python []
 2 0 8 4 6 8 8 0 4 2
 ```
 
@@ -138,11 +138,26 @@ for i in range(10):
 # 0-10 jämna heltal
 from random import randrange
 
-r = ', '.join([str(randrange(0, 10, 2)) for i in range(10)])
+listan: list[int] = [randrange(0, 10, 2) for _ in range(10)]
+
+print(*listan, sep=', ')
+```
+
+```python []
+8, 0, 0, 2, 4, 0, 0, 4, 4, 4
+```
+
+--
+
+```python []
+# 0-10 jämna heltal
+from random import randrange
+
+r: str = ', '.join([str(randrange(0, 10, 2)) for i in range(10)])
 print(r)
 ```
 
-```html []
+```python []
 8, 0, 0, 2, 4, 0, 0, 4, 4, 4
 ```
 
@@ -152,7 +167,7 @@ print(r)
 
 --
 
-Ger ett heltal mellan a och b.
+Ger ett heltal mellan **a** och **b**.
 
 Utdatan kan verkligen anta extremvärdet.
 
@@ -162,11 +177,11 @@ Utdatan kan verkligen anta extremvärdet.
 # 1-10 heltal = alias till randrange(a, b+1)
 from random import randint
 
-r = randint(1, 10)
+r: int = randint(1, 10)
 print(r)
 ```
 
-```html []
+```python []
 10
 ```
 
@@ -184,13 +199,13 @@ Väljer slumpmässigt ett element ur en sekvens, t.ex. en sträng, lista, tippel
 # Väljer ett slumpmässigt element ur en sekvens
 from random import choice
 
-text = "ABCDE"
-r = choice(text)
+text: str = "ABCDE"
+r: str = choice(text)
 
 print(r)
 ```
 
-```html []
+```python []
 B
 ```
 
@@ -200,13 +215,13 @@ B
 # Väljer ett slumpmässigt element ur en sekvens
 from random import choice
 
-lista = ['Kalle', 'Ada', 'Humle', 'Dumle']
-r = choice(lista)
+lista: list[str] = ['Kalle', 'Ada', 'Humle', 'Dumle']
+r: str = choice(lista)
 
 print(r)
 ```
 
-```html []
+```python []
 Ada
 ```
 
@@ -216,13 +231,13 @@ Ada
 # Väljer ett slumpmässigt element ur en sekvens
 from random import choice
 
-tupel = 'Kalle', 'Ada', 'Humle', 'Dumle'
-r = choice(tupel)
+listan: tuple[str, ...] = 'Kalle', 'Ada', 'Humle', 'Dumle'
+r = choice(listan)
 
 print(r)
 ```
 
-```html []
+```python []
 Dumle
 ```
 
@@ -232,13 +247,13 @@ Dumle
 # Väljer ett slumpmässigt element ur en sekvens
 from random import choice
 
-numbers = range(50, 60 +1)
-r = choice(numbers)
+numbers: int = range(50, 60 +1)
+r: int = choice(numbers)
 
 print(r)
 ```
 
-```html []
+```python []
 57
 ```
 
@@ -255,12 +270,12 @@ Blandar sekvensen _x_ på plats.
 ```python []
 from random import shuffle
 
-listan = [7, 65, 5, 42, 45, 12]
+listan: list[int] = [7, 65, 5, 42, 45, 12]
 shuffle(listan)
 print(listan)
 ```
 
-```html []
+```python []
 [12, 45, 42, 7, 65, 5]
 ```
 
@@ -269,14 +284,14 @@ print(listan)
 ```python []
 from random import shuffle
 
-listan = [7, 65, 5, 42, 45, 12]
-
-slumpad = listan.copy()
+listan: list[int] = [7, 65, 5, 42, 45, 12]
+slumpad: list[int] = listan.copy()
 shuffle(slumpad)
+
 print(listan, slumpad, sep="\n")
 ```
 
-```html []
+```python []
 [7, 65, 5, 42, 45, 12]
 [45, 12, 65, 7, 42, 5]
 ```
@@ -294,14 +309,14 @@ Drar slumpmässigt _k_ st element ur en population.
 ```python []
 from random import sample
 
-listan = ['Kalle', 'Ada', 'Pelle', 'Marie', 'Elin', 'Olle']
+listan: list[str] = ['Kalle', 'Ada', 'Pelle', 'Marie', 'Elina', 'Olle']
 
-val = sample(listan, k=2)
+val: list[str] = sample(listan, k=2)
 
 print(val)
 ```
 
-```html []
+```python []
 ['Marie', 'Kalle']
 ```
 
@@ -318,18 +333,18 @@ Läs av och sätt generatorns "**tillstånd**" för att kunna återupprepa en vi
 ```python []
 from random import random
 
-r1 = random()
-r2 = random()
+r1: float = random()
+r2: float = random()
 
 print(r1, r2, sep='\n')
 
-r1 = random()
-r2 = random()
+r1: float  = random()
+r2: float  = random()
 
 print('\n', r1, r2, sep='\n')
 ```
 
-```html []
+```python []
 0.6089971386840282
 0.8501426052332153
 
@@ -342,22 +357,22 @@ print('\n', r1, r2, sep='\n')
 ```python [1, 3, 10]
 from random import getstate, random, setstate
 
-state = getstate()
+state: float  = getstate()
 
-r1 = random()
-r2 = random()
+r1: float  = random()
+r2: float  = random()
 
 print(r1, r2, sep='\n')
 
 setstate(state)
 
-r1 = random()
-r2 = random()
+r1: float  = random()
+r2: float  = random()
 
 print(r1, r2, sep='\n')
 ```
 
-```html []
+```python []
 0.9746084144708325
 0.9100866238071204
 
