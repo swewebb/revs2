@@ -10,21 +10,17 @@ Fel som inträffar när datorn kör en kod vi skrivit kan indelas i följande ty
 
 --
 
-## Runtime
-
-Runtime-fel / logiska fel
+## Runtime (logiska fel)
 
 Vi har programmerat fel, tänkt fel, eller gör någon form av förbjuden operation, t.ex:
 
 - Indexerar utanför en listas sista element
-- Försökt göra division med noll
+- Försökt dela med noll
 - Användaren matar in data av fel typ så att programmet inte kan fortsätta som tänkt
 
 --
 
-## Syntax
-
-Syntax-fel / kompileringsfel / interpreteringsfel
+## Syntaxfel (kompileringsfel / interpreteringsfel)
 
 Vi har använt fel syntax.
 
@@ -32,7 +28,7 @@ Här hinner koden aldrig köras utan avbryts under ett inledande skede.
 
 --
 
-Syntaxfel får vi klara av genom att rätta koden, och i viss mån även runtime-fel, men många fel som inträffar under körning behöver inte leda till att programmet kraschar om vi har en adekvat felhantering, s.k. **undantagshantering (exceptions)**
+Syntaxfel får vi klara av genom att rätta koden, och i viss mån även runtime-fel, men många fel som inträffar under körning behöver inte leda till att programmet kraschar om vi har en felhantering, s.k. **undantagshantering (exceptions)**
 
 ---
 
@@ -87,7 +83,7 @@ txt = 'Teknik'
 print('Texten är {}'.formats(txt))
 ```
 
-```python [4]
+```python [3-4]
 Traceback (most recent call last):
   File "ex4.py", line 2, in <module>
     print('Texten är {}'.formats(txt))
@@ -277,12 +273,12 @@ except:
     print('Ett annat undantag har hänt')
 ```
 
-```html []
+```text []
 Ange ett heltal: 55.55
 Felaktigt värde
 ```
 
-```html []
+```text []
 Ange ett heltal: 0
 Nolldivision
 ```
@@ -300,17 +296,17 @@ else:
     print(omvänt)
 ```
 
-```html []
+```text []
 Ange ett jämt heltal: 5
 Inget jämt heltal!
 ```
 
-```html []
+```text []
 Ange ett jämt heltal: teknik
 Inget jämt heltal!
 ```
 
-```html []
+```text []
 Ange ett jämt heltal: 8
 0.125
 ```
@@ -355,12 +351,12 @@ else:
     print("Det är ett positivt tal!")
 ```
 
-```html []
+```txt []
 Ange ett positivt tal: 5
 Det är ett positivt tal!
 ```
 
-```html []
+```txt []
 Ange ett positivt tal: -5
 Du är inte vidare smart, du!
 ```
@@ -382,11 +378,42 @@ while True:
         print(x,' är inte ett tal! Vänligen försök igen.')
 ```
 
-```html []
+```text []
 Ange ett reellt tal: teknik
-teknik  är inte ett tal! Vänligen försök igen.
+teknik är inte ett tal! Vänligen försök igen.
 Ange ett reellt tal: 5.55
-Du angav talet:  5.55
+Du angav talet: 5.55
+```
+
+---
+
+```python []
+def add_numbers(a: float, b: float) -> float:
+    """DOCSTRING"""
+    try:
+        return a + b
+    except TypeError:
+        print("Fel: Inmatningen måste vara numerisk.")
+        return 0.0
+
+if __name__ == "__main__":
+    resultat = add_numbers(5, 10.5)
+    print(f"{resultat=}")
+```
+
+--
+
+```text []
+resultat=15.5
+```
+
+```python []
+resultat = add_numbers("kaka", 10.5)
+```
+
+```text []
+Fel: Inmatningen måste vara numerisk.
+resultat=0.0
 ```
 
 ---
