@@ -7,9 +7,9 @@
 --
 
 ```python
-string = 'abcdefghijklmnop'
-x = string[1:4+1]
-print(x)
+txt: str = 'abcdefghijklmnop'
+sliced: str = txt[1:4+1]
+print(sliced)
 ```
 
 ```
@@ -19,9 +19,9 @@ bcde
 --
 
 ```python
-string = 'abcdefghijklmnop'
-x = string.split('d')
-print(x)
+txt: str = 'abcdefghijklmnop'
+splitted = txt.split('d')
+print(splitted)
 ```
 
 ```python
@@ -31,8 +31,8 @@ print(x)
 --
 
 ```python
-string = 'abcdefghijklmnop'
-lista = list(string)
+txt: str = 'abcdefghijklmnop'
+lista: list[str] = list(txt)
 print(lista)
 ```
 
@@ -43,9 +43,10 @@ print(lista)
 --
 
 ```python
-lista = list(string)
-x = lista[1:4+1]
-print(x)
+txt: str = 'abcdefghijklmnop'
+lista: list[str] = list(txt)
+sliced: list[str] = lista[1:4+1]
+print(sliced)
 ```
 
 ```python
@@ -55,9 +56,11 @@ print(x)
 --
 
 ```python
-lista = list(string)
-x = '-'.join(lista)
-print(x)
+txt: str = 'abcdefghijklmnop'
+lista: list[str] = list(txt)
+sammanfogad: str = '-'.join(lista)
+
+print(sammanfogad)
 ```
 
 ```python
@@ -67,7 +70,9 @@ a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p
 --
 
 ```python
-print('-'.join(list('abcdefghijklmnop')))
+sammanfogad: str = '-'.join(list('abcdefghijklmnop'))
+
+print(sammanfogad)
 ```
 
 ```python
@@ -77,9 +82,9 @@ a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p
 --
 
 ```python
-string = 'abcdefghijklmnop'
-lista = list(string)
-tippel = tuple(string)
+txt: str = 'abcdefghijklmnop'
+lista: list[str] = list(txt)
+tippel: tuple[str, ...] = tuple(txt)
 
 print(lista, end='\n\n')
 print(tippel)
@@ -104,15 +109,16 @@ print(tippel)
 Längden av listan. Sista index är `len(lista)-1`
 
 ```python
-lista = ['A', 'B', 'C', 'D']
-x = len(lista)
-y = len(lista)-1
+lista: list[str] = ['A', 'B', 'C', 'D']
+x: int = len(lista)
+y: int = len(lista)-1
 
-print(x, y)
+print(f"{x=}, {y=}")
+
 ```
 
 ```python
-4 3
+x=4, y=3
 ```
 
 --
@@ -124,17 +130,16 @@ print(x, y)
 Returnerar en sorterad lista, där elementen måste vara av samma typ
 
 ```python
-lista = ['X', 'B', 'E', 'D']
-x = sorted(lista)
-print(x)
+lista: list[str] = ['X', 'B', 'E', 'D']
+sorterad_lista: list[str] = sorted(lista)
+
+print(f"{lista=}")
+print(f"{sorterad_lista=}")
 ```
 
 ```python
-print(sorted(['X', 'B', 'E', 'D']))
-```
-
-```python
-['B', 'D', 'E', 'X']
+lista=['X', 'B', 'E', 'D']
+sorterad_lista=['B', 'D', 'E', 'X']
 ```
 
 --
@@ -146,7 +151,7 @@ print(sorted(['X', 'B', 'E', 'D']))
 Lägger till elementet **x** i slutet av listan
 
 ```python
-lista = ['A', 'B', 'C', 'D']
+lista: list[str] = ['A', 'B', 'C', 'D']
 lista.append('X')
 print(lista)
 ```
@@ -164,14 +169,15 @@ print(lista)
 Förlänger listan med en annan lista
 
 ```python
-lista1 = ['A', 'B', 'C', 'D']
-lista2 = [1, 2, 3]
+lista1: list[str] = ['A', 'B', 'C', 'D']
+lista2: list[str] = ["X", "Y", "Z"]
 lista1.extend(lista2)
-print(lista1)
+
+print(f"{lista1=}")
 ```
 
 ```python
-['A', 'B', 'C', 'D', 1, 2, 3]
+lista1=['A', 'B', 'C', 'D', 'X', 'Y', 'Z']
 ```
 
 --
@@ -183,13 +189,14 @@ print(lista1)
 Infogar elementet **x** på plats **i**.
 
 ```python
-lista = ['A', 'B', 'C', 'D']
-lista.insert(2, 'X')
-print(lista)
+lista: list[str] = ['A', 'B', 'C', 'D']
+lista.insert(2, 'Y')
+
+print(f"{lista=}")
 ```
 
 ```python
-['A', 'B', 'X', 'C', 'D']
+lista=['A', 'B', 'Y', 'C', 'D']
 ```
 
 --
@@ -201,13 +208,14 @@ print(lista)
 Tar bort första elementet med värdet **x**
 
 ```python
-lista = ['A', 'B', 'C', 'D', 'C']
+lista: list[str] = ['A', 'B', 'C', 'D', 'C']
 lista.remove('C')
-print(lista)
+
+print(f"{lista=}")
 ```
 
 ```python
-['A', 'B', 'D', 'C']
+lista=['A', 'B', 'D', 'C']
 ```
 
 --
@@ -219,14 +227,15 @@ print(lista)
 Tar bort elementet med index **i** och returnerar värdet. Om **i** utelämnas är standard (default) att sista värdet tas bort.
 
 ```python
-lista = ['A', 'B', 'C', 'D']
+lista: list[str] = ['A', 'B', 'C', 'D']
 lista.pop()
 lista.pop(1)
-print(lista)
+
+print(f"{lista=}")
 ```
 
 ```python
-['A', 'C']
+lista=['A', 'C']
 ```
 
 --
@@ -238,13 +247,14 @@ print(lista)
 Returnerar index för första förekomst av element **x**.
 
 ```python
-lista = ['A', 'B', 'C', 'D', 'C', 'C']
-x = lista.index('C')
-print(x)
+lista: list[str] = ['A', 'B', 'C', 'D', 'C', 'C']
+plats = lista.index('C')
+
+print(f"{plats=}")
 ```
 
 ```python
-2
+plats=2
 ```
 
 --
@@ -256,13 +266,14 @@ print(x)
 Returnerar antalet element med värdet **x**.
 
 ```python
-lista = ['A', 'B', 'C', 'D', 'C']
-x = lista.count('C')
-print(x)
+lista: list[str] = ['A', 'B', 'C', 'D', 'C', 'C']
+antal = lista.count('C')
+
+print(f"{antal=}")
 ```
 
 ```python
-2
+antal=3
 ```
 
 --
@@ -274,8 +285,9 @@ print(x)
 Sorterar listan på plats
 
 ```python
-lista = ['E', 'B', 'A', 'D', 'C']
+lista: list[str] = ['E', 'B', 'A', 'D', 'C']
 lista.sort()
+
 print(lista)
 ```
 
@@ -292,8 +304,9 @@ print(lista)
 Vänder på ordningen av elementen i listan.
 
 ```python
-lista = ['A', 'B', 'C', 'D']
+lista: list[str] = ['A', 'B', 'C', 'D']
 lista.reverse()
+
 print(lista)
 ```
 
@@ -312,7 +325,7 @@ Ibland vill man loopa över en sträng/lista/tippel så att man har tillgång ti
 --
 
 ```python
-txt = 'Teknik'
+txt: str = 'Teknik'
 
 for index, char in enumerate(txt):
     print(index, char)
@@ -330,8 +343,10 @@ for index, char in enumerate(txt):
 --
 
 ```python
-tippel = tuple('Teknik')
+tippel: tuple[str, ...] = tuple('Teknik')
+
 print(tippel)
+
 for index, char in enumerate(tippel):
     print(index, char)
 ```
@@ -377,18 +392,26 @@ Istället för hakparenteser används "måsvingar" **{ }** och **kolon** när di
 --
 
 ```python
-skateboard = {
-  "brand": "Creature",
-  "model": "Martinez Calavera",
-  "width": 8.99,
-  "length": 32.64
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
 }
+
 print(skateboard)
 ```
 
 ```python
 {'brand': 'Creature', 'model': 'Martinez Calavera', 'width': 8.99, 'length': 32.64}
 ```
+
+--
+
+**dict[str, str | float]** betyder att **skateboard** är en ordbok där:
+
+- Nycklarna (_str_) alltid är av typen **str** (sträng).
+- Värdena (_str | float_) kan vara antingen **str** (sträng) eller **float** (decimaltal).
 
 ---
 
@@ -397,15 +420,15 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-x = skateboard["brand"]
-print(x)
+brand: str = skateboard["brand"]
+print(brand)
 ```
 
 ```python
@@ -415,14 +438,14 @@ Creature
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
-x = skateboard.get("brand")
-print(x)
+brand: str = skateboard.get("brand")
+print(brand)
 ```
 
 ```python
@@ -432,15 +455,17 @@ Creature
 --
 
 ```python
-skateboard = {
-  "brand": "Creature",
-  "model": "Martinez Calavera",
-  "width": 8.99,
-  "length": 32.64
+from typing import KeysView
+
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
 }
 
-x = skateboard.keys()
-print(x)
+keys: KeysView[str]  = skateboard.keys()
+print(keys)
 ```
 
 ```python
@@ -450,15 +475,36 @@ dict_keys(['brand', 'model', 'width', 'length'])
 --
 
 ```python
-skateboard = {
-  "brand": "Creature",
-  "model": "Martinez Calavera",
-  "width": 8.99,
-  "length": 32.64
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
 }
 
-x = skateboard.values()
-print(x)
+keys: list[str] = list(skateboard.keys())
+print(keys)
+```
+
+```python
+['brand', 'model', 'width', 'length']
+```
+
+--
+
+```python
+from typing import ValuesView
+
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
+}
+
+parts: ValuesView[str | float] = skateboard.values()
+
+print(parts)
 ```
 
 ```python
@@ -468,15 +514,36 @@ dict_values(['Creature', 'Martinez Calavera', 8.99, 32.64])
 --
 
 ```python
-skateboard = {
-  "brand": "Creature",
-  "model": "Martinez Calavera",
-  "width": 8.99,
-  "length": 32.64
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
 }
 
-x = skateboard.items()
-print(x)
+parts: list[str | float] = list(skateboard.values())
+
+print(parts)
+```
+
+```python
+['Creature', 'Martinez Calavera', 8.99, 32.64]
+```
+
+--
+
+```python
+from typing import ItemsView
+
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
+}
+
+part_info: ItemsView[str, str | float] = skateboard.items()
+print(part_info)
 ```
 
 ```python
@@ -486,7 +553,25 @@ dict_items([('brand', 'Creature'), ('model', 'Martinez Calavera'), ('width', 8.9
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
+    "brand": "Creature",
+    "model": "Martinez Calavera",
+    "width": 8.99,
+    "length": 32.64
+}
+
+part_info: list[tuple[str, str | float]] = list(skateboard.items())
+print(part_info)
+```
+
+```
+[('brand', 'Creature'), ('model', 'Martinez Calavera'), ('width', 8.99), ('length', 32.64)]
+```
+
+--
+
+```python
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -495,11 +580,11 @@ skateboard = {
 
 
 if "model" in skateboard:
-    print("Jo")
+    print("Finns!")
 ```
 
 ```python
-Jo
+Finns!
 ```
 
 ---
@@ -509,7 +594,7 @@ Jo
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -527,7 +612,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -549,7 +634,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -567,7 +652,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -589,7 +674,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "kaka": "jepp",
   "model": "Martinez Calavera",
@@ -608,7 +693,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -626,7 +711,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "kaka": "jepp",
@@ -645,7 +730,7 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "kaka": "jepp",
@@ -667,7 +752,7 @@ NameError: name 'skateboard' is not defined
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "kaka": "jepp",
@@ -690,15 +775,15 @@ print(skateboard)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-for x in skateboard:
-    print(x)
+for txt in skateboard:
+    print(txt)
 ```
 
 ```
@@ -711,19 +796,18 @@ length
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-for x in skateboard.keys():
-    print(x)
-
+for txt in skateboard.keys():
+    print(txt)
 ```
 
-```html
+```
 brand
 model
 width
@@ -733,19 +817,19 @@ length
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-for x in skateboard:
-    y = skateboard[x]
-    print(y)
+for txt in skateboard:
+    part_info: str | float = skateboard[txt]
+    print(part_info)
 ```
 
-```html
+```
 Creature
 Martinez Calavera
 8.99
@@ -755,19 +839,19 @@ Martinez Calavera
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-for x in skateboard:
-    y = skateboard.get(x)
-    print(y)
+for txt in skateboard:
+    part_info = skateboard.get(txt)
+    print(part_info)
 ```
 
-```html
+```
 Creature
 Martinez Calavera
 8.99
@@ -777,18 +861,18 @@ Martinez Calavera
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-for x in skateboard.values():
-    print(x)
+for value in skateboard.values():
+    print(value)
 ```
 
-```html
+```
 Creature
 Martinez Calavera
 8.99
@@ -798,7 +882,7 @@ Martinez Calavera
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
@@ -809,7 +893,7 @@ for key, value in skateboard.items():
     print(key, value, sep=": ")
 ```
 
-```html
+```
 brand: Creature
 model: Martinez Calavera
 width: 8.99
@@ -823,14 +907,14 @@ length: 32.64
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-kopia = skateboard.copy()
+kopia: dict[str, str | float] = skateboard.copy()
 print(kopia)
 ```
 
@@ -841,14 +925,14 @@ print(kopia)
 --
 
 ```python
-skateboard = {
+skateboard: dict[str, str | float] = {
   "brand": "Creature",
   "model": "Martinez Calavera",
   "width": 8.99,
   "length": 32.64
 }
 
-kopia = dict(skateboard)
+kopia: dict[str, str | float] = dict(skateboard)
 print(kopia)
 ```
 
@@ -863,7 +947,7 @@ print(kopia)
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -884,7 +968,7 @@ print(skateboards)
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -895,8 +979,8 @@ skateboards = {
                "length": 31.75},
 }
 
-x = skateboards["board1"]
-print(x)
+board: dict[str, str | float] = skateboards["board1"]
+print(board)
 ```
 
 ```python
@@ -906,7 +990,7 @@ print(x)
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -917,8 +1001,8 @@ skateboards = {
                "length": 31.75},
 }
 
-x = skateboards["board1"]["model"]
-print(x)
+model: str = skateboards["board1"]["model"]
+print(board)
 ```
 
 ```python
@@ -928,7 +1012,7 @@ Martinez Calavera
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -956,34 +1040,7 @@ print(skateboards)
 --
 
 ```python
-skateboards = {
-    "board1": {"brand": "Creature",
-               "model": "Martinez Calavera",
-               "width": 8.99,
-               "length": 32.64},
-    "board2": {"brand": "Prime Heritage",
-               "model": "Dune Curb Crusher",
-               "width": 8.25,
-               "length": 31.75},
-}
-
-skateboards["board3"] = {}
-skateboards["board3"]["brand"] = "Tired"
-skateboards["board3"]["model"] = "Logo Two on Chuck",
-skateboards["board3"]["width"] =  8.625,
-skateboards["board3"]["length"] = 32.00
-
-print(skateboards)
-```
-
-```python
-{'board1': {'brand': 'Creature', 'model': 'Martinez Calavera', 'width': 8.99, 'length': 32.64}, 'board2': {'brand': 'Prime Heritage', 'model': 'Dune Curb Crusher', 'width': 8.25, 'length': 31.75}, 'board3': {'brand': 'Tired', 'model': 'Logo Two on Chuck', 'width': 8.625, 'length': 32.0}}
-```
-
---
-
-```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -1006,7 +1063,7 @@ print(skateboards)
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -1030,7 +1087,7 @@ print(skateboards)
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -1053,7 +1110,7 @@ board2 {'brand': 'Prime Heritage', 'model': 'Dune Curb Crusher', 'width': 8.25, 
 --
 
 ```python
-skateboards = {
+skateboards: dict[str, dict[str, str | float]] = {
     "board1": {"brand": "Creature",
                "model": "Martinez Calavera",
                "width": 8.99,
@@ -1067,13 +1124,13 @@ skateboards = {
 for board, info in skateboards.items():
     print(board)
     for detail, value in info.items():
-        print("   ", detail,": ", value)
+        print(f"   {detail} : {value}")
     print('------------------')
 ```
 
 --
 
-```python
+```
 board1
     brand :  Creature
     model :  Martinez Calavera
