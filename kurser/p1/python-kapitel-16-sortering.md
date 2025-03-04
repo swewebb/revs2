@@ -47,7 +47,7 @@ Sorterar listan efter nycklarna då **sorted()** sorterar tuples efter första e
 Omvandlar den sorterade listan tillbaka till en ordbok
 
 ```python []
-"a": 2, "b": 3, "c": 1}
+{"a": 2, "b": 3, "c": 1}
 ```
 
 --
