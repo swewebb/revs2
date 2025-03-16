@@ -29,7 +29,7 @@
 
 --
 
-```html
+```text []
 Anne-Alica Anniesson
 Bo-Balder Bjarnsson
 Cliff-Cåre Claesson
@@ -39,7 +39,7 @@ Filen **textfil.txt** innehåller följande text.
 
 --
 
-```python
+```python []
 f = open('./textfil.txt', encoding = 'UTF-8')
 text = (f.read())
 f.close()
@@ -47,7 +47,7 @@ f.close()
 print(text)
 ```
 
-```html
+```text []
 Anne-Alica Anniesson
 Bo-Balder Bjarnsson
 Cliff-Cåre Claesson
@@ -55,7 +55,7 @@ Cliff-Cåre Claesson
 
 --
 
-```python
+```python []
 f = open('./fil.txt', encoding = 'UTF-8')
 text = f.read()
 f.close()
@@ -63,22 +63,38 @@ f.close()
 print(text)
 ```
 
-```html
-Traceback (most recent call last):
-  File "ex1.py", line 1, in <module>
-    f = open('./fil.txt', encoding = 'UTF-8')
-FileNotFoundError: [Errno 2] No such file or directory: './fil.txt'
+```text []
+Traceback (most recent call last): File "ex1.py", line 1, in
+<module>
+  f = open('./fil.txt', encoding = 'UTF-8')
+  FileNotFoundError: [Errno 2] No such file
+  or directory: './fil.txt'</module>
 ```
 
 --
 
-```python
+```python []
 try:
     f = open('./textfil.txt', encoding = 'UTF-8')
-    text = f.read()
+    text: str = f.read()
     f.close()
 except:
-    text = 'Filen kan inte öppnas!'
+    text: str = 'Filen kan inte öppnas!'
+finally:
+    print(text)
+```
+
+--
+
+```python []
+try:
+    f = open('./textfil.txt', encoding = 'UTF-8')
+    text: str = f.read()
+    f.close()
+except FileNotFoundError :
+    text = 'Filen finns inte'
+except Exception as error:
+    text = f'Oväntat fel: {error}'
 finally:
     print(text)
 ```
@@ -87,7 +103,7 @@ finally:
 
 ```python
 with open('./textfil.txt', encoding = 'UTF-8') as f:
-    text = f.read()
+    text: str = f.read()
 
 print(text)
 ```
@@ -99,9 +115,11 @@ try:
     with open('./textfil.txt', encoding = 'UTF-8') as f:
         text = f.read()
 except FileNotFoundError:
-    text = 'Filen kan inte öppnas!'
-
-print(text)
+    text = 'Filen finns inte'
+except Exception as error:
+    text = f'Oväntat fel: {error}'
+finally:
+    print(text)
 ```
 
 ---
@@ -154,9 +172,7 @@ except FileNotFoundError:
 ```
 
 ```html
-Anne-Alica Anniesson
-
-Bo-Balder Bjarnsson
+Anne-Alica Anniesson Bo-Balder Bjarnsson
 ```
 
 --
@@ -171,8 +187,7 @@ except FileNotFoundError:
 ```
 
 ```html
-Anne-Alica Anniesson
-Bo-Balder Bjarnsson
+Anne-Alica Anniesson Bo-Balder Bjarnsson
 ```
 
 --
@@ -187,9 +202,7 @@ except FileNotFoundError:
 ```
 
 ```html
-Anne-Alica Anniesson
-Bo-Balder Bjarnsson
-Cliff-Cåre Claesson
+Anne-Alica Anniesson Bo-Balder Bjarnsson Cliff-Cåre Claesson
 ```
 
 --
@@ -223,8 +236,7 @@ except FileNotFoundError:
 ```
 
 ```html
-Anne
--Alica
+Anne -Alica
 ```
 
 --
@@ -244,9 +256,8 @@ except FileNotFoundError:
 ```
 
 ```html
-Anne- * Alica *  Anni * esson *
-Bo-B * alder *  Bjar * nsson *
-Clif * f-Cår * e Cla * esson *
+Anne- * Alica * Anni * esson * Bo-B * alder * Bjar * nsson * Clif * f-Cår * e
+Cla * esson *
 ```
 
 ---
@@ -279,9 +290,7 @@ with open('./listan.txt', 'w', encoding = 'UTF-8') as f:
 ```
 
 ```html
-Å
-Ä
-Ö
+Å Ä Ö
 ```
 
 --
@@ -295,9 +304,7 @@ with open('./listan.txt', 'w', encoding = 'UTF-8') as f:
 ```
 
 ```html
-Å
-Ä
-Ö
+Å Ä Ö
 ```
 
 --
@@ -357,12 +364,7 @@ except Exception as e:
 ```
 
 ```html
-Å
-Ä
-Ö
-Å
-Ä
-Ö
+Å Ä Ö Å Ä Ö
 ```
 
 --
@@ -383,8 +385,7 @@ Skriv in post: Plugga inför NP MA3
 ```
 
 ```html
-Plugga inför NP FY1
-Plugga inför NP MA3
+Plugga inför NP FY1 Plugga inför NP MA3
 ```
 
 --
@@ -420,7 +421,6 @@ Finns filen redan skrivs den över, annars skapas en ny fil.
 --
 
 ## r
-
 
 Filen skall öppnas för läsning (r=read).
 

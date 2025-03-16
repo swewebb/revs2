@@ -2,7 +2,7 @@
 
 --
 
-##  Application Programming Interface
+## Application Programming Interface
 
 --
 
@@ -132,8 +132,6 @@ fetch("https://jsonplaceholder.typicode.com/users/1")
 --
 
 ![ex2](bilder/api-ex2.png)
-
-
 
 ---
 
@@ -341,7 +339,6 @@ fetch("https://jsonplaceholder.typicode.com/users", {
 
 ---
 
-
 # Exempel 7
 
 --
@@ -372,7 +369,6 @@ fetch("https://jsonplaceholder.typicode.com/users/5", {
 ![ex7](bilder/api-ex7.png)
 
 ---
-
 
 # Exempel 8
 
@@ -484,7 +480,6 @@ form.addEventListener("submit", (e) => {
 [How To Use the JavaScript Fetch API to Get Data](https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data)
 
 [How to Fetch Data from an API Using the Fetch API in JavaScript](https://www.freecodecamp.org/news/how-to-fetch-data-from-an-api-using-the-fetch-api-in-javascript/)
-
 
 [What Is Fetch API in JavaScript? How to Use It (with Examples)](https://blog.hubspot.com/website/javascript-fetch-api)
 
