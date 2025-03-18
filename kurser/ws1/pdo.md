@@ -2,13 +2,13 @@
 
 --
 
-PHP Data Object
+## PHP Data Object
 
 Är ett **Database Access Abstraction Layer**, **DBAL** vilket gör det möjligt att kommunicera med olika typer av databaser.
 
 --
 
-Fördelar med att använda PDO:
+## Fördelar med att använda PDO:
 
 **Säkerhet** - Användbara förberedda satser
 
@@ -373,7 +373,6 @@ try {
 
 --
 
-
 ![pdo-ex7b](bilder/pdo-ex7b.png)
 
 ---
@@ -455,7 +454,6 @@ try {
 --
 
 ![pdo-ex9](bilder/pdo-ex9.png)
-
 
 ---
 
