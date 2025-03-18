@@ -90,7 +90,9 @@ fetchUser();
 
 --
 
-## async function fetchUser()
+```js
+async function fetchUser()
+```
 
 Definierar en asynkron funktion.
 
@@ -98,7 +100,14 @@ Definierar en asynkron funktion.
 
 --
 
-## try { ... } catch (error) { ... }
+```js
+try {
+  ...
+}
+catch (error) {
+  ...
+}
+```
 
 Inom **try**-blocket försöker koden att köra en asynkron uppgift (hämta data).
 
@@ -106,7 +115,9 @@ Om något går fel, till exempel om nätverksanropet misslyckas, fångas felet a
 
 --
 
-## const response = await fetch("...");
+```js
+const response = await fetch("...");
+```
 
 **fetch()** används för att göra ett HTTP-anrop till API:et
 
@@ -116,7 +127,9 @@ Om något går fel, till exempel om nätverksanropet misslyckas, fångas felet a
 
 --
 
-## const data = await response.json();
+```js
+const data = await response.json();
+```
 
 Omvandlar svaret från **fetch** till ett JavaScript-objekt (JSON-format) genom att använda **response.json()**.
 
@@ -124,19 +137,27 @@ Eftersom **json()** är en asynkron funktion, används **await** för att vänta
 
 --
 
-## console.table(data);
+```js
+console.table(data);
+```
 
 Skriver ut data i en tabellform i webbläsarens konsol.
 
 --
 
-## catch (error) { console.log(error); }
+```js
+catch (error) {
+  console.log(error);
+}
+```
 
 Om något går fel vid någon punkt i **try**-blocket, kommer felet att fångas här och skrivas ut i konsolen.
 
 --
 
-## fetchUser();:
+```js
+fetchUser();
+```
 
 Anropar funktionen **fetchUser** för att köra den.
 
