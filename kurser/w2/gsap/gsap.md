@@ -241,6 +241,6 @@ I film #2 används codepen, men du använder givetvis Visual Studio Code.
 
 [GSAP Basics: Dive into Web Animations](https://marmelab.com/blog/2024/03/27/gsap-basics-js-animation.html)
 
-[GSAP Basics: Dive into Web Animations](https://blog.bitsrc.io/practical-guide-to-getting-started-with-gsap-greensock-animation-platform-21ff9638ea70)
+[Getting Started with GSAP: A Practical Guide](https://blog.bitsrc.io/practical-guide-to-getting-started-with-gsap-greensock-animation-platform-21ff9638ea70)
 
 [GreenSock Tutorial for Beginners: Web Animation Library](https://shakuro.com/blog/greensock-tutorial-for-beginners-web-animation-library)
