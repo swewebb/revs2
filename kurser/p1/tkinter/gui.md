@@ -1,4 +1,4 @@
-# Introduktion till Tkinter
+# Tkinter
 
 ---
 
@@ -10,7 +10,7 @@ Tkinter är ett bibliotek för att skapa grafiska användargränssnitt (GUI) i P
 
 --
 
-Ingår i standardbiblioteket och kräver ingen extra installation.
+Ingår i standardbiblioteket och kräver ingen extra installation (nja).
 
 --
 
@@ -25,15 +25,17 @@ Används för att skapa fönster, knappar, textrutor och andra GUI-element.
 ```python []
 import tkinter as tk
 
-# Skapa huvudfönstret
+# Skapar huvudfönstret
 root = tk.Tk()
 root.title("Min första GUI-app")
 
-# Skapa en etikett
+# Skapar en etikett
 label = tk.Label(root, text="Hej världen!")
-label.pack()
 
-# Starta huvudloopen
+# Placerar etiketten i fönstret
+label.grid(row=0,column=0)
+
+# Startar huvudloopen
 root.mainloop()
 ```
 
@@ -71,39 +73,26 @@ import tkinter as tk
 root = tk.Tk()
 root.title("Min första GUI-app")
 
-# Sätter fönstrets storlek till 800x600 pixlar
-root.geometry("800x600")
+# Sätter fönstrets storlek
+root.geometry("500x400")
 
-label = tk.Label(root, text="Hej världen!")
-label.pack()
+# Minsta storlek
+root.minsize(400, 200)
 
-root.mainloop()
-```
+# Största storlek
+root.maxsize(800, 600)
 
---
+label = tk.Label(
+  root,
+  text="Hej världen!"
+)
 
-![BILD](ex2a.png)
-
---
-
-## Sätta min- och maxstorlekar
-
-```python
-import tkinter as tk
-
-root = tk.Tk()
-root.title("Min första GUI-app")
-
-root.geometry("800x600")
-
-# Minsta storlek 400x300
-root.minsize(400, 300)
-
-# Största storlek 1024x768
-root.maxsize(1024, 768)
-
-label = tk.Label(root, text="Hej världen!")
-label.pack()
+label.grid(
+  row=0,
+  column=0,
+  padx=10,
+  pady=10
+)
 
 root.mainloop()
 ```
@@ -121,8 +110,45 @@ root.title("Min första GUI-app")
 # Fullskärm (endast Windows)
 root.state("zoomed")
 
-label = tk.Label(root, text="Hej världen!")
-label.pack()
+label = tk.Label(
+  root,
+  text="Hej världen!"
+)
+
+label.grid(
+  row=0,
+  column=0,
+  padx=10,
+  pady=10
+)
+
+root.mainloop()
+```
+
+--
+
+```python [2, 7-9]
+import tkinter as tk
+import os
+
+root = tk.Tk()
+root.title("Min första GUI-app")
+
+# Kontrollera om operativsystemet är Windows
+if os.name == "nt":
+    root.state("zoomed")
+
+label = tk.Label(
+    root,
+    text="Hej världen!"
+)
+
+label.grid(
+    row=0,
+    column=0,
+    padx=10,
+    pady=10
+)
 
 root.mainloop()
 ```
@@ -153,22 +179,44 @@ root.mainloop()
 
 --
 
-```python [3-5, 11-12, 14-15]
+```python [3-5, 12-15, 17-37]
 import tkinter as tk
 
-def klicka():
+def klicka() -> None:
     """DOCSTRING"""
     label.config(text="Knappen klickades!")
 
 root = tk.Tk()
 root.title("Knapp")
 root.geometry("400x100")
+root.resizable(False, False)
 
-label = tk.Label(root, text="Tryck på knappen!")
-label.pack()
+label = tk.Label(
+    root,
+    text="Tryck på knappen!"
+)
 
-button = tk.Button(root, text="Klicka mig!", command=klicka)
-button.pack()
+label.grid(
+    row=0,
+    column=0,
+    padx=10,
+    pady=10
+)
+
+# Skapar en knapp som kör funktionen klicka
+button = tk.Button(
+    root,
+    text="Klicka mig!",
+    command=klicka
+)
+
+# Placerar knappen i fönstret
+button.grid(
+    row=0,
+    column=1,
+    padx=10,
+    pady=10
+)
 
 root.mainloop()
 ```
@@ -193,25 +241,33 @@ root.mainloop()
 
 --
 
-```python [3-5, 14-15, 17-18]
+```python ]
 import tkinter as tk
 
 def visa_text():
-    """DOCSTRING"""
-    label.config(text=f"Du skrev: {entry.get()}")
+    label_output.config(text=f"Du skrev: {entry.get()}")
 
 root = tk.Tk()
-root.title("Inmatningsexempel")
-root.geometry("400x100")
+root.title("Inmatning")
+root.geometry("400x200")
+
+# Konfigurera kolumnerna
+root.columnconfigure(0, weight=0)
+root.columnconfigure(1, weight=1)
+root.columnconfigure(2, weight=0)
+
+# Skapa och placera widgets
+label = tk.Label(root, text="Texten:")
+label.grid(column=0, row=0, sticky=tk.W, padx=5, pady=5)
 
 entry = tk.Entry(root)
-entry.pack()
+entry.grid(column=1, row=0, sticky="ew", padx=5, pady=5)
 
 button = tk.Button(root, text="Visa text", command=visa_text)
-button.pack()
+button.grid(column=2, row=0, sticky=tk.W, padx=5, pady=5)
 
-label = tk.Label(root, text="")
-label.pack()
+label_output = tk.Label(root, text="")
+label_output.grid(column=0, row=1, columnspan=2, sticky="w", padx=5, pady=5)
 
 root.mainloop()
 ```
@@ -220,11 +276,13 @@ root.mainloop()
 
 ## Förklaring
 
-**tk.Entry()** skapar en inmatningsruta.
+Vi ställer in hur kolumnerna i fönstret ska bete sig när fönstret ändrar storlek. Kolumn 1 (mittkolumnen) ges en vikt på 1, vilket gör att den expanderar vid fönstrets storleksändring.
 
-**.get()** hämtar texten från rutan.
+Vi skapar ett inmatningsfält, **Entry** där användaren kan skriva in text och placerar det i kolumn 1, rad 0
 
-**label.config(text=...)** uppdaterar etikettens text.
+**sticky="ew"** för att expandera både åt vänster och höger.
+
+**sticky=tk.W**, för att vänsterjustera
 
 --
 
@@ -236,31 +294,56 @@ root.mainloop()
 
 --
 
-```python [3-5, 11-19]
+```python [3-4, 11-34]
 import tkinter as tk
 
 def post():
-    """DOCSTRING"""
     label.config(text="Du valde POST")
 
 root = tk.Tk()
 root.title("Meny")
 root.geometry("400x100")
+root.resizable(False, False)
 
 meny = tk.Menu(root)
 root.config(menu=meny)
 
-fil_meny = tk.Menu(meny, tearoff=0)
-fil_meny.add_command(label="Post", command=post)
+fil_meny = tk.Menu(
+    meny,
+    tearoff=0
+)
+
+fil_meny.add_command(
+    label="Post",
+    command=post
+)
+
 fil_meny.add_separator()
-fil_meny.add_command(label="Avsluta", command=root.quit)
 
-meny.add_cascade(label="Fil", menu=fil_meny)
+fil_meny.add_command(
+    label="Avsluta",
+    command=root.quit
+)
 
-label = tk.Label(root, text="Välj en meny!", font=("Arial", 14))
-label.pack()
+meny.add_cascade(
+    label="Fil",
+    menu=fil_meny
+)
+
+label = tk.Label(
+    root, text="Välj en meny!",
+    font=("Arial", 14)
+)
+
+label.grid(
+    row=0,
+    column=0,
+    padx=10,
+    pady=10
+)
 
 root.mainloop()
+
 ```
 
 --
@@ -279,177 +362,65 @@ root.mainloop()
 
 --
 
-## ![BILD](ex7-meny.gif)
+![BILD](ex7-meny.gif)
 
 ---
 
-# Hantera textfiler
+# Textruta
 
 --
 
-## Del 1
-
-```python [7-8]
+```python [2, 4, 6-10, 20-33, 38]
 import tkinter as tk
+import tkinter.scrolledtext as tkst
+
+current_file = None
+
+def new_file():
+    global current_file
+    current_file = None
+    text_area.delete(1.0, tk.END)
+    root.title("Notepad")
 
 root = tk.Tk()
-root.title("Textfil")
-root.geometry("400x100")
+root.title("Notepad")
+root.geometry("600x400")
+root.minsize(400, 200)
 
-text_area = tk.Text(root, wrap="word")
-text_area.pack(expand=True, fill="both")
+root.grid_rowconfigure(0, weight=1)
+root.grid_columnconfigure(0, weight=1)
 
-meny = tk.Menu(root)
-root.config(menu=meny)
+text_area = tkst.ScrolledText(
+    master=root,
+    wrap=tk.WORD,
+    undo=True,
+    padx=10,
+    pady=10,
+    font=("Consolas", 12),
+    bg="#282A36",
+    fg="#F8F8F2",
+    insertbackground="white",
+    selectbackground="#6272A4",
+    selectforeground="#F8F8F2"
+)
+text_area.grid(row=0, column=0, sticky="nsew")
 
-fil_meny = tk.Menu(meny, tearoff=0)
-fil_meny.add_command(label="Öppna", command="")
-fil_meny.add_command(label="Spara", command="")
-fil_meny.add_separator()
-fil_meny.add_command(label="Avsluta", command=root.quit)
-meny.add_cascade(label="Fil", menu=fil_meny)
+main_menu = tk.Menu(root)
+file_menu = tk.Menu(main_menu, tearoff=0)
+main_menu.add_cascade(label="Arkiv", menu=file_menu)
+file_menu.add_command(label="Ny", command=new_file)
+file_menu.add_separator()
+file_menu.add_command(label="Avsluta", command=root.quit)
+root.config(menu=main_menu)
 
 root.mainloop()
+
 ```
 
 --
 
-![BILD](ex8-del1-filhantering.gif)
+![BILD](ex-textruta.gif)
 
 --
 
-## Förklaring
-
-Doh!
-
---
-
-## Del 2
-
-```python [2, 4-16, 29]
-import tkinter as tk
-from tkinter import filedialog
-
-def oppna_fil():
-    """DOCSTRING"""
-    filnamn = filedialog.askopenfilename(
-        filetypes=[
-            ("Textfiler", "*.txt"),
-            ("Alla filer", "*.*")
-        ]
-    )
-
-    if filnamn:
-        with open(filnamn, "r") as fil:
-            text_area.delete("1.0", tk.END)
-            text_area.insert(tk.END, fil.read())
-
-root = tk.Tk()
-root.title("Textfil")
-root.geometry("400x100")
-
-text_area = tk.Text(root, wrap="word")
-text_area.pack(expand=True, fill="both")
-
-meny = tk.Menu(root)
-root.config(menu=meny)
-
-fil_meny = tk.Menu(meny, tearoff=0)
-fil_meny.add_command(label="Öppna", command=oppna_fil)
-fil_meny.add_command(label="Spara", command="")
-fil_meny.add_separator()
-fil_meny.add_command(label="Avsluta", command=root.quit)
-meny.add_cascade(label="Fil", menu=fil_meny)
-
-root.mainloop()
-```
-
---
-
-## Förklaring
-
-**filedialog.askopenfilename()** används för att välja en fil att öppna.
-
-**with open(filnamn, "r")** läser från filen.
-
-**text_area.delete("1.0", tk.END)** tar bort all text från början till slut.
-
-**text_area.insert(tk.END, fil.read())** läser hela innehållet i en öppen fil och placerar texten i textarean vid slutet.
-
---
-
-![BILD](ex8-del2-filhantering.gif)
-
---
-
-## Del 3
-
-```python [18-31, 45]
-import tkinter as tk
-from tkinter import filedialog
-
-def oppna_fil():
-    """DOCSTRING"""
-    filnamn = filedialog.askopenfilename(
-        filetypes=[
-            ("Textfiler", "*.txt"),
-            ("Alla filer", "*.*")
-        ]
-    )
-
-    if filnamn:
-        with open(filnamn, "r") as fil:
-            text_area.delete("1.0", tk.END)
-            text_area.insert(tk.END, fil.read())
-
-def spara_fil():
-    """DOCSTRING"""
-    text = text_area.get("1.0", tk.END)
-    filnamn = filedialog.asksaveasfilename(
-        defaultextension=".txt",
-        filetypes=[
-            ("Textfiler", "*.txt"),
-            ("Alla filer", "*.*")
-        ]
-    )
-
-    if filnamn:
-        with open(filnamn, "w") as fil:
-            fil.write(text)
-
-root = tk.Tk()
-root.title("Textfil")
-root.geometry("400x100")
-
-text_area = tk.Text(root, wrap="word")
-text_area.pack(expand=True, fill="both")
-
-meny = tk.Menu(root)
-root.config(menu=meny)
-
-fil_meny = tk.Menu(meny, tearoff=0)
-fil_meny.add_command(label="Öppna", command=oppna_fil)
-fil_meny.add_command(label="Spara", command=spara_fil)
-fil_meny.add_separator()
-fil_meny.add_command(label="Avsluta", command=root.quit)
-meny.add_cascade(label="Fil", menu=fil_meny)
-
-root.mainloop()
-```
-
---
-
-## Förklaring
-
-**text_area.get("1.0", tk.END)** hämtar text från text_area från startpositionen till slutpositionen. **1.0** betyder första raden, första tecknet och **tk.END** betyder slutet av texten.
-
-**filedialog.asksaveasfilename()** används för att välja var filen ska sparas.
-
-**with open(filnamn, "w")** skriver till filen.
-
----
-
-# Vidare läsning
-
-- [Tkinter-dokumentation](https://docs.python.org/3/library/tkinter.html)
-- [Tkinter-tutorial](https://realpython.com/python-gui-tkinter/)
+![BILD](ex-textruta2.gif)
